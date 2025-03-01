@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.sendMail.dto;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto;
 
 public class EmailRequest {
     private String userId;

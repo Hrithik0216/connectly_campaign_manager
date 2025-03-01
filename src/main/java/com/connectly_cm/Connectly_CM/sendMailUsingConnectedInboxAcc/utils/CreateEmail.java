@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.sendMail.utils;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils;
 
 import java.util.Properties;
 import javax.mail.MessagingException;

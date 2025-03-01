@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.sendMail.utils;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils;
 import com.google.api.services.gmail.model.Message;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

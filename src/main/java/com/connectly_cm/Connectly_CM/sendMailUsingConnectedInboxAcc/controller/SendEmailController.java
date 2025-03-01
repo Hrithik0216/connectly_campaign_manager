@@ -1,7 +1,7 @@
-package com.connectly_cm.Connectly_CM.sendMail.controller;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.controller;
 
-import com.connectly_cm.Connectly_CM.sendMail.dto.EmailRequest;
-import com.connectly_cm.Connectly_CM.sendMail.service.SendEmailService;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailRequest;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service.SendEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

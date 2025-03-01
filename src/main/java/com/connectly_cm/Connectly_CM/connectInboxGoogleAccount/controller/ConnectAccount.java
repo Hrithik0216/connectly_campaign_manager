@@ -2,8 +2,8 @@ package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller;
 
 //import statements remain untouched
 
-import com.connectly_cm.Connectly_CM.sendMail.model.ConnectedAccount;
-import com.connectly_cm.Connectly_CM.sendMail.repository.ConnectedAccountRepository;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
 import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.auth.oauth2.TokenResponse;

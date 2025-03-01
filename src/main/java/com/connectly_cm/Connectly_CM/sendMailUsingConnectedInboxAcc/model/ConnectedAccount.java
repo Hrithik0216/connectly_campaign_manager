@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.sendMail.model;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

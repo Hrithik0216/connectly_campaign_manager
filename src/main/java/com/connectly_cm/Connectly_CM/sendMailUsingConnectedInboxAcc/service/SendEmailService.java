@@ -1,9 +1,9 @@
-package com.connectly_cm.Connectly_CM.sendMail.service;
+package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service;
 
-import com.connectly_cm.Connectly_CM.sendMail.model.ConnectedAccount;
-import com.connectly_cm.Connectly_CM.sendMail.repository.ConnectedAccountRepository;
-import com.connectly_cm.Connectly_CM.sendMail.utils.CreateEmail;
-import com.connectly_cm.Connectly_CM.sendMail.utils.CreateMessage;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.CreateEmail;
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.CreateMessage;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
 import com.google.api.client.http.javanet.NetHttpTransport;
