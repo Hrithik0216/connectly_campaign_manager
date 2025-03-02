@@ -2,6 +2,7 @@ package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller;
 
 //import statements remain untouched
 
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.service.ConnectAccountService;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
 import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
@@ -17,16 +18,19 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.gson.JsonObject;
+import com.mongodb.client.result.UpdateResult;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.view.RedirectView;
+import org.springframework.data.mongodb.core.query.Query;
+
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
@@ -57,6 +61,12 @@ public class ConnectAccount {
 
     @Autowired
     ConnectedAccountRepository connectedAccountRepository;
+
+    @Autowired
+    ConnectAccountService connectAccountService;
+
+    @Autowired
+    MongoTemplate mongoTemplate;
 
     @PostConstruct
     public void init() throws Exception {
@@ -107,6 +117,19 @@ public class ConnectAccount {
             // Retrieve the user's email address
             String userEmail = service.users().getProfile("me").execute().getEmailAddress();
             LOGGER.info("Step 4: User Email Retrieved: " + userEmail);
+            ConnectedAccount checkIfUserConnectedConnectedBefore = connectedAccountRepository.findByUserId(userId);
+            if(checkIfUserConnectedConnectedBefore!=null){
+                if(checkIfUserConnectedConnectedBefore.getConnectedMails().contains(userEmail)){
+                    LOGGER.info("The account you are trying to connect already exists. Please remove the account and reconnect. " + userEmail);
+                 return ResponseEntity.status(HttpStatus.FOUND).body("The account you are trying to connect already exists. Please remove the account and reconnect");
+                }
+                LOGGER.info("Earlier this user has connected an account. Found a document in DB. We will update in the same document of id "+
+                        checkIfUserConnectedConnectedBefore.getId());
+                Query query = new Query().addCriteria(Criteria.where("_id").is(checkIfUserConnectedConnectedBefore.getId()));
+                Update updateConnectedMail = new Update().addToSet("connectedMails",userEmail);
+                UpdateResult addedNewAcc = mongoTemplate.updateFirst(query,updateConnectedMail,ConnectedAccount.class);
+                return ResponseEntity.status(HttpStatus.FOUND).body(addedNewAcc.getUpsertedId().toString());
+            }
             ConnectedAccount connectedAccount = new ConnectedAccount();
             connectedAccount.setConnectedMails(Arrays.asList(userEmail));
             connectedAccount.setAccessToken(response.getAccessToken());
@@ -128,6 +151,11 @@ public class ConnectAccount {
             json.addProperty("error", e.getMessage());
             return new ResponseEntity<>(json.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
+    }
+
+    @RequestMapping(value = "/removeAcc", method = RequestMethod.DELETE)
+    public ResponseEntity<?> removeAccount(@RequestBody String userId){
+        return connectAccountService.removeAccount(userId);
     }
 
 
