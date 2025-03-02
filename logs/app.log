@@ -106,3 +106,7 @@
 25/03/02 21:31:56 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
 25/03/02 21:31:57 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
 25/03/02 21:31:57 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 00:04:24 INFO service.ConnectAccountService: Removing acc for the userid: {
+    "userId":"67b8b3fac1e3bf2a47a4b63a"
+}
+25/03/03 00:04:25 INFO service.ConnectAccountService: The acc is null
