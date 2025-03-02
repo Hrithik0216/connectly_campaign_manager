@@ -10,6 +10,7 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.Message;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,8 @@ import java.util.Date;
 
 @Service
 public class SendEmailService {
+
+    private static final Logger LOGGER = Logger.getLogger(SendEmailService.class);
 
     @Autowired
     ConnectedAccountRepository connectedAccountRepository;
@@ -64,17 +67,19 @@ public class SendEmailService {
 
     public void sendEmail(String userId, String toEmailAddress, String subject, String bodyText) {
         try {
-            System.out.println("sendmail service");
+
+            LOGGER.info("Initiated the process of sending mail for " + userId + " to " + toEmailAddress);
             // Retrieve credentials from MongoDB
             ConnectedAccount connectedAccount = connectedAccountRepository.findByUserId(userId);
             if (connectedAccount == null) {
+                LOGGER.info("Credentials not found for user: " + userId);
                 throw new RuntimeException("Credentials not found for user: " + userId);
             }
 
             // Check if the token is expired
             if (connectedAccount.getTokenExpiryTime().before(new Date())) {
                 // Refresh the token
-                System.out.println("refreshing access token");
+                LOGGER.info("Refreshing access token for " + userId);
                 refreshAccessToken(userId);
 
                 // Re-fetch the updated credentials
@@ -88,14 +93,16 @@ public class SendEmailService {
                     .build();
 
             // Use the stored email address as the "from" address
+
             String fromEmailAddress = connectedAccount.getConnectedMails().get(0);
+            LOGGER.info("Your connected acc from db is " + fromEmailAddress);
 
             // Create and send the email
             MimeMessage email = CreateEmail.createEmail(toEmailAddress, fromEmailAddress, subject, bodyText);
             Message message = CreateMessage.createMessageWithEmail(email);
             service.users().messages().send("me", message).execute();
 
-            System.out.println("Email sent successfully!");
+            LOGGER.info("Email sent successfully to " + toEmailAddress + " from " + fromEmailAddress);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -17,6 +17,7 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.gson.JsonObject;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -36,6 +37,7 @@ import java.util.List;
 @RestController
 public class ConnectAccount {
 
+    private static final Logger LOGGER = Logger.getLogger(ConnectAccount.class);
     private static final String APPLICATION_NAME = "ConnectlyTesting";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
     private HttpTransport httpTransport;
@@ -71,13 +73,14 @@ public class ConnectAccount {
                 .build();
     }
 
-    @RequestMapping(value = "/redirect", method = RequestMethod.GET)
-    public RedirectView redirectTogoogele(){
-        return new RedirectView("https://www.google.com");
-    }
+//    @RequestMapping(value = "/redirect", method = RequestMethod.GET)
+//    public RedirectView redirectTogoogele(){
+//        return new RedirectView("https://www.google.com");
+//    }
 
     @RequestMapping(value = "/login/gmail", method = RequestMethod.GET)
     public RedirectView googleConnectionStatus(@RequestParam String userId) throws Exception {
+        LOGGER.info("Google OAuth initiated...");
         return new RedirectView(authorize(userId));
     }
 
@@ -85,26 +88,25 @@ public class ConnectAccount {
     public ResponseEntity<String> oauth2Callback(@RequestParam(value = "code") String code,
                                                  @RequestParam(value = "state") String userId) {
         JsonObject json = new JsonObject();
-        System.out.println("userId:" + userId);
+        LOGGER.info("OAuth entered with the userId:" + userId);
+
         try {
             // Exchange the authorization code for an access token
-            System.out.println("OAuth Callback: Received Code: " + code);
+            LOGGER.info("OAuth Callback: Received Code: " + code);
             TokenResponse response = flow.newTokenRequest(code).setRedirectUri(redirectUri).execute();
-            System.out.println("Step 1: OAuth Token Retrieved: " + response.getAccessToken());
+            LOGGER.info("Step 1: OAuth Token Retrieved: " + response.getAccessToken());
             Credential credential = flow.createAndStoreCredential(response, "userID");
-            System.out.println("Step 2: Credential Created");
-            System.out.println("OAuth Token Response: " + response.toPrettyString());
+            LOGGER.info("Step 2: Credential Created");
+            LOGGER.info("OAuth Token Response: " + response.toPrettyString());
 
             // Use the access token to interact with the Gmail API
             Gmail service = new Gmail.Builder(httpTransport, JSON_FACTORY, credential)
                     .setApplicationName(APPLICATION_NAME)
                     .build();
-            System.out.println("Step 3: Gmail Service Initialized");
-
+            LOGGER.info("Step 3: Gmail Service Initialized");
             // Retrieve the user's email address
             String userEmail = service.users().getProfile("me").execute().getEmailAddress();
-            System.out.println("Step 4: User Email Retrieved: " + userEmail);
-
+            LOGGER.info("Step 4: User Email Retrieved: " + userEmail);
             ConnectedAccount connectedAccount = new ConnectedAccount();
             connectedAccount.setConnectedMails(Arrays.asList(userEmail));
             connectedAccount.setAccessToken(response.getAccessToken());
@@ -118,11 +120,11 @@ public class ConnectAccount {
             connectedAccountRepository.save(connectedAccount);
             json.addProperty("response", "Got credentials");
             json.addProperty("userMail", userEmail);
-            System.out.println("Step 8: Emails Processed");
-
+            LOGGER.info("Step 8: Emails Processed");
             return new ResponseEntity<>(json.toString(), HttpStatus.OK);
         } catch (Exception e) {
             e.printStackTrace();
+            LOGGER.error("Error occured while connecting your google account. The error is: "+e.getMessage());
             json.addProperty("error", e.getMessage());
             return new ResponseEntity<>(json.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -145,7 +147,8 @@ public class ConnectAccount {
                 setRedirectUri(redirectUri).
                 setState(userId).
                 set("prompt", "consent");  // Force re-approval
-        System.out.println("Authorization URL: " + authorizationUrl.build());
+        LOGGER.info("Authorization URL: " + authorizationUrl.build());
+        //System.out.println("Authorization URL: " + authorizationUrl.build());
         return authorizationUrl.build();
     }
 }
