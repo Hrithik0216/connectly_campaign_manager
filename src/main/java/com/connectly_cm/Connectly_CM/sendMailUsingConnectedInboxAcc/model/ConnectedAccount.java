@@ -9,6 +9,10 @@ import java.util.List;
 @Document
 public class ConnectedAccount {
 
+    public String getId() {
+        return id;
+    }
+
     @Id
     private String id;
     private List<String> scopes;

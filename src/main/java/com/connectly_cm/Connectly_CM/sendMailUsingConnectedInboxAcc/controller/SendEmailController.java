@@ -5,6 +5,7 @@ import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailReq
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service.SendEmailService;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,14 +19,14 @@ public class SendEmailController {
     SendEmailService sendEmailService;
 
     @RequestMapping(value = "/sendEmail", method = RequestMethod.POST)
-    public void sendEmail(@RequestBody EmailRequest emailRequest) {
+    public ResponseEntity<?> sendEmail(@RequestBody EmailRequest emailRequest) {
         if (emailRequest == null || emailRequest.getUserId() == null ||
                 emailRequest.getToAddress() == null || emailRequest.getSubject() == null ||
                 emailRequest.getBody() == null) {
             LOGGER.info("Invalid request: All fields are required");
             throw new IllegalArgumentException("Invalid request: All fields are required");
         }
-        sendEmailService.sendEmail(emailRequest.getUserId(),
+        return sendEmailService.sendEmail(emailRequest.getUserId(),
                 emailRequest.getToAddress(),
                 emailRequest.getSubject(),
                 emailRequest.getBody());

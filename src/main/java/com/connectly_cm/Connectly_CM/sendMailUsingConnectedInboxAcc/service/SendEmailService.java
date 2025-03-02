@@ -1,5 +1,6 @@
 package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service;
 
+import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailResponse;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.CreateEmail;
@@ -13,12 +14,17 @@ import com.google.api.services.gmail.model.Message;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import javax.mail.internet.MimeMessage;
 
 import java.io.IOException;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class SendEmailService {
@@ -65,7 +71,7 @@ public class SendEmailService {
         connectedAccountRepository.save(connectedAccount);
     }
 
-    public void sendEmail(String userId, String toEmailAddress, String subject, String bodyText) {
+    public ResponseEntity<?> sendEmail(String userId, String toEmailAddress, String subject, String bodyText) {
         try {
 
             LOGGER.info("Initiated the process of sending mail for " + userId + " to " + toEmailAddress);
@@ -103,8 +109,14 @@ public class SendEmailService {
             service.users().messages().send("me", message).execute();
 
             LOGGER.info("Email sent successfully to " + toEmailAddress + " from " + fromEmailAddress);
+            EmailResponse emailResponse = new EmailResponse(fromEmailAddress,toEmailAddress);
+
+            Map<String, Object> responseMap= new HashMap<>();
+            responseMap.put("mailResult", Collections.singletonMap("emailResponse",emailResponse));
+            return ResponseEntity.status(HttpStatus.OK).body(responseMap);
         } catch (Exception e) {
             e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occured while sending mail to "+toEmailAddress+". The error is"+e.getMessage());
         }
     }
 }
