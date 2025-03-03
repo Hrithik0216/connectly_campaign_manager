@@ -1,7 +1,15 @@
 package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto;
 
 public class EmailRequest {
-    private String userId;
+    public String getFromAddress() {
+        return fromAddress;
+    }
+
+    public void setFromAddress(String fromAddress) {
+        this.fromAddress = fromAddress;
+    }
+
+    private String fromAddress;
     private String toAddress;
     private String subject;
     private String body;
@@ -13,6 +21,9 @@ public class EmailRequest {
     public void setUserId(String userId) {
         this.userId = userId;
     }
+
+    private String userId;
+
 
     public String getToAddress() {
         return toAddress;
