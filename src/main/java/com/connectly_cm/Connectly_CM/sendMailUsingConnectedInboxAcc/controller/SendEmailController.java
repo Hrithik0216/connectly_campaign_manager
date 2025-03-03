@@ -20,13 +20,13 @@ public class SendEmailController {
 
     @RequestMapping(value = "/sendEmail", method = RequestMethod.POST)
     public ResponseEntity<?> sendEmail(@RequestBody EmailRequest emailRequest) {
-        if (emailRequest == null || emailRequest.getUserId() == null ||
+        if (emailRequest == null || emailRequest.getFromAddress() == null ||
                 emailRequest.getToAddress() == null || emailRequest.getSubject() == null ||
                 emailRequest.getBody() == null) {
             LOGGER.info("Invalid request: All fields are required");
             throw new IllegalArgumentException("Invalid request: All fields are required");
         }
-        return sendEmailService.sendEmail(emailRequest.getUserId(),
+        return sendEmailService.sendEmail(emailRequest.getUserId(), emailRequest.getFromAddress(),
                 emailRequest.getToAddress(),
                 emailRequest.getSubject(),
                 emailRequest.getBody());
