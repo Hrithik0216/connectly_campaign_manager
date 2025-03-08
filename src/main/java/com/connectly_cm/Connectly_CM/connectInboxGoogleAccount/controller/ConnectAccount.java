@@ -2,9 +2,10 @@ package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller;
 
 //import statements remain untouched
 
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.ConnectedGmailAccount;
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.service.ConnectAccountService;
-import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
-import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
 import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.auth.oauth2.TokenResponse;
@@ -18,7 +19,6 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.gson.JsonObject;
-import com.mongodb.client.result.UpdateResult;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -33,10 +33,7 @@ import org.springframework.data.mongodb.core.query.Query;
 
 
 import javax.annotation.PostConstruct;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class ConnectAccount {
@@ -60,7 +57,7 @@ public class ConnectAccount {
     private String scope;
 
     @Autowired
-    ConnectedAccountRepository connectedAccountRepository;
+    ConnectedUnifiedInboxAccounts connectedUnifiedInboxAccounts;
 
     @Autowired
     ConnectAccountService connectAccountService;
@@ -101,7 +98,6 @@ public class ConnectAccount {
         LOGGER.info("OAuth entered with the userId:" + userId);
 
         try {
-            // Exchange the authorization code for an access token
             LOGGER.info("OAuth Callback: Received Code: " + code);
             TokenResponse response = flow.newTokenRequest(code).setRedirectUri(redirectUri).execute();
             LOGGER.info("Step 1: OAuth Token Retrieved: " + response.getAccessToken());
@@ -117,44 +113,67 @@ public class ConnectAccount {
             // Retrieve the user's email address
             String userEmail = service.users().getProfile("me").execute().getEmailAddress();
             LOGGER.info("Step 4: User Email Retrieved: " + userEmail);
-            ConnectedAccount checkIfUserConnectedConnectedBefore = connectedAccountRepository.findByUserId(userId);
-            if(checkIfUserConnectedConnectedBefore!=null){
-                if(checkIfUserConnectedConnectedBefore.getConnectedMails().contains(userEmail)){
-                    LOGGER.info("The account you are trying to connect already exists. Please remove the account and reconnect. " + userEmail);
-                 return ResponseEntity.status(HttpStatus.FOUND).body("The account you are trying to connect already exists. Please remove the account and reconnect");
+
+
+            UnifiedInboxAccounts isMailConnected = connectedUnifiedInboxAccounts.findByUserId(userId);
+            if (isMailConnected != null) {
+                List<ConnectedGmailAccount> connectedMails = isMailConnected.getConnectedEmailAccounts();
+                boolean isAccfound = connectedMails.stream()
+                        .anyMatch(account -> account.getConnectedMail().equals(userEmail));
+                if (isAccfound) {
+                    LOGGER.info("The Inbox account you are trying to connect already exists. Please remove the account and reconnect. " + userEmail);
+                    return ResponseEntity
+                            .status(HttpStatus.FOUND)
+                            .body("The Inbox account is already connected. Verified with UnifiedInboxAccounts db");
+                } else {
+                    LOGGER.info("Initiated the process of adding the Inbox account " + userEmail);
+                    ConnectedGmailAccount newAcc = new ConnectedGmailAccount();
+                    newAcc.setConnectedMail(userEmail.trim());
+                    newAcc.setAccessToken(response.getAccessToken());
+                    newAcc.setRefreshToken(response.getRefreshToken());
+                    newAcc.setScopes(Arrays.asList(
+                            "https://www.googleapis.com/auth/gmail.send",
+                            "https://www.googleapis.com/auth/gmail.readonly"));
+                    newAcc.setTimestamp(new Date());
+                    newAcc.setTokenExpiryTime(new Date(System.currentTimeMillis() + response.getExpiresInSeconds() * 1000));
+                    Query query = new Query().addCriteria(Criteria.where("userId"));
+                    Update updateConnectedMails = new Update().addToSet("connectedEmailAccounts", newAcc);
+                    mongoTemplate.upsert(query, updateConnectedMails, UnifiedInboxAccounts.class);
+                    LOGGER.info("Updates by adding the inbox acc to the existing document.");
+                    return ResponseEntity.status(HttpStatus.OK).body("Connected Inbox mail " + userEmail + " to your acc.");
                 }
-                LOGGER.info("Earlier this user has connected an account. Found a document in DB. We will update in the same document of id "+
-                        checkIfUserConnectedConnectedBefore.getId());
-                Query query = new Query().addCriteria(Criteria.where("_id").is(checkIfUserConnectedConnectedBefore.getId()));
-                Update updateConnectedMail = new Update().addToSet("connectedMails",userEmail);
-                UpdateResult addedNewAcc = mongoTemplate.updateFirst(query,updateConnectedMail,ConnectedAccount.class);
-                return ResponseEntity.status(HttpStatus.FOUND).body(addedNewAcc.getUpsertedId().toString());
             }
-            ConnectedAccount connectedAccount = new ConnectedAccount();
-            connectedAccount.setConnectedMails(Arrays.asList(userEmail));
-            connectedAccount.setAccessToken(response.getAccessToken());
-            connectedAccount.setRefreshToken(response.getRefreshToken());
-            connectedAccount.setScopes(Arrays.asList(
+
+
+            ConnectedGmailAccount addNewAcc = new ConnectedGmailAccount();
+            addNewAcc.setConnectedMail(userEmail.trim());
+            addNewAcc.setAccessToken(response.getAccessToken());
+            addNewAcc.setRefreshToken(response.getRefreshToken());
+            addNewAcc.setScopes(Arrays.asList(
                     "https://www.googleapis.com/auth/gmail.send",
                     "https://www.googleapis.com/auth/gmail.readonly"));
-            connectedAccount.setTimestamp(new Date());
-            connectedAccount.setTokenExpiryTime(new Date(System.currentTimeMillis() + response.getExpiresInSeconds() * 1000));
-            connectedAccount.setUserId(userId);
-            connectedAccountRepository.save(connectedAccount);
+            addNewAcc.setTimestamp(new Date());
+            addNewAcc.setTokenExpiryTime(new Date(System.currentTimeMillis() + response.getExpiresInSeconds() * 1000));
+            UnifiedInboxAccounts unifiedInboxAccounts = new UnifiedInboxAccounts();
+            unifiedInboxAccounts.setConnectedEmailAccounts(Arrays.asList(addNewAcc));
+            unifiedInboxAccounts.setUserId(userId);
+            connectedUnifiedInboxAccounts.save(unifiedInboxAccounts);
+            LOGGER.info("Added the inbox acc "+ userEmail+" by creating a new document for the userID "+userId);
+
             json.addProperty("response", "Got credentials");
             json.addProperty("userMail", userEmail);
-            LOGGER.info("Step 8: Emails Processed");
             return new ResponseEntity<>(json.toString(), HttpStatus.OK);
-        } catch (Exception e) {
+        } catch (
+                Exception e) {
             e.printStackTrace();
-            LOGGER.error("Error occured while connecting your google account. The error is: "+e.getMessage());
+            LOGGER.error("Error occured while connecting your google account. The error is: " + e.getMessage());
             json.addProperty("error", e.getMessage());
             return new ResponseEntity<>(json.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 
     @RequestMapping(value = "/removeAcc", method = RequestMethod.DELETE)
-    public ResponseEntity<?> removeAccount(@RequestBody String userId){
+    public ResponseEntity<?> removeAccount(@RequestBody String userId) {
         return connectAccountService.removeAccount(userId);
     }
 
@@ -182,71 +201,4 @@ public class ConnectAccount {
 }
 
 
-//@RequestMapping(value = "/login/oauth2/code/google", method = RequestMethod.GET, params = "code")
-//public ResponseEntity<String> oauth2Callback(@RequestParam(value = "code") String code) {
-//    JsonObject json = new JsonObject();
-////        JsonArray arr = new JsonArray();
-//
-//    try {
-//        // Exchange the authorization code for an access token
-//        System.out.println("OAuth Callback: Received Code: " + code);
-//        TokenResponse response = flow.newTokenRequest(code).setRedirectUri(redirectUri).execute();
-//        System.out.println("Step 1: OAuth Token Retrieved: " + response.getAccessToken());
-//        Credential credential = flow.createAndStoreCredential(response, "userID");
-//        System.out.println("Step 2: Credential Created");
-//        System.out.println("OAuth Token Response: " + response.toPrettyString());
-//
-//        // Use the access token to interact with the Gmail API
-//        Gmail service = new Gmail.Builder(httpTransport, JSON_FACTORY, credential)
-//                .setApplicationName(APPLICATION_NAME)
-//                .build();
-//        System.out.println("Step 3: Gmail Service Initialized");
-//
-//        // Retrieve the user's email address
-//        String userEmail = service.users().getProfile("me").execute().getEmailAddress();
-//        System.out.println("Step 4: User Email Retrieved: " + userEmail);
-////            flow.createAndStoreCredential(response, userEmail); // Store credentials
-////            System.out.println("Step 5: Credential Stored");
-//
-//        ConnectedAccount connectedAccount = new ConnectedAccount();
-//        connectedAccount.setConnectedMails(Arrays.asList(userEmail));
-//        connectedAccount.setAccessToken(response.getAccessToken());
-//        connectedAccount.setRefreshToken(response.getRefreshToken());
-//        connectedAccount.setScopes(Arrays.asList(
-//                "https://www.googleapis.com/auth/gmail.send",
-//                "https://www.googleapis.com/auth/gmail.readonly"));
-//        connectedAccount.setTimestamp(new Date());
-//        connectedAccount.setTokenExpiryTime(new Date(System.currentTimeMillis() + response.getExpiresInSeconds() * 1000));
-//        connectedAccountRepository.save(connectedAccount);
-//
-//
-//        // Retrieve emails with the subject "Welcome to A2Cart"
-////            String userId = "me";
-////            //String query = "subject:'Welcome to A2Cart'";
-////            String query = "";
-////            ListMessagesResponse msgResponse = service.users().messages().list(userId).setQ(query).execute();
-////            System.out.println("Step 6: Email Query Executed");
-////            List<Message> messages = msgResponse.getMessages();
-//
-////            if (messages == null || messages.isEmpty()) {
-////                System.out.println("Step 7: No Emails Found");
-////                return new ResponseEntity<>("No messages found", HttpStatus.NO_CONTENT);
-////            }
-//
-//        // Retrieve & store email snippets
-////            for (Message msg : messages) {
-////                Message message = service.users().messages().get(userId, msg.getId()).execute();
-////                arr.add(message.getSnippet());
-////            }
-//        json.addProperty("response", "Got credentials");
-//        json.addProperty("userMail", userEmail);
-//        System.out.println("Step 8: Emails Processed");
-//
-//        return new ResponseEntity<>(json.toString(), HttpStatus.OK);
-//    } catch (Exception e) {
-//        e.printStackTrace();
-//        json.addProperty("error", e.getMessage());
-//        return new ResponseEntity<>(json.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
-//    }
-//}
 
