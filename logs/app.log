@@ -106,3 +106,279 @@
 25/03/02 21:31:56 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
 25/03/02 21:31:57 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
 25/03/02 21:31:57 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 21:28:25 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 21:28:25 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 21:28:48 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 21:28:48 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQHrkDOgZnLKyI6q2lF7m5uKlgv3gteosM_-n4nxHOF8sUMErQ7eJaBhm2p5OYC6dg
+25/03/03 21:28:48 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp4vFp63frOFvbtJjFTyheIp24j0yhX5Fyy_AiExfuGKGrlYf0QI4m4L0xM5v1ubQMskte3NJQPlydHLU084mFBY5PxlkL44IxXokTSnyNpR3MYhMP7iRvXnyLOqrMO8ahs6uuxOT0Ug_WksyyRc3WTGUsSIfO71op9WaCgYKAZMSARMSFQHGX2MigvxgjOhYT6i88UhmJpYZPQ0175
+25/03/03 21:28:48 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 21:28:48 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp4vFp63frOFvbtJjFTyheIp24j0yhX5Fyy_AiExfuGKGrlYf0QI4m4L0xM5v1ubQMskte3NJQPlydHLU084mFBY5PxlkL44IxXokTSnyNpR3MYhMP7iRvXnyLOqrMO8ahs6uuxOT0Ug_WksyyRc3WTGUsSIfO71op9WaCgYKAZMSARMSFQHGX2MigvxgjOhYT6i88UhmJpYZPQ0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gQhYbiS3snf7CgYIARAAGBASNwF-L9IrpMhRCKz95qyAPW5IKnArvEdNXr30FtngpXXwHhZPEafBw43EiEijBRFJmNveP8-vJ28",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 21:28:48 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 21:28:49 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 21:29:19 ERROR controller.ConnectAccount: Error occured while connecting your google account. The error is: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-3onwxms-shard-00-00.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=ac-3onwxms-shard-00-02.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}, {address=ac-3onwxms-shard-00-01.m321jgb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: Received fatal alert: internal_error}}]
+25/03/03 21:30:03 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 21:30:03 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 21:30:26 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 21:30:26 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQEzor-R-i0YCa4mihH-5bptgaxzt__67iGQYjiAh14DGhGagEM7XvoxX6pbuS_EsQ
+25/03/03 21:30:27 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp4ie7LRcNNWir8OAJQHE7iMJEzcQrsAhlr-KQbp08UVNK6uOePvr0TVIVWsIg6fkjqGVisbeY63i1FO0XbCgXgGBNrQ_wR0BvvCjpmu-gRRs6_bFXi6QnwYf1yxUl9B93RfV4bE7cU9Zw5V4FonAGygvYlLUbq_tLUpaCgYKASISARMSFQHGX2MiNjtTdCXcCTbosJJsxL0w9Q0175
+25/03/03 21:30:27 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 21:30:27 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp4ie7LRcNNWir8OAJQHE7iMJEzcQrsAhlr-KQbp08UVNK6uOePvr0TVIVWsIg6fkjqGVisbeY63i1FO0XbCgXgGBNrQ_wR0BvvCjpmu-gRRs6_bFXi6QnwYf1yxUl9B93RfV4bE7cU9Zw5V4FonAGygvYlLUbq_tLUpaCgYKASISARMSFQHGX2MiNjtTdCXcCTbosJJsxL0w9Q0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0g6uykr7yrtmxCgYIARAAGBASNwF-L9IrdrI8V94hSDOA-9Pjvx3bJLp2sRSFCyZ0Jkc_IvCLrKaMNVLiqqhhSNGONQE7-Nb7t6Q",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 21:30:27 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 21:30:27 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 21:30:28 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 21:31:52 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 21:31:52 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 21:32:02 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 21:32:02 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQEX1ogWVTFRjxMd4fJKLSQv4mysE4tdi_5gq4ZXvd-SN5BQbPjBOdfdiToS2HD8nw
+25/03/03 21:32:02 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp5fCbaU397xw9ZzZ10J54ta4xqSNNv6A-gzka6prrapFM56XT6cvnLoAWCvPkmH-JIgww7TO8BW2GpCE5vgY7KMpb05oWOCfbFJ6a_Sgewwc0SXmVFhSlgLuUe22rDK8GKAKnE0mGkG-BdAjtRrR_dU7oB1gQORk09eaCgYKAR0SARMSFQHGX2MiZ8kxvICb7itjXnFgFVSRzA0175
+25/03/03 21:32:02 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 21:32:02 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp5fCbaU397xw9ZzZ10J54ta4xqSNNv6A-gzka6prrapFM56XT6cvnLoAWCvPkmH-JIgww7TO8BW2GpCE5vgY7KMpb05oWOCfbFJ6a_Sgewwc0SXmVFhSlgLuUe22rDK8GKAKnE0mGkG-BdAjtRrR_dU7oB1gQORk09eaCgYKAR0SARMSFQHGX2MiZ8kxvICb7itjXnFgFVSRzA0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gv5xTCnFTcaQCgYIARAAGBASNwF-L9IrlCSdKzZScjGZONqmQCl6RSn5fz3Mb53KnHfzMvx1ZQVemb7POrgOp9od70uvunaWpS4",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 21:32:02 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 21:32:03 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 21:32:03 INFO controller.ConnectAccount: Step 8: Emails Processed
+25/03/03 23:30:06 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:30:06 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:30:17 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:30:17 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQGnf3C2rifCM9xRyD8QnegJ3dWRP2F0RudUqJvX_p5w1bA37yp5jtXteClNNgzVzg
+25/03/03 23:30:18 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp60WtLIdCbUKodZ_tJtwqYPZdKRRAGZBDOjFydIk0TM0fbiRxFUAkVJV7a-ZXtzDVEeRdils_RWNBpiO1wt5Ogd4iPWcfmpkEcFhJRWSrxXcQXeNHE7G9zuMBl8j2-TyYKE0KexTD9vGA_WZiaPtPCrW7Dz26ih4BzwaCgYKAQESARMSFQHGX2MiGus0Zpt0vPB1J0YksmIJOw0175
+25/03/03 23:30:18 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:30:18 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp60WtLIdCbUKodZ_tJtwqYPZdKRRAGZBDOjFydIk0TM0fbiRxFUAkVJV7a-ZXtzDVEeRdils_RWNBpiO1wt5Ogd4iPWcfmpkEcFhJRWSrxXcQXeNHE7G9zuMBl8j2-TyYKE0KexTD9vGA_WZiaPtPCrW7Dz26ih4BzwaCgYKAQESARMSFQHGX2MiGus0Zpt0vPB1J0YksmIJOw0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gIqrCgvpqQeQCgYIARAAGBASNwF-L9Ir0jWmVydhVNMhFeOldQq-p-tWI7hGI-lP8YrQxYleX2uLIA38rO4nToA7P913CTCMvMw",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:30:18 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:30:18 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:30:19 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 23:33:48 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:33:48 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:33:49 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:33:49 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:34:41 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:34:41 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQEuv_5eYUMwkEU3MORt3ZsigRmcotEoO6rSXiNNqCBKLKkzH0JJ9eR0fC13ukqVtw
+25/03/03 23:34:41 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp7p6RxTQoRKAUmbfsvsR01MpjES73rsrzDFmb_nZcntmkfp0FJ9tDapIB0pfXv-l4ZbTlpX7_70WKzjprVjzx9hBXh-V2-PispPYUbD5edF9mdnAr3mLpNet8Dgw-b5iUIv8dFHoakDVpnMS9ZRKOfjOSSDb8iha6LfaCgYKAXMSARMSFQHGX2MitMvXkX2n_KhYyPA8gz02xQ0175
+25/03/03 23:34:41 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:34:41 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp7p6RxTQoRKAUmbfsvsR01MpjES73rsrzDFmb_nZcntmkfp0FJ9tDapIB0pfXv-l4ZbTlpX7_70WKzjprVjzx9hBXh-V2-PispPYUbD5edF9mdnAr3mLpNet8Dgw-b5iUIv8dFHoakDVpnMS9ZRKOfjOSSDb8iha6LfaCgYKAXMSARMSFQHGX2MitMvXkX2n_KhYyPA8gz02xQ0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gbv8rc5lFbeSCgYIARAAGBASNwF-L9IrBC7t8Sg-Lb3z3Cw60097HcNWmcriDKwdt3I7rCc64k1uDsni6vIZuE5Qr9fUs4SQu2E",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:34:41 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:34:42 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:34:42 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 23:35:24 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:35:24 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:35:25 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:35:25 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:35:37 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:35:37 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQEqBFpV7Wp0r4pc_U_-rCXKwEOnsGDRrjt2MDGw0963PPs1eFe2OIQah6VN8xEhqg
+25/03/03 23:35:38 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp6pZnTdxyeAZ1VHZKLF5g90k2KhBZf2iGFmbwuEs4XQElt4Rm6xQvgVcP3QAg1ag13r6FTl0x3gSBkbUZpzKH67JXZ6CZxn-JTqGPsNSVp49BJCmziK8fnqn7GcAJYTNiwTjTwgCzL3KJMoLUEB1umtSXf7KHTk-GI0aCgYKAdwSARMSFQHGX2MikGMp9SbB9-u9tH7Won9zBw0175
+25/03/03 23:35:38 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:35:38 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp6pZnTdxyeAZ1VHZKLF5g90k2KhBZf2iGFmbwuEs4XQElt4Rm6xQvgVcP3QAg1ag13r6FTl0x3gSBkbUZpzKH67JXZ6CZxn-JTqGPsNSVp49BJCmziK8fnqn7GcAJYTNiwTjTwgCzL3KJMoLUEB1umtSXf7KHTk-GI0aCgYKAdwSARMSFQHGX2MikGMp9SbB9-u9tH7Won9zBw0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0g8kyR5m7QaKGCgYIARAAGBASNwF-L9IryFeXvu5euVMXyXN7r0FYXULfBBQFgec5vl_PQWOAw7VhgUg6nyBhhIya4NOobhwYeG0",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:35:38 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:35:38 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:35:38 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 23:41:10 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:41:10 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:41:11 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:41:11 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:43:54 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:43:54 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQFw8PWz5SPqvjTSKmcPCBUTsrzcGXuYLpTme9D9jgIQq5xfPEBzAN46I5jcEMstZg
+25/03/03 23:43:54 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp56P--4NLu4-ix0I9xqYYaPcSGpywp0E5dluhl8xm1pXCCY3Cw_ysCnmZvy-Q4IUFWAZqy_tc3JmJS0q1nwbqx0fdWr6D_w8sADx2lEnWCblht09aBhnmFXeXhtCBr-DVFnQPUpnXk0FhUpJJWhOh13DBcp7x4nimddaCgYKAcASARMSFQHGX2Mi6OfbUu2pO-mmEhzKXA9ROA0175
+25/03/03 23:43:54 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:43:54 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp56P--4NLu4-ix0I9xqYYaPcSGpywp0E5dluhl8xm1pXCCY3Cw_ysCnmZvy-Q4IUFWAZqy_tc3JmJS0q1nwbqx0fdWr6D_w8sADx2lEnWCblht09aBhnmFXeXhtCBr-DVFnQPUpnXk0FhUpJJWhOh13DBcp7x4nimddaCgYKAcASARMSFQHGX2Mi6OfbUu2pO-mmEhzKXA9ROA0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0g2_BL_uWKLpvCgYIARAAGBASNwF-L9Ir-7cgTApWkjrcNGfXJFpAhEAe8dFWZKb5h_aBBiKK2rN3Sex-kxpL6OOPfMPaUTT13B4",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:43:54 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:43:55 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:43:56 ERROR controller.ConnectAccount: Error occured while connecting your google account. The error is: Cannot invoke "Object.toString()" because "isMailConnected" is null
+25/03/03 23:47:07 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:47:07 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:47:08 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:47:08 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:50:13 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:50:13 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQFl34YeZPSxIFmd9_yTZQbWNmc-QvG2ZNhwHDozUCPDMnfZfB7R9nk27JPNw34H0g
+25/03/03 23:50:13 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp59PkCFDewE2QkVQDjKTFxgzMmIeSsAwTBj8_aptqPQmzXNnyAGCtPlVlDfJE1tXlIH4pJ831yeWOTyrpAmiXrfQBuIPYnhSU2AQvbBEgyCMNl3Yom38RMedF9Qwjgap7rz0qe6CIuhX28gKrcao54mTov_GO2HzalbaCgYKAVISARMSFQHGX2MiydwfGhSCnQyAjBqBFvRdAQ0175
+25/03/03 23:50:13 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:50:13 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp59PkCFDewE2QkVQDjKTFxgzMmIeSsAwTBj8_aptqPQmzXNnyAGCtPlVlDfJE1tXlIH4pJ831yeWOTyrpAmiXrfQBuIPYnhSU2AQvbBEgyCMNl3Yom38RMedF9Qwjgap7rz0qe6CIuhX28gKrcao54mTov_GO2HzalbaCgYKAVISARMSFQHGX2MiydwfGhSCnQyAjBqBFvRdAQ0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gvPna-OSbSi7CgYIARAAGBASNwF-L9Irpzpfgr2PYaDjqO-O4RYbVGfZaokVEcz4eCKrmV6X82IV-9LJmuSzQ4jmu8Zo_6AMtCY",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:50:13 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:50:14 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:50:15 ERROR controller.ConnectAccount: Error occured while connecting your google account. The error is: Cannot invoke "Object.toString()" because "isMailConnected" is null
+25/03/03 23:51:56 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:51:57 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:51:57 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:51:57 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:52:34 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:52:34 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQHeXiziPMbu255iiaqdyxoQRAjx_UTAwvh2FrJ_kLiKAe6G-bDVQFoWyhXzFgAsfQ
+25/03/03 23:52:34 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp6kNLxKc3gipiGh1xaH0BFqCP7pasrfUZaaHIQmaE-k5f3fGZ5B9d1B7AO_o0QOUavRFzl1DQnpapiS4hna0TyMHNQHK3XKQbjKqRrJpuTkD2eVTmQVQEHaymKwb7gPsAz0-_DzOEs0RGQzxpOfWo8qBdrWxXYrvW_maCgYKAS0SARMSFQHGX2Mi93klHiAaVEGFAjDx1amPbw0175
+25/03/03 23:52:34 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:52:34 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp6kNLxKc3gipiGh1xaH0BFqCP7pasrfUZaaHIQmaE-k5f3fGZ5B9d1B7AO_o0QOUavRFzl1DQnpapiS4hna0TyMHNQHK3XKQbjKqRrJpuTkD2eVTmQVQEHaymKwb7gPsAz0-_DzOEs0RGQzxpOfWo8qBdrWxXYrvW_maCgYKAS0SARMSFQHGX2Mi93klHiAaVEGFAjDx1amPbw0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gPBAKKmgy7eYCgYIARAAGBASNwF-L9Irva16YkLec6mqmunnOXJGE36pqdBzK-2q8dWmwgU31IMWOGVUCvAtqm_4TQLMozCoU8Q",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:52:34 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:52:35 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:52:36 INFO controller.ConnectAccount: The account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/03 23:52:47 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:52:47 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:52:48 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/03 23:52:48 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/03 23:52:57 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/03 23:52:57 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQFdNC7SeU804Km4ZHTvAaGd_ADVCk4OTFZiJklscPN8jsNA42s7IgxBdjIIAd6QVw
+25/03/03 23:52:57 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp4_rI6WXWsfrLrjKRdABL1wJNMON7i5Z_R-hwqlPWqu8pLIGAHBjByCR2CB9iVzpAPge0ZkXwsSOKjQHwJaMPXqvWRKyxgEoxG6yoOu8Aj5a9sK8Uoti8R7S96SVtNReadEXs5KJTuUSPDtI3PET6rK71jJ97luFYCNaCgYKAaoSARMSFQHGX2Mii2ztY5e_dwgwOASCwdtHWw0175
+25/03/03 23:52:57 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/03 23:52:57 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp4_rI6WXWsfrLrjKRdABL1wJNMON7i5Z_R-hwqlPWqu8pLIGAHBjByCR2CB9iVzpAPge0ZkXwsSOKjQHwJaMPXqvWRKyxgEoxG6yoOu8Aj5a9sK8Uoti8R7S96SVtNReadEXs5KJTuUSPDtI3PET6rK71jJ97luFYCNaCgYKAaoSARMSFQHGX2Mii2ztY5e_dwgwOASCwdtHWw0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gmbi_0YKHa_cCgYIARAAGBASNwF-L9Ir-U1F-3_s1XlbPQ9OnjwbDzwJt7VeH1CU-Hqgos5iFElRU2pDPdxwGJOmcLdBh56FEj0",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/03 23:52:57 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/03 23:52:58 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/03 23:52:58 ERROR controller.ConnectAccount: Error occured while connecting your google account. The error is: Query { "$java" : Query: { "userId" : "67b8b3fac1e3bf2a47a4b63a"}, Fields: {}, Sort: {} } returned non unique result
+25/03/04 00:41:23 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 00:41:23 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 00:41:24 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 00:41:24 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 00:41:40 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/04 00:41:40 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQFLBecnIMRCTCbr1RfiMCsMPwPYBfS90LnatTAMYNgF6KOXV-T_Pzn_I3VQTLotcA
+25/03/04 00:41:40 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp7fYgklB-E3bZflnSSyuZ3z_CEt-_qgq-lw8iZnlf6A_xZtp3NUNu71-n4jNXxUwuxMSXEwvNqNcNejC2KV9txJ8K0vNsBSKLDWQlUdfTdfSrYHk8B1U1Wn2J5Rl4je1_Q328CelCXxp-IUZ0-n2hzZ6pHgq_fLRJqXaCgYKAYQSARMSFQHGX2Mi7BdJrOPFgs_-nRnPoYbuZg0175
+25/03/04 00:41:40 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/04 00:41:40 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp7fYgklB-E3bZflnSSyuZ3z_CEt-_qgq-lw8iZnlf6A_xZtp3NUNu71-n4jNXxUwuxMSXEwvNqNcNejC2KV9txJ8K0vNsBSKLDWQlUdfTdfSrYHk8B1U1Wn2J5Rl4je1_Q328CelCXxp-IUZ0-n2hzZ6pHgq_fLRJqXaCgYKAYQSARMSFQHGX2Mi7BdJrOPFgs_-nRnPoYbuZg0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0g7DMI909XrTjCgYIARAAGBASNwF-L9Ir557FZJaSiNMPBsoeVM30WVgfxyKZ7sbiHuBcTg2AppWIxzcp7FZagQ2RyMbv3jUDBE8",
+  "scope" : "https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.readonly",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/04 00:41:40 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/04 00:41:41 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/04 00:41:42 INFO controller.ConnectAccount: Added the inbox acc hrithik3285@gmail.com by creating a new document for the userID 67b8b3fac1e3bf2a47a4b63a
+25/03/04 00:41:42 INFO controller.ConnectAccount: Step 8: Emails Processed
+25/03/04 00:41:56 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 00:41:56 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 00:41:57 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 00:41:57 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 00:42:05 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/04 00:42:05 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQH4Dq5NMvmXgbi14x43V-gv0t7WmYsgMXtyRDtqM2WTLQoXfhKmKg_Mp1WJhqWYfQ
+25/03/04 00:42:06 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp75KV1w9Zg4neYjMR0uGOp6cFY3QA0cSXZSGvXaP7-ufFs_QD9rQXPcbJvwiIvpnHbzIrZw1-Sf_dMmxpC7c5SKO_VvPHKwCG9bfkf9fmYEZ8N9NASVC45yvaxnxVRTyyFbq_I6NCtKuLTZm9AbPWw1lS9nVODByZ08aCgYKAQcSARMSFQHGX2MiJSVIhdoWJhTq1Rbabe2YBg0175
+25/03/04 00:42:06 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/04 00:42:06 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp75KV1w9Zg4neYjMR0uGOp6cFY3QA0cSXZSGvXaP7-ufFs_QD9rQXPcbJvwiIvpnHbzIrZw1-Sf_dMmxpC7c5SKO_VvPHKwCG9bfkf9fmYEZ8N9NASVC45yvaxnxVRTyyFbq_I6NCtKuLTZm9AbPWw1lS9nVODByZ08aCgYKAQcSARMSFQHGX2MiJSVIhdoWJhTq1Rbabe2YBg0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0g4IwNW0ZT7c3CgYIARAAGBASNwF-L9Ir93w7sa0rctNxJq8kIsBvxYdYf4sK_hIns3mhhQdK7Dk7z3vYYzpy5c_PB2bC2MjKwFE",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/04 00:42:06 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/04 00:42:06 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/04 00:42:06 INFO controller.ConnectAccount: The Inbox account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/04 01:22:42 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:22:42 INFO service.SendEmailService: Credentials not found for user: null
+25/03/04 01:23:39 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:23:39 INFO service.SendEmailService: Credentials not found for user: null
+25/03/04 01:25:41 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:25:42 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:25:42 INFO service.SendEmailService: Your connected acc from db is hrithik3285@gmail.com
+25/03/04 01:25:43 INFO service.SendEmailService: Email sent successfully to memories02162001@gmail.com from hrithik3285@gmail.com
+25/03/04 01:29:46 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:29:46 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:29:46 INFO service.SendEmailService: Your connected acc from db is hrithik3285@gmail.com
+25/03/04 01:29:47 INFO service.SendEmailService: Email sent successfully to memories02162001@gmail.com from hrithik3285@gmail.com
+25/03/04 01:46:59 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 01:46:59 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 01:47:00 INFO controller.ConnectAccount: Google OAuth initiated...
+25/03/04 01:47:00 INFO controller.ConnectAccount: Authorization URL: https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=84613388155-un48eac3hk4uu62pdivvsk4q0om0vhdv.apps.googleusercontent.com&redirect_uri=http://localhost:8000/login/oauth2/code/google&response_type=code&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.readonly&state=67b8b3fac1e3bf2a47a4b63a&prompt=consent
+25/03/04 01:47:07 INFO controller.ConnectAccount: OAuth entered with the userId:67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:47:07 INFO controller.ConnectAccount: OAuth Callback: Received Code: 4/0AQSTgQEG2rm9pYPnTua3ZYcrsoAAdHTW7p93vBXRaw12g5VXpI9FpYYlIBsOQ0c62j4QTg
+25/03/04 01:47:08 INFO controller.ConnectAccount: Step 1: OAuth Token Retrieved: ya29.a0AeXRPp4DD5lGo8Di1SdjyGDgRkYgiSax9j9RGcZ5j0_Bp-Ves_iD2DQdl2rj9cQn4fB07h78sf1HCdyIrkNLoe4SFEXu_shQCMM6a54mTaX6o3fPsZflk-6ZIqh5Ej5lhUkxRYBlZuODWTP897Gy1x5-5XTdBgUGPVArpvHpaCgYKAfcSARMSFQHGX2MiHyhkTD8fNjGqYcHEaoOv-A0175
+25/03/04 01:47:08 INFO controller.ConnectAccount: Step 2: Credential Created
+25/03/04 01:47:08 INFO controller.ConnectAccount: OAuth Token Response: {
+  "access_token" : "ya29.a0AeXRPp4DD5lGo8Di1SdjyGDgRkYgiSax9j9RGcZ5j0_Bp-Ves_iD2DQdl2rj9cQn4fB07h78sf1HCdyIrkNLoe4SFEXu_shQCMM6a54mTaX6o3fPsZflk-6ZIqh5Ej5lhUkxRYBlZuODWTP897Gy1x5-5XTdBgUGPVArpvHpaCgYKAfcSARMSFQHGX2MiHyhkTD8fNjGqYcHEaoOv-A0175",
+  "expires_in" : 3599,
+  "refresh_token" : "1//0gET-cyYKDtHnCgYIARAAGBASNwF-L9IrgxW-5m4ytyK3hxh6j7ftrg57GPg5oFHpeRcS1xEkVNWTTDFYTbJ-0NHw8PLrJ53tz70",
+  "scope" : "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.send",
+  "token_type" : "Bearer",
+  "refresh_token_expires_in" : 604799
+}
+25/03/04 01:47:08 INFO controller.ConnectAccount: Step 3: Gmail Service Initialized
+25/03/04 01:47:08 INFO controller.ConnectAccount: Step 4: User Email Retrieved: hrithik3285@gmail.com
+25/03/04 01:47:09 INFO controller.ConnectAccount: The Inbox account you are trying to connect already exists. Please remove the account and reconnect. hrithik3285@gmail.com
+25/03/04 01:47:26 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:47:27 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:47:27 INFO service.SendEmailService: Refreshing access token for 67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:47:27 INFO service.SendEmailService: Initiated refersh token process...67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:47:27 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:47:27 INFO service.SendEmailService: Refreshed token...
+25/03/04 01:47:27 INFO service.SendEmailService: Updated the access token for the inbox acc hrithik3285@gmail.com
+25/03/04 01:47:27 INFO service.SendEmailService: Your connected acc from db is hrithik3285@gmail.com
+25/03/04 01:48:06 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:48:06 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:48:06 INFO service.SendEmailService: Refreshing access token for 67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:48:06 INFO service.SendEmailService: Initiated refersh token process...67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:48:06 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:48:07 INFO service.SendEmailService: Refreshed token...
+25/03/04 01:48:07 INFO service.SendEmailService: Updated the access token for the inbox acc hrithik3285@gmail.com
+25/03/04 01:48:07 INFO service.SendEmailService: Your connected acc from db is hrithik3285@gmail.com
+25/03/04 01:48:45 INFO service.SendEmailService: Initiated the process of sending mail for hrithik3285@gmail.com to memories02162001@gmail.com
+25/03/04 01:48:45 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:48:45 INFO service.SendEmailService: Refreshing access token for 67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:48:45 INFO service.SendEmailService: Initiated refersh token process...67b8b3fac1e3bf2a47a4b63a
+25/03/04 01:48:45 INFO service.SendEmailService: The Inbox account through which you are trying to send mail is connected. hrithik3285@gmail.com
+25/03/04 01:48:46 INFO service.SendEmailService: Refreshed token...
+25/03/04 01:48:46 INFO service.SendEmailService: Updated the access token for the inbox acc hrithik3285@gmail.com
+25/03/04 01:48:46 INFO service.SendEmailService: Your connected acc from db is hrithik3285@gmail.com

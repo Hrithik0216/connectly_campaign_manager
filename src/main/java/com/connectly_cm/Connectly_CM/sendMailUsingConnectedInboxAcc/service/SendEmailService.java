@@ -1,5 +1,8 @@
 package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service;
 
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.ConnectedGmailAccount;
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailResponse;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.ConnectedAccount;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
@@ -7,6 +10,7 @@ import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.Create
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.CreateMessage;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
+import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.gmail.Gmail;
@@ -14,6 +18,10 @@ import com.google.api.services.gmail.model.Message;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -21,10 +29,7 @@ import org.springframework.stereotype.Service;
 import javax.mail.internet.MimeMessage;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class SendEmailService {
@@ -40,83 +45,144 @@ public class SendEmailService {
     @Value("${google.client-secret}")
     private String clientSecret;
 
+    @Autowired
+    ConnectedUnifiedInboxAccounts connectedUnifiedInboxAccounts;
 
-    public void refreshAccessToken(String userId) throws IOException {
-        // Retrieve the existing document from MongoDB
-        ConnectedAccount connectedAccount = connectedAccountRepository.findByUserId(userId);
-        if (connectedAccount == null) {
+    @Autowired
+    MongoTemplate mongoTemplate;
+
+
+    public void refreshAccessToken(String userId, String fromAddress) throws IOException {
+        LOGGER.info("Initiating token refresh for user: {} and email: {}"+ userId+" "+ fromAddress);
+        UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
+        if (unifiedInboxAccount == null) {
+            LOGGER.warn("User not found in database: {}"+ userId);
             throw new RuntimeException("Credentials not found for user: " + userId);
         }
 
-        // Refresh the token
-        GoogleCredential credential = new GoogleCredential.Builder()
-                .setTransport(new NetHttpTransport())
-                .setJsonFactory(GsonFactory.getDefaultInstance())
-                .setClientSecrets(clientId, clientSecret)
-                .build()
-                .setAccessToken(connectedAccount.getAccessToken())
-                .setRefreshToken(connectedAccount.getRefreshToken());
+        List<ConnectedGmailAccount> connectedMails = unifiedInboxAccount.getConnectedEmailAccounts();
+        Optional<ConnectedGmailAccount> inboxAcc = connectedMails.stream()
+                .filter(acc -> acc.getConnectedMail().equals(fromAddress))
+                .findFirst();
 
-        try {
-            credential.refreshToken();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        if (inboxAcc.isPresent()) {
+            ConnectedGmailAccount account = inboxAcc.get();
+            LOGGER.info("Found email account: {}"+ fromAddress);
+
+            GoogleCredential credential = new GoogleCredential.Builder()
+                    .setTransport(new NetHttpTransport())
+                    .setJsonFactory(GsonFactory.getDefaultInstance())
+                    .setClientSecrets(clientId, clientSecret)
+                    .build()
+                    .setAccessToken(account.getAccessToken())
+                    .setRefreshToken(account.getRefreshToken());
+
+            try {
+                if (credential.refreshToken()) {
+                    LOGGER.info("Token refreshed successfully for: {}"+ fromAddress);
+
+                    Query query = new Query().addCriteria(Criteria.where("userId").is(userId)
+                            .and("connectedEmailAccounts.connectedMail").is(fromAddress));
+
+                    Update update = new Update()
+                            .set("connectedEmailAccounts.$.accessToken", credential.getAccessToken())
+                            .set("connectedEmailAccounts.$.tokenExpiryTime",
+                                    new Date(System.currentTimeMillis() + credential.getExpiresInSeconds() * 1000));
+
+                    mongoTemplate.updateFirst(query, update, UnifiedInboxAccounts.class);
+                    LOGGER.info("Updated new access token in database for: {}"+ fromAddress);
+                } else {
+                    LOGGER.error("Failed to refresh access token for {}"+ fromAddress);
+                }
+            } catch (IOException e) {
+                LOGGER.error("Error refreshing token: {}"+ e.getMessage());
+                throw new RuntimeException(e);
+            }
+        } else {
+            LOGGER.warn("Email not found in connected accounts: {}"+ fromAddress);
+            throw new RuntimeException("Email not connected: " + fromAddress);
         }
-
-        // Update the fields in the existing document
-        connectedAccount.setAccessToken(credential.getAccessToken());
-        connectedAccount.setTokenExpiryTime(new Date(System.currentTimeMillis() + credential.getExpiresInSeconds() * 1000));
-
-        // Save the updated document back to MongoDB
-        connectedAccountRepository.save(connectedAccount);
     }
 
-    public ResponseEntity<?> sendEmail(String userId, String toEmailAddress, String subject, String bodyText) {
+
+    public ResponseEntity<?> sendEmail(String userId, String fromAddress, String toEmailAddress, String subject, String bodyText) {
         try {
+            LOGGER.info("Initiating email sending process from {} to {}"+ fromAddress+ toEmailAddress);
+            UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
 
-            LOGGER.info("Initiated the process of sending mail for " + userId + " to " + toEmailAddress);
-            // Retrieve credentials from MongoDB
-            ConnectedAccount connectedAccount = connectedAccountRepository.findByUserId(userId);
-            if (connectedAccount == null) {
-                LOGGER.info("Credentials not found for user: " + userId);
-                throw new RuntimeException("Credentials not found for user: " + userId);
+            if (unifiedInboxAccount == null) {
+                LOGGER.warn("User credentials not found for: {}"+ userId);
+                return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credentials not found.");
             }
 
-            // Check if the token is expired
-            if (connectedAccount.getTokenExpiryTime().before(new Date())) {
-                // Refresh the token
-                LOGGER.info("Refreshing access token for " + userId);
-                refreshAccessToken(userId);
+            List<ConnectedGmailAccount> connectedMails = unifiedInboxAccount.getConnectedEmailAccounts();
+            Optional<ConnectedGmailAccount> inboxAcc = connectedMails.stream()
+                    .filter(acc -> acc.getConnectedMail().equals(fromAddress))
+                    .findFirst();
 
-                // Re-fetch the updated credentials
-                connectedAccount = connectedAccountRepository.findByUserId(userId);
+            if (inboxAcc.isPresent()) {
+                ConnectedGmailAccount account = inboxAcc.get();
+
+                //Check token expiry
+                if (account.getTokenExpiryTime().before(new Date())) {
+                    LOGGER.info("Access token expired. Refreshing...");
+                    refreshAccessToken(userId, fromAddress);
+
+                    // Re-fetch updated credentials
+                    UnifiedInboxAccounts updatedAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
+                    inboxAcc = updatedAccount.getConnectedEmailAccounts().stream()
+                            .filter(acc -> acc.getConnectedMail().equals(fromAddress))
+                            .findFirst();
+
+                    if (!inboxAcc.isPresent() || inboxAcc.get().getAccessToken() == null) {
+                        LOGGER.error("Token refresh failed, access token still missing.");
+                        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Token refresh failed.");
+                    }
+                }
+
+                String accessToken = inboxAcc.get().getAccessToken();
+                Credential credential = new GoogleCredential().setAccessToken(accessToken);
+                Gmail service = new Gmail.Builder(new NetHttpTransport(), GsonFactory.getDefaultInstance(), credential)
+                        .setApplicationName("Connectly")
+                        .build();
+
+                //Validate token email
+                String tokenUserEmail = service.users().getProfile("me").execute().getEmailAddress();
+                if (!tokenUserEmail.equals(fromAddress)) {
+                    LOGGER.error("Access token does not match sender email!");
+                    return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                            .body("Token email mismatch. Expected: " + fromAddress + ", Found: " + tokenUserEmail);
+                }
+
+                //Check scopes
+                if (!account.getScopes().contains("https://www.googleapis.com/auth/gmail.send")) {
+                    LOGGER.error("Missing required scope: gmail.send");
+                    return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Insufficient permissions to send email.");
+                }
+
+                //Send Email
+                MimeMessage email = CreateEmail.createEmail(toEmailAddress, fromAddress, subject, bodyText);
+                Message message = CreateMessage.createMessageWithEmail(email);
+                service.users().messages().send(tokenUserEmail, message).execute();
+
+                LOGGER.info("Email sent successfully from {} to {}"+ fromAddress+ toEmailAddress);
+
+                Map<String, Object> responseMap = new HashMap<>();
+                responseMap.put("mailResult", Collections.singletonMap("emailResponse", new EmailResponse(fromAddress, toEmailAddress)));
+                return ResponseEntity.status(HttpStatus.OK).body(responseMap);
             }
 
-            // Use the access token to authenticate the Gmail API
-            Credential credential = new GoogleCredential().setAccessToken(connectedAccount.getAccessToken());
-            Gmail service = new Gmail.Builder(new NetHttpTransport(), GsonFactory.getDefaultInstance(), credential)
-                    .setApplicationName("Connectly")
-                    .build();
-
-            // Use the stored email address as the "from" address
-
-            String fromEmailAddress = connectedAccount.getConnectedMails().get(0);
-            LOGGER.info("Your connected acc from db is " + fromEmailAddress);
-
-            // Create and send the email
-            MimeMessage email = CreateEmail.createEmail(toEmailAddress, fromEmailAddress, subject, bodyText);
-            Message message = CreateMessage.createMessageWithEmail(email);
-            service.users().messages().send("me", message).execute();
-
-            LOGGER.info("Email sent successfully to " + toEmailAddress + " from " + fromEmailAddress);
-            EmailResponse emailResponse = new EmailResponse(fromEmailAddress,toEmailAddress);
-
-            Map<String, Object> responseMap= new HashMap<>();
-            responseMap.put("mailResult", Collections.singletonMap("emailResponse",emailResponse));
-            return ResponseEntity.status(HttpStatus.OK).body(responseMap);
+            LOGGER.warn("Account not found for email: {}"+ fromAddress);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Account not found.");
+        } catch (GoogleJsonResponseException e) {
+            LOGGER.error("Google API error: {} - {}"+ e.getStatusCode()+ e.getDetails());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Google API error: " + e.getDetails().getMessage());
         } catch (Exception e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occured while sending mail to "+toEmailAddress+". The error is"+e.getMessage());
+            LOGGER.error("Unexpected error: {}"+ e.getMessage(), e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error sending email: " + e.getMessage());
         }
     }
+
 }
