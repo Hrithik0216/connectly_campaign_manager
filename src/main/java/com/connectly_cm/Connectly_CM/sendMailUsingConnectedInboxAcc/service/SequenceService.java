@@ -102,6 +102,7 @@ public class SequenceService {
 
     public ResponseEntity<?> sendEmailWithThreadId(String userId, String fromAddress, String toEmailAddress, String subject, String bodyText, String threadId) {
         try {
+            LOGGER.info("Sending mail with samethread service is invoked");
             LOGGER.info("Initiating email sending process from {} to {}"+ fromAddress+ toEmailAddress);
             UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
 
@@ -186,6 +187,7 @@ public class SequenceService {
 
     public ResponseEntity<?> sendEmail(String userId, String fromAddress, String toEmailAddress, String subject, String bodyText) {
         try {
+            LOGGER.info("Sending mail with a new thread");
             LOGGER.info("Initiating email sending process from {} to {}"+ fromAddress+ toEmailAddress);
             UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
 
