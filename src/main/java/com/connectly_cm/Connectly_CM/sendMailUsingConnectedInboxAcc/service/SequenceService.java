@@ -14,6 +14,7 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.gson.GsonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.model.Message;
+import org.apache.coyote.Response;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -49,10 +50,11 @@ public class SequenceService {
     private MongoTemplate mongoTemplate;
 
     public void refreshAccessToken(String userId, String fromAddress) throws IOException {
-        LOGGER.info("Initiating token refresh for user: {} and email: {}" + userId + " " + fromAddress);
+        LOGGER.info("Initiating token refresh for user: " + userId + " and email: " + fromAddress);
         UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
+
         if (unifiedInboxAccount == null) {
-            LOGGER.warn("User not found in database: {}" + userId);
+            LOGGER.warn("User not found in database: " + userId);
             throw new RuntimeException("Credentials not found for user: " + userId);
         }
 
@@ -63,7 +65,7 @@ public class SequenceService {
 
         if (inboxAcc.isPresent()) {
             ConnectedGmailAccount account = inboxAcc.get();
-            LOGGER.info("Found email account: {}" + fromAddress);
+            LOGGER.info("Found email account: " + fromAddress);
 
             GoogleCredential credential = new GoogleCredential.Builder()
                     .setTransport(new NetHttpTransport())
@@ -75,7 +77,7 @@ public class SequenceService {
 
             try {
                 if (credential.refreshToken()) {
-                    LOGGER.info("Token refreshed successfully for: {}" + fromAddress);
+                    LOGGER.info("Token refreshed successfully for: " + fromAddress);
 
                     Query query = new Query().addCriteria(Criteria.where("userId").is(userId)
                             .and("connectedEmailAccounts.connectedMail").is(fromAddress));
@@ -86,28 +88,41 @@ public class SequenceService {
                                     new Date(System.currentTimeMillis() + credential.getExpiresInSeconds() * 1000));
 
                     mongoTemplate.updateFirst(query, update, UnifiedInboxAccounts.class);
-                    LOGGER.info("Updated new access token in database for: {}" + fromAddress);
+                    LOGGER.info("Updated new access token in database for: " + fromAddress);
                 } else {
-                    LOGGER.error("Failed to refresh access token for {}" + fromAddress);
+                    LOGGER.error("Failed to refresh access token for " + fromAddress);
                 }
             } catch (IOException e) {
                 LOGGER.error("Error refreshing token: {}" + e.getMessage());
-                throw new RuntimeException(e);
+                invokeReauthorization(userId, fromAddress);
+//                throw new RuntimeException(e);
             }
         } else {
-            LOGGER.warn("Email not found in connected accounts: {}" + fromAddress);
+            LOGGER.warn("Email not found in connected accounts: " + fromAddress);
             throw new RuntimeException("Email not connected: " + fromAddress);
         }
+    }
+
+    public ResponseEntity<?> invokeReauthorization(String userId, String fromAddress) {
+        LOGGER.info("Removing the connected account(" + fromAddress + "). The refresh token has expired for the userID " + userId);
+        Query query = new Query(Criteria.where("userId").is(userId));
+        mongoTemplate.remove(query, UnifiedInboxAccounts.class);
+        LOGGER.info("Deleted the connected account doument");
+        /*
+         * Deleting the entire account to main atomicity*/
+        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY)
+                .body(fromAddress + "Removed your connected inbox account as the refresh token was expired." +
+                        " Please re-connect your account");
     }
 
     public ResponseEntity<?> sendEmailWithThreadId(String userId, String fromAddress, String toEmailAddress, String subject, String bodyText, String threadId) {
         try {
             LOGGER.info("Sending mail with samethread service is invoked");
-            LOGGER.info("Initiating email sending process from {} to {}"+ fromAddress+ toEmailAddress);
+            LOGGER.info("Initiating email sending process from " + fromAddress + " to " + toEmailAddress);
             UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
 
             if (unifiedInboxAccount == null) {
-                LOGGER.warn("User credentials not found for: {}"+ userId);
+                LOGGER.warn("User credentials not found for: " + userId);
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credentials not found.");
             }
 
@@ -160,10 +175,10 @@ public class SequenceService {
                 MimeMessage email = CreateEmail.createEmail(toEmailAddress, fromAddress, subject, bodyText);
                 Message message = CreateMessage.createMessageWithEmail(email);
                 message.setThreadId(threadId);
-               service.users().messages().send(tokenUserEmail, message).execute();
+                service.users().messages().send(tokenUserEmail, message).execute();
 
 
-                LOGGER.info("Email sent successfully from {} to {}"+ fromAddress+ toEmailAddress);
+                LOGGER.info("Email sent successfully from {} to {}" + fromAddress + toEmailAddress);
 //                LOGGER.info("message: "+message);
 
                 Map<String, Object> responseMap = new HashMap<>();
@@ -171,14 +186,14 @@ public class SequenceService {
                 return ResponseEntity.status(HttpStatus.OK).body(responseMap);
             }
 
-            LOGGER.warn("Account not found for email: {}"+ fromAddress);
+            LOGGER.warn("Account not found for email: " + fromAddress);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Account not found.");
         } catch (GoogleJsonResponseException e) {
-            LOGGER.error("Google API error: {} - {}"+ e.getStatusCode()+ e.getDetails());
+            LOGGER.error("Google API error: " + e.getStatusCode() + e.getDetails());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Google API error: " + e.getDetails().getMessage());
         } catch (Exception e) {
-            LOGGER.error("Unexpected error: {}"+ e.getMessage(), e);
+            LOGGER.error("Unexpected error: {}" + e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error sending email: " + e.getMessage());
         }
@@ -188,11 +203,11 @@ public class SequenceService {
     public ResponseEntity<?> sendEmail(String userId, String fromAddress, String toEmailAddress, String subject, String bodyText) {
         try {
             LOGGER.info("Sending mail with a new thread");
-            LOGGER.info("Initiating email sending process from {} to {}"+ fromAddress+ toEmailAddress);
+            LOGGER.info("Initiating email sending process from {} to {}" + fromAddress + toEmailAddress);
             UnifiedInboxAccounts unifiedInboxAccount = connectedUnifiedInboxAccounts.findByUserId(userId);
 
             if (unifiedInboxAccount == null) {
-                LOGGER.warn("User credentials not found for: {}"+ userId);
+                LOGGER.warn("User credentials not found for: {}" + userId);
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credentials not found.");
             }
 
@@ -246,13 +261,13 @@ public class SequenceService {
                 Message message = CreateMessage.createMessageWithEmail(email);
 //                service.users().messages().send(tokenUserEmail, message).execute();
                 //New
-                Message sentMessage =   service.users().messages().send(tokenUserEmail, message).execute();
-                LOGGER.info("sentMessae: "+sentMessage);
+                Message sentMessage = service.users().messages().send(tokenUserEmail, message).execute();
+                LOGGER.info("sentMessae: " + sentMessage);
                 LOGGER.info("Message sent! ID: " + sentMessage.getId() + ", Thread ID: " + sentMessage.getThreadId());
                 String threadId = sentMessage.getThreadId();
                 //
 
-                LOGGER.info("Email sent successfully from {} to {}"+ fromAddress+ toEmailAddress);
+                LOGGER.info("Email sent successfully from {} to {}" + fromAddress + toEmailAddress);
 //                LOGGER.info("message: "+message);
 
                 Map<String, Object> responseMap = new HashMap<>();
@@ -260,14 +275,14 @@ public class SequenceService {
                 return ResponseEntity.status(HttpStatus.OK).body(responseMap);
             }
 
-            LOGGER.warn("Account not found for email: {}"+ fromAddress);
+            LOGGER.warn("Account not found for email: {}" + fromAddress);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Account not found.");
         } catch (GoogleJsonResponseException e) {
-            LOGGER.error("Google API error: {} - {}"+ e.getStatusCode()+ e.getDetails());
+            LOGGER.error("Google API error: {} - {}" + e.getStatusCode() + e.getDetails());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Google API error: " + e.getDetails().getMessage());
         } catch (Exception e) {
-            LOGGER.error("Unexpected error: {}"+ e.getMessage(), e);
+            LOGGER.error("Unexpected error: {}" + e.getMessage(), e);
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Error sending email: " + e.getMessage());
         }
