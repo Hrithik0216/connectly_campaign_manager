@@ -1,6 +1,7 @@
 package com.connectly_cm.Connectly_CM.buyContacts.service;
 
 import com.connectly_cm.Connectly_CM.buyContacts.model.Contacts;
+import com.connectly_cm.Connectly_CM.buyContacts.model.PagedContactResponse;
 import com.connectly_cm.Connectly_CM.buyContacts.repository.PurchaseContactsRepository;
 import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,15 @@ public class PurchaseContactsService {
     @Autowired
     PurchaseContactsRepository purchaseContactsRepository;
 
-    public ResponseEntity<List<Contacts>> getContacts(int pageNum, int pageSize) {
+    public ResponseEntity<PagedContactResponse> getContacts(int pageNum, int pageSize) {
         Pageable pageable = PageRequest.of(pageNum, pageSize);
         Page<Contacts> contacts = purchaseContactsRepository.findAll(pageable);
-        List<Contacts> result = contacts.getContent();
-        return ResponseEntity.status(HttpStatus.FOUND).body(result);
+        PagedContactResponse pg = new PagedContactResponse();
+        pg.setContacts(contacts.getContent());
+        pg.setTotalContacts(contacts.getNumberOfElements());
+        pg.setCurrentPage(contacts.getNumber());
+        pg.setCurrentPage(pageable.getPageNumber());
+        return ResponseEntity.status(HttpStatus.FOUND).body(pg);
     }
 
 }
