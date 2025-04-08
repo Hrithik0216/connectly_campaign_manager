@@ -16,9 +16,9 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         // Allow access to OAuth2 endpoints
-                        .requestMatchers("/login/gmailCallback", "/login/oauth2/code/google", "/login/gmail").permitAll()
+                        .requestMatchers("/login/gmailCallback", "/login/oauth2/code/google", "/login/gmail","/api/email/**").permitAll()
                         // Secure all other endpoints
-                        .requestMatchers("/sendEmail","/redirect","/removeAcc").permitAll()
+                        .requestMatchers("/sendEmail","/redirect","/removeAcc","buyContacts/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 // Disable CSRF protection (required for OAuth2 callbacks)
