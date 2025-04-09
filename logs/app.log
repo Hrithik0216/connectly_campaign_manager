@@ -1797,3 +1797,7 @@ POST https://oauth2.googleapis.com/token
 25/04/08 23:38:38 INFO service.EmailSchedulerService: Window result false
 25/04/08 23:38:38 INFO utils.TimeWindowUtils: window in utils is [Timewindow{start='08:00', end='23:00', days=[MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY]}]
 25/04/08 23:38:38 INFO service.EmailSchedulerService: Error in window
+25/04/10 00:15:00 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/10 00:15:00 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/10 00:16:06 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/10 00:20:58 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
