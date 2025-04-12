@@ -41,12 +41,13 @@ public class PipedriveConnectorService {
         LOGGER.info("Getting tokens for the auth code: " + authCode);
         String getTokenUrl = CrmConstants.PIPEDRIVE_GET_TOKENS_URL;
         String basicAuthCred = clientId + ":" + clientSecret;
-        String token64 = new String(Base64.getEncoder().encode(basicAuthCred.getBytes()));
+        String token64 = new String(Base64.getEncoder()
+                .encode(basicAuthCred.getBytes()));
         String auth = CrmConstants.AUTH_TYPE + token64;
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set(HttpHeaders.AUTHORIZATION, auth);
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+        headers.set(CrmConstants.AUTHORIZATION, auth);
+        headers.setContentType(CrmConstants.APPLICATION_FORM_URLENCODED);
 
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
         map.add("grant_type", CrmConstants.PIPEDRIVE_GRANT_TYPE);
