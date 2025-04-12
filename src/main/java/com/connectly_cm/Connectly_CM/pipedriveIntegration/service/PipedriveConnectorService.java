@@ -3,6 +3,7 @@ package com.connectly_cm.Connectly_CM.pipedriveIntegration.service;
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
 import com.connectly_cm.Connectly_CM.pipedriveIntegration.DTO.PipedriveConnectedResponse;
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -36,7 +37,8 @@ public class PipedriveConnectorService {
         return ResponseEntity.status(HttpStatus.OK).body(resp);
     }
 
-    public ResponseEntity<?> getTokens(String authCode) {
+    public JSONObject getTokens(String authCode) {
+        LOGGER.info("Getting tokens for the auth code: " + authCode);
         String getTokenUrl = CrmConstants.PIPEDRIVE_GET_TOKENS_URL;
         String basicAuthCred = clientId + ":" + clientSecret;
         String token64 = new String(Base64.getEncoder().encode(basicAuthCred.getBytes()));
@@ -57,12 +59,15 @@ public class PipedriveConnectorService {
         RestTemplate restTemplate = new RestTemplate();
         try {
             ResponseEntity<String> response = restTemplate.postForEntity(getTokenUrl, request, String.class);
-            return ResponseEntity.status(HttpStatus.OK).body(response.getBody());
-        } catch (HttpClientErrorException | HttpServerErrorException ex){
-            return ResponseEntity.status(ex.getStatusCode()).body(ex.getResponseBodyAsString());
-        }
-        catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Interal server err");
+            LOGGER.info("The response status is " + response.getStatusCode());
+            LOGGER.info("The response body is " + response.getBody());
+            return new JSONObject(response.getBody());
+        } catch (HttpClientErrorException | HttpServerErrorException ex) {
+            LOGGER.warn("Error caused due to " + ex.getMessage());
+            return new JSONObject().put("error", ex.getMessage());
+        } catch (Exception e) {
+            LOGGER.warn("Internal server error" + e.getMessage());
+            return new JSONObject().put("error", "Internal server err: " + e.getMessage());
         }
 
     }
