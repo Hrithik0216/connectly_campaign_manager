@@ -1,21 +1,21 @@
 package com.connectly_cm.Connectly_CM.pipedriveIntegration.controller;
 
 import com.connectly_cm.Connectly_CM.StringUtils.StringUtil;
-import com.connectly_cm.Connectly_CM.pipedriveIntegration.DTO.PipedriveConnectedResponse;
 import com.connectly_cm.Connectly_CM.pipedriveIntegration.service.PipedriveConnectorService;
 import com.connectly_cm.Connectly_CM.usersUtils.repository.UserRepository;
-import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/crm")
@@ -51,12 +51,16 @@ public class PipedriveConnector {
     }
 
     @PostMapping("pipedrive/getTokens")
-    public ResponseEntity<?> getTokens(HttpServletRequest request, HttpServletResponse response){
+    public ResponseEntity<Map<String, Object>> getTokens(HttpServletRequest request, HttpServletResponse response){
         String authCode = request.getParameter("authCode");
         if(StringUtil.isEmpty(authCode)){
             LOGGER.info("The Authorization code is empty");
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("The Authorization code is empty");
+//            return new JSONObject("The authorization code is empty");
+            HashMap<String,Object> map = new HashMap<>();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body((Map<String, Object>) map.put("Error",new String("Err")));
         }
-        return pipedriveConnectorService.getTokens(authCode);
+
+        JSONObject result = pipedriveConnectorService.getTokens(authCode);
+        return ResponseEntity.status(HttpStatus.OK).body(result.toMap());
     }
 }
