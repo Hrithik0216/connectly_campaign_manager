@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,4 +50,13 @@ public class PipedriveConnector {
         }
     }
 
+    @PostMapping("pipedrive/getTokens")
+    public ResponseEntity<?> getTokens(HttpServletRequest request, HttpServletResponse response){
+        String authCode = request.getParameter("authCode");
+        if(StringUtil.isEmpty(authCode)){
+            LOGGER.info("The Authorization code is empty");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("The Authorization code is empty");
+        }
+        return pipedriveConnectorService.getTokens(authCode);
+    }
 }
