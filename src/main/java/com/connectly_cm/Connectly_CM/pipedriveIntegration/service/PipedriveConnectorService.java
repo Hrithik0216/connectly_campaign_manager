@@ -2,8 +2,10 @@ package com.connectly_cm.Connectly_CM.pipedriveIntegration.service;
 
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
 import com.connectly_cm.Connectly_CM.pipedriveIntegration.DTO.PipedriveConnectedResponse;
+import com.connectly_cm.Connectly_CM.usersUtils.repository.UserRepository;
 import org.apache.log4j.Logger;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -22,6 +24,9 @@ import java.util.Map;
 public class PipedriveConnectorService {
     private static final Logger LOGGER = Logger.getLogger(PipedriveConnectorService.class);
 
+    @Autowired
+    UserRepository userRepository;
+
     @Value("${pipedrive.client.id}")
     private String clientId;
 
@@ -30,11 +35,20 @@ public class PipedriveConnectorService {
 
 
     public ResponseEntity<?> authenticate(String userId) {
-        String authenticationUrl = CrmConstants.PIPEDRIVE_OAUTH_URL + "client_id=" + clientId + "&redirect_uri=" + CrmConstants.PIPEDRIVE_REDIRECT_URL;
-        LOGGER.info("The pipedrive authentication url is " + authenticationUrl);
-        HashMap<String, String> resp = new HashMap<>();
-        resp.put("authorizationUrl", authenticationUrl);
-        return ResponseEntity.status(HttpStatus.OK).body(resp);
+        if (userRepository.existsById(userId)) {
+            LOGGER.info("The user exists. UserID: " + userId);
+            String authenticationUrl = CrmConstants.PIPEDRIVE_OAUTH_URL + "client_id=" + clientId + "&redirect_uri=" + CrmConstants.PIPEDRIVE_REDIRECT_URL;
+            LOGGER.info("The pipedrive authentication url is " + authenticationUrl);
+            HashMap<String, String> resp = new HashMap<>();
+            resp.put("authorizationUrl", authenticationUrl);
+            return ResponseEntity.status(HttpStatus.OK).body(resp);
+        }
+        else {
+            LOGGER.info("The userId is not found in db " + userId + ".");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("The user with userId " + userId + " not found in DB");
+        }
+
     }
 
     public JSONObject getTokens(String authCode) {

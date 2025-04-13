@@ -21,8 +21,8 @@ import java.util.Map;
 @RequestMapping("/crm")
 public class PipedriveConnector {
     private static final Logger LOGGER = Logger.getLogger(PipedriveConnector.class);
-    @Autowired
-    UserRepository userRepository;
+
+
     @Autowired
     PipedriveConnectorService pipedriveConnectorService;
 
@@ -34,30 +34,16 @@ public class PipedriveConnector {
             LOGGER.info("The userId is not found in headers " + userId + ".");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("The userId is not found in headers");
         }
-
-        try {
-            if (userRepository.existsById(userId)) {
-                return pipedriveConnectorService.authenticate(userId);
-            } else {
-                LOGGER.info("The userId is not found in db " + userId + ".");
-                return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                        .body("The user with userId " + userId + " not found in DB");
-            }
-        } catch (Exception e) {
-            LOGGER.info("Error in getting pipedrive authentication URL");
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Unexpected err has happened while getting authorization URL " + e.getMessage());
-        }
+        return pipedriveConnectorService.authenticate(userId);
     }
 
     @PostMapping("pipedrive/getTokens")
-    public ResponseEntity<Map<String, Object>> getTokens(HttpServletRequest request, HttpServletResponse response){
+    public ResponseEntity<Map<String, Object>> getTokens(HttpServletRequest request, HttpServletResponse response) {
         String authCode = request.getParameter("authCode");
-        if(StringUtil.isEmpty(authCode)){
+        if (StringUtil.isEmpty(authCode)) {
             LOGGER.info("The Authorization code is empty");
-//            return new JSONObject("The authorization code is empty");
-            HashMap<String,Object> map = new HashMap<>();
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body((Map<String, Object>) map.put("Error",new String("Err")));
+            HashMap<String, Object> map = new HashMap<>();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body((Map<String, Object>) map.put("Error", new String("Err")));
         }
 
         JSONObject result = pipedriveConnectorService.getTokens(authCode);
