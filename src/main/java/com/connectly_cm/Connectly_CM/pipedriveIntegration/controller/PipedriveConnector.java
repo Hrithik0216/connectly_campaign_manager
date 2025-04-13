@@ -40,13 +40,16 @@ public class PipedriveConnector {
     @PostMapping("pipedrive/getTokens")
     public ResponseEntity<Map<String, Object>> getTokens(HttpServletRequest request, HttpServletResponse response) {
         String authCode = request.getParameter("authCode");
+        HashMap<String, Object> map = new HashMap<>();
         if (StringUtil.isEmpty(authCode)) {
             LOGGER.info("The Authorization code is empty");
-            HashMap<String, Object> map = new HashMap<>();
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body((Map<String, Object>) map.put("Error", new String("Err")));
         }
 
         JSONObject result = pipedriveConnectorService.getTokens(authCode);
+        if(result.has("error")){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body((Map<String,Object>)map.put("error","Internal server error"));
+        }
         return ResponseEntity.status(HttpStatus.OK).body(result.toMap());
     }
 }
