@@ -1,7 +1,5 @@
 package com.connectly_cm.Connectly_CM.buyContacts.model;
 
-import com.connectly_cm.Connectly_CM.usersUtils.model.User;
-
 import java.util.List;
 
 public class PagedContactResponse {

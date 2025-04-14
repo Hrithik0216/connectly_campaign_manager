@@ -1,6 +1,6 @@
-package com.connectly_cm.Connectly_CM.usersUtils.repository;
+package com.connectly_cm.Connectly_CM.Utils.usersUtils.repository;
 
-import com.connectly_cm.Connectly_CM.usersUtils.model.User;
+import com.connectly_cm.Connectly_CM.Utils.usersUtils.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface UserRepository extends MongoRepository<User, String> {
