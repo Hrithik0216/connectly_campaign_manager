@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.usersUtils.model;
+package com.connectly_cm.Connectly_CM.Utils.usersUtils.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

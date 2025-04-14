@@ -9,8 +9,13 @@ public final class CrmConstants {
     public static final String PIPEDRIVE_GET_TOKENS_URL = "https://oauth.pipedrive.com/oauth/token";
     public static final String AUTH_TYPE = "Basic ";
     public static final String AUTHORIZATION = "Authorization";
-    public static final String PIPEDRIVE_GRANT_TYPE  ="authorization_code";
+    public static final String PIPEDRIVE_GRANT_TYPE = "authorization_code";
+    public static final String PIPEDRIVE_APIKEY_AUTHORIZATION = "x-api-key";
     public static final MediaType APPLICATION_FORM_URLENCODED = new MediaType("application", "x-www-form-urlencoded");
+    public static final String PIPEDRIVE_BASE_URL = "https://api.pipedrive.com/v1";
+    public static final String PIPEDRIVE_COMPANY_DOMAIN = "https://hrithik-sandbox.pipedrive.com";
+    public static final String PIPEDRIVE_PERSONS = "/persons";
+    public static final String GET_ALL_CONTACTS = "/v1/persons";
 
     public CrmConstants() {
     }

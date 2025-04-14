@@ -1831,3 +1831,25 @@ POST https://oauth2.googleapis.com/token
 25/04/13 18:20:22 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.775e54a3ae0ed3d62095c7d6d237655ec6f3dacf
 25/04/13 18:20:23 INFO service.PipedriveConnectorService: The response status is 200 OK
 25/04/13 18:20:23 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:ZytVzLrhNRjkAODtVxc_jb1qkK8SuUtYEqLyQlJkoTWxwqh7I54dAf7hsiAxYvgF0CT31Tqgp5sLDDQ9xxJcTYDh1btKvJiIQL7DaCera99aXPILXj-S4Gc9pBK8t007X2y_QSoU2__7G8Mv0D3A1quVb3S3b4z48BMA-__7pfNxcHdinaE4eRjcuLiXZhml2JiAmCDdkmck0k1Dx9lLEFb8PfqlUPWLAWNOTRPoIgiKmHFXwgodfD9hCJpUQjsK2TWLScvfyxrb35scDlmURcqzwE9w48PxQzxW4vCQeJJKfnm6AfcsCFaB9CJ78_5epRoZ0NwKMiGIQVqbUAV4k4sfhZieEZC9WwwCd5xwYcP4AVwZUUqApllMNMEEfxouaIKCfHD6lJIV3vSzGh0dG3N3","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/14 00:12:58 INFO controller.PipedriveConnector: The userId is null
+25/04/14 00:12:58 INFO controller.PipedriveConnector: The userId is null null
+25/04/14 00:13:40 INFO controller.PipedriveConnector: The userId is null
+25/04/14 00:13:40 INFO controller.PipedriveConnector: The userId is null null
+25/04/14 00:14:18 INFO controller.PipedriveConnector: The userId is null
+25/04/14 00:14:18 INFO controller.PipedriveConnector: The userId is null null
+25/04/14 00:18:35 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 00:18:35 INFO service.PipedriveConnectorService: The user exists in db 67f55f28476aaf6b6cd61642
+25/04/14 00:18:35 INFO service.PipedriveConnectorService: The string URL for fetching contacts https://api.pipedrive.com/v1/persons?limit=2
+25/04/14 19:55:40 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/14 19:55:40 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/14 19:57:35 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/14 19:57:35 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/14 19:58:05 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ab657ef81d6fb06bdbe0043dccc8ee6b56a71a59
+25/04/14 19:58:06 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/14 19:58:06 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:mrv2oKQ1NhizQPJ7Yn7_FkrD7NQSKZoj756zjEGtjSXAT2pTcCyOfBXigbUjFLKOGpqDJr9KxvjC36w2Tvap-pw8E6FN32pU4zC9iLDx60ZJ3PIDQQGPj05m5qQjx4KqvBID6QzlQZRc4yko6Uqx1Za_WMgg4w3M_OEkEM5rQ_0oykMC33z6OESaF2EfjGn7MJP0zq20jMe21T0d1oIyNNxed6MDhbAiRg9WNo_LqqGQe_XcHNxLA0ise_iNCp82_D-o7KErUOlY0M7gmBiuX6ivba9Zf0M3VAU3ZZK7FQezxoySjb_zv3YZtBKJbb7_azlQJWhxjyOL6yHpdDlsxFvFnUw0V5hcdMFag_i0a4Aaf9twX6a9OpD0fBERcQ2D9PknHFbVOYricd_IJbswLzOa","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/14 19:59:28 INFO controller.PipedriveConnector: The userId is null
+25/04/14 20:01:58 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 20:07:17 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 20:29:29 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 21:20:30 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 21:23:10 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642

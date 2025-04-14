@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.StringUtils;
+package com.connectly_cm.Connectly_CM.Utils.StringUtils;
 
 public class StringUtil{
 
