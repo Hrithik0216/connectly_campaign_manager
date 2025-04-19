@@ -21,7 +21,6 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
-import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -147,14 +146,14 @@ public class PipedriveConnectorService {
                             LOGGER.info("Access token has not expired. Using the same");
                             String accessToken = EncryptionAes.localDecrypt(crmSetting.getAccessToken());
                             String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                            makeApiCall(accessToken, url);
-                            return ResponseEntity.status(HttpStatus.OK).body("Succes");
+                            Map<String, Object> result =makeApiCall(accessToken, url);
+                            return ResponseEntity.status(HttpStatus.OK).body(result);
                         } else {
                             LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
                             String updatedAcessToken = accessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(crmSetting.getRefreshToken()));
                             String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                            makeApiCall(updatedAcessToken, url);
-                            return ResponseEntity.status(HttpStatus.OK).body("Succes");
+                            Map<String, Object> result=makeApiCall(updatedAcessToken, url);
+                            return ResponseEntity.status(HttpStatus.OK).body(result);
                         }
                     } catch (Exception e) {
                         throw new RuntimeException(e);
@@ -212,7 +211,7 @@ public class PipedriveConnectorService {
         }
     }
 
-    private void makeApiCall(String accessToken, String url) {
+    private Map<String, Object> makeApiCall(String accessToken, String url) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(url)
@@ -220,11 +219,14 @@ public class PipedriveConnectorService {
                 .build();
         try {
             Response response = client.newCall(request).execute();
-            // Print the response status code and body
-            System.out.println("Status code: " + response.code());
-            System.out.println("Response body: " + response.body().string());
+            String responseBody = response.body().string(); // Read once
+            LOGGER.info("Status code: " + response.code());
+            LOGGER.info("Response body: " + responseBody);
+            return new JSONObject(responseBody).toMap(); // Now safe to parse
         } catch (IOException e) {
-            e.getMessage();
+            LOGGER.warn("Exception during API call: " + e.getMessage(), e);
         }
+        return Collections.singletonMap("Error", "Error while fetching data");
     }
+
 }

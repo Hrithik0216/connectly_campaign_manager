@@ -1930,3 +1930,39 @@ POST https://oauth2.googleapis.com/token
 25/04/19 13:01:35 INFO service.PipedriveConnectorService: UserID's crm setting data exist
 25/04/19 13:01:35 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@9f761b5
 25/04/19 13:01:35 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 22:53:31 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 22:55:13 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 22:55:13 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 22:55:13 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 22:55:13 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@32b5be2f
+25/04/19 22:55:13 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 22:55:16 INFO service.PipedriveConnectorService: Status code: 200
+25/04/19 22:55:16 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/19 22:59:32 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 22:59:32 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 22:59:32 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 22:59:32 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@69187539
+25/04/19 22:59:32 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 22:59:35 INFO service.PipedriveConnectorService: Status code: 200
+25/04/19 22:59:35 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/19 23:04:23 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 23:04:23 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 23:04:23 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 23:04:23 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@7b09b551
+25/04/19 23:04:23 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 23:04:26 INFO service.PipedriveConnectorService: Status code: 200
+25/04/19 23:04:26 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/19 23:04:43 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 23:04:43 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 23:04:43 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 23:04:43 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@64b8095b
+25/04/19 23:04:43 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 23:04:44 INFO service.PipedriveConnectorService: Status code: 200
+25/04/19 23:04:44 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/19 23:06:51 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 23:06:52 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 23:06:52 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 23:06:52 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@7f007344
+25/04/19 23:06:52 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 23:06:55 INFO service.PipedriveConnectorService: Status code: 200
+25/04/19 23:06:55 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
