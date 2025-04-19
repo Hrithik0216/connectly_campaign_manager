@@ -1,20 +1,17 @@
-package com.connectly_cm.Connectly_CM.EncryptionUtils.EncryptionAes;
+package com.connectly_cm.Connectly_CM.Utils.EncryptionAes;
 
 
 import javax.crypto.Cipher;
-import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
 import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
 import java.util.Base64;
-import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 
-import static com.connectly_cm.Connectly_CM.EncryptionUtils.EncryptionAes.EncryptionConstants.*;
+import static com.connectly_cm.Connectly_CM.Utils.EncryptionAes.EncryptionConstants.*;
 
 public class EncryptionAes {
     static SecureRandom secureRandom = new SecureRandom();

@@ -8,6 +8,8 @@ import java.util.List;
 @Document(collection = "users")
 public class User {
 
+
+
     @Id
     private String id;
     private String email;
@@ -35,6 +37,10 @@ public class User {
     private int noOfSequencecs;
     private String nextBillingCycle;
     private String autoLoginKey;
+
+    public String getId() {
+        return id;
+    }
 
     public String getEmail() {
         return email;
