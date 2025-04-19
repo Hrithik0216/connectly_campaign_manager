@@ -1853,3 +1853,80 @@ POST https://oauth2.googleapis.com/token
 25/04/14 20:29:29 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
 25/04/14 21:20:30 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
 25/04/14 21:23:10 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/14 21:50:55 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/18 21:21:58 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/18 21:21:58 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/18 21:22:54 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/18 21:22:54 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.13d78d79d6882b18d98ea3177428268f317302d4
+25/04/18 21:22:55 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/18 21:22:55 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:cZ73z5d0NxjNOCiaQfTu5-EFaUNZdjjPWeL4RxWmf36s-AGja_OoIChqLlt1YSYQ0kzIMoZBDE1c32KnjEdy43uoldSw-2I7Kl1NBiA9ypo08RkFOvddP-Mfc4Z493TUc0Ka_cmYz3QdGJ0tY_jZlj89h-vOAgUU-E1PRhgn3qQzC3fCkqbbFMfd0lZtf_bUAD7Spn4h84NZ1FgMTfEnqKOUjKvC_U-Qb7BdwyJHUGO33lnMaIMWlZT6XkykcoDdkzKyPmod2Khdm7CDFWVq4l6TjS7DVYTdYuAGTYufHu-wiFq1ZPFN6NXy-iQkc4tkMQAvC5sRBLA9ZMeRm4EZJVzCiiNYD2CtTrDp2htN7gIeVvFX-wI4JdgSzp47neeWlwVNQ2r0RM3zIL459TaRvbWC","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/19 00:53:58 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/19 00:53:58 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/19 00:54:29 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 00:54:29 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.515e6c16a47846f927b16a22b8c15fb327ec747e
+25/04/19 00:54:30 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/19 00:54:30 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:C9ojYyOANxgafMINGOYKYiqkmsWM8su_JCJAbZGowz4Z4JKA9l_dzYAGcgXt-gf9XUOKLMfb4-tgavvzPDuLTWCTqRa8bcLEf1Kw43jIFlnrnJq6zVzNqQEQAwobd9m3ECJreimF42Qqskz8NYbJS7FO_6fD0yd8J3f1JFkG3bgUyhB48FsaFCtI4GbRH08_D7SxO2DTRaWnBw3e6uSfF6s2VCrjxtIxeL7BHcu0gF8N5WNM5EsokbVarn9bStl9TPW-icVAGkwcOeFlTmUpXtpYeRQ6EwiUuoreGAKnQFftzvevmNL347fynMClDx3z9IPu-LHHeqzBq9zSHK3VIBtYMMjr8N4pSSTjq1IU4kZ04i4gELNEDI3eBsO_K-9f_1El_x8oebrALHiv3erdVkm1","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/19 00:54:30 INFO DateUtils.DateTimeUtils: Converted date to String is 18-4-2025 19:24:30
+25/04/19 00:54:30 INFO DateUtils.DateTimeUtils: Converted date to String is 18-4-2025 19:24:30
+25/04/19 00:54:30 INFO DateUtils.DateTimeUtils: Converted date to String is 18-4-2025 20:24:29
+25/04/19 10:36:42 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/19 10:36:42 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/19 10:37:35 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:37:35 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.33638154466a524754583cf706c58c4e5b6e3c05
+25/04/19 10:37:36 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/19 10:37:36 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:gA8fWfWfNxhnbDxz4R6-moLxECzQHnC7ZiDrAPl_FBNTVDsv7L_C0Oa6FSI_Ht9IAc4wp3dWyx24trEMqfjVyteRxlA7TjeZC7tMwL0fGYJAw1tGgY6NEO0FxXSGKJ0-zOnSAJfjRU-nTm5LfFdxfT_sE8baroQAkTBUhchA0tnDrQN9QWcOS-QKq76Wo-z_e8yTuBNEH509xIpLyksKANYwlVEXO1wDnrStIy6HPdFOZ6yDmel07fM-yroOeFHkTYvXbcRWQ5u-T2fuDQz9gdtUvUVQrV-m86EUOWoooaKY35i2jIEg8F5DTbe9YhevMPTPwHHnjCt0GlOHEFGP487VRGO08DjaW5ysagvJUL3wj0OtBdTEmzIcfAWjQ0_s6C_DrqNZV9fBYLoQjvTgXpuX","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/19 10:37:37 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 05:07:37
+25/04/19 10:37:37 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 05:07:37
+25/04/19 10:37:37 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 06:07:36
+25/04/19 10:37:37 INFO service.PipedriveConnectorService: Saving the crm settings for the user with userId 67f55f28476aaf6b6cd61642
+25/04/19 10:39:06 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/19 10:39:06 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/19 10:39:25 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:39:25 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.8bc6b0ccb7e017a2ee4c86ca8c867d7dc919a120
+25/04/19 10:43:38 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:43:38 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.8bc6b0ccb7e017a2ee4c86ca8c867d7dc919a120
+25/04/19 10:43:38 INFO service.PipedriveConnectorService: An account is already connected. Please reconnect or disconnect it
+25/04/19 10:49:16 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:49:16 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.8bc6b0ccb7e017a2ee4c86ca8c867d7dc919a120
+25/04/19 10:49:16 INFO service.PipedriveConnectorService: An account is already connected. Please reconnect or disconnect it
+25/04/19 10:50:08 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:50:08 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.8bc6b0ccb7e017a2ee4c86ca8c867d7dc919a120
+25/04/19 10:50:09 WARN service.PipedriveConnectorService: Error caused due to 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code has expired","error":"invalid_grant"}"
+25/04/19 10:51:47 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/19 10:51:47 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/19 10:52:11 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 10:52:11 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.3fae3060206f5619e469b473fcd7c3d72cb717ae
+25/04/19 10:52:11 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/19 10:52:11 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:MYeiG8GgNxiVNshHF34STXfPZrrOLfujn-LkxIuYWVe1OTJ0KD45KC61lGedv9oyNFeBpk-E1ryZUBbZ0TrjIsgC6Blta84kDrzSw0MpsU_MvleuCepaM7ns7VpP6Ev_Rc-zCW_4od0NMuLsA1i1Ef1pUXjKYC9Bnh8Bogf_fBkbmNVSIJnGeBlPl7mUB64FGOtR5CtS0tONuLRXwmZodpVLGFXyoY0bd3qmoOm1nNZLKzC41tHnOqwPi6cy9vdMuZsPlGXSe3fL_MA094_ip-ir20M6hlN0UjERUH_tzRH1rydCb7KJPVBKix2jcLqwCk9wkPU-0WFCYCLUGcq9Vgc21dm8Aubj8tMsXNPe9o19Oo6vkSOq0cDRWSTjX4GhrDfeDhKJku6ZxesJcBZytvVS","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/19 10:52:12 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 05:22:12
+25/04/19 10:52:12 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 05:22:12
+25/04/19 10:52:12 INFO DateUtils.DateTimeUtils: Converted date to String is 19-4-2025 06:22:11
+25/04/19 10:52:12 INFO service.PipedriveConnectorService: Saving the crm settings for the user with userId 67f55f28476aaf6b6cd61642
+25/04/19 11:01:34 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 11:05:52 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 11:05:52 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 11:06:27 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 11:06:28 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 11:06:28 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 11:06:28 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@5cf078eb
+25/04/19 11:06:28 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 11:10:25 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 11:10:26 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 11:10:26 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 11:10:26 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@5007ada7
+25/04/19 11:10:26 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 12:54:33 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/19 12:54:33 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/19 12:55:23 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/19 12:55:23 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.6c5e877c4a8e0f485332e8fd83c6ad60dbe64bd8
+25/04/19 12:55:23 INFO service.PipedriveConnectorService: An account is already connected. Please reconnect or disconnect it
+25/04/19 12:55:33 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 12:55:34 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 12:55:34 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 12:55:34 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@6fbf9be8
+25/04/19 12:55:34 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/19 13:01:34 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/19 13:01:35 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/19 13:01:35 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/19 13:01:35 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@9f761b5
+25/04/19 13:01:35 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642

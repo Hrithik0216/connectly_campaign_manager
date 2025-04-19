@@ -1,7 +1,6 @@
 package com.connectly_cm.Connectly_CM.pipedriveIntegration.controller;
 
 import com.connectly_cm.Connectly_CM.Utils.StringUtils.StringUtil;
-import com.connectly_cm.Connectly_CM.pipedriveIntegration.DTO.PipedrivePersonsRequestBody;
 import com.connectly_cm.Connectly_CM.pipedriveIntegration.service.PipedriveConnectorService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -21,8 +19,8 @@ public class PipedriveConnector {
     private static final Logger LOGGER = Logger.getLogger(PipedriveConnector.class);
 
 
-    @Autowired
-    PipedriveConnectorService pipedriveConnectorService;
+   @Autowired
+   PipedriveConnectorService pipedriveConnectorService;
 
     @PostMapping("pipedrive/authenticate")
     public ResponseEntity<?> authenticate(HttpServletRequest request, HttpServletResponse response) {
@@ -38,12 +36,19 @@ public class PipedriveConnector {
     @PostMapping("pipedrive/getTokens")
     public ResponseEntity<Map<String, Object>> getTokens(HttpServletRequest request, HttpServletResponse response) {
         String authCode = request.getParameter("authCode");
+        String userId = request.getHeader("userId");
+        if(userId==null){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("Error","The userId is null"));
+        }
+        if(userId.isEmpty()){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("Error","The userId is empty"));
+        }
         if (StringUtil.isEmpty(authCode)) {
             LOGGER.info("The Authorization code is empty");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("Error", "Err"));
         }
-
-        JSONObject result = pipedriveConnectorService.getTokens(authCode);
+        LOGGER.info("The userId is "+userId);
+        JSONObject result = pipedriveConnectorService.getTokens(authCode, userId);
         if (result.has("error")) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error", "Internal server error"));
         }
@@ -52,7 +57,7 @@ public class PipedriveConnector {
 
     @GetMapping("pipedrive/getContacts")
     public ResponseEntity<?> getContact(HttpServletRequest request, HttpServletResponse response){
-        String userId = request.getHeader("userId");
+        String userId = request.getParameter("userId");
         LOGGER.info("Header userId: {}"+userId);
 
         if (userId == null) {
@@ -60,16 +65,11 @@ public class PipedriveConnector {
         }
 
         if (StringUtil.isEmpty(userId)) {
+            LOGGER.info("The userId is empty");
             return ResponseEntity.badRequest()
                     .body(Map.of("error", "User ID must be provided in headers or parameters"));
         }
 
-//        Map<String, String> params = new HashMap<>();
-//        request.getParameterMap().forEach((key, values) -> {
-//            if (!key.equals("userId") && values.length > 0) {
-//                params.put(key, values[0]); // Takes first value for each key
-//            }
-//        });
         return pipedriveConnectorService.getContacts(userId);
     }
 }

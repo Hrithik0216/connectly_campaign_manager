@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.EncryptionUtils.EncryptionAes;
+package com.connectly_cm.Connectly_CM.Utils.EncryptionAes;
 
 import org.springframework.beans.factory.annotation.Value;
 
