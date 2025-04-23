@@ -18,6 +18,7 @@ public final class CrmConstants {
     public static final String PIPEDRIVE_PERSONS = "/persons";
     public static final String GET_ALL_CONTACTS = "/v1/persons";
     public static final String PIPEDRIVE_CRM ="PIPEDRIVE";
+    public static final String PIPEDRIVE_LEADS="/leads";
 
     public CrmConstants() {
     }

@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -71,5 +72,14 @@ public class PipedriveConnector {
         }
 
         return pipedriveConnectorService.getContacts(userId);
+    }
+
+    @GetMapping("pipedrive/getLeadContacts")
+    public ResponseEntity<?> getLeadContacts(HttpServletRequest request, HttpServletResponse response, @RequestBody Map<String,Object>requestBody){
+        String userId = request.getParameter("userId");
+        if(StringUtil.isEmpty(userId)){
+            throw new NullPointerException();
+        }
+        return pipedriveConnectorService.getLeadContacts(userId, requestBody);
     }
 }

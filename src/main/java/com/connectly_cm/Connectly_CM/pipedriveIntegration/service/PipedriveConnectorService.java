@@ -3,6 +3,7 @@ package com.connectly_cm.Connectly_CM.pipedriveIntegration.service;
 import com.connectly_cm.Connectly_CM.Utils.DateUtils.DateTimeUtils;
 import com.connectly_cm.Connectly_CM.Utils.EncryptionAes.EncryptionAes;
 import com.connectly_cm.Connectly_CM.Utils.StringUtils.StringUtil;
+import com.connectly_cm.Connectly_CM.Utils.UrlBuilder.UrlBuilder;
 import com.connectly_cm.Connectly_CM.Utils.usersUtils.model.User;
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
 import com.connectly_cm.Connectly_CM.Utils.usersUtils.repository.UserRepository;
@@ -24,7 +25,6 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
-import java.net.http.HttpClient;
 import java.util.*;
 
 
@@ -64,10 +64,10 @@ public class PipedriveConnectorService {
     }
 
     public JSONObject getTokens(String authCode, String userId) {
-        if (authCode == null ) {
+        if (authCode == null) {
             throw new IllegalArgumentException("The authCode is null");
         }
-        if(userId==null){
+        if (userId == null) {
             throw new IllegalArgumentException("The userId is null");
         }
         LOGGER.info("Getting tokens for the auth code: " + authCode);
@@ -137,49 +137,7 @@ public class PipedriveConnectorService {
         return new JSONObject().put("Error", "An account is already connected. Please reconnect or disconnect it");
     }
 
-    public ResponseEntity<?> getContacts(String userId) {
-        if(userId==null){
-            throw new IllegalArgumentException("The userId is null");
-        }
-        if (userRepository.existsById(userId)) {
-            LOGGER.info("User ID exist " + userId);
-            if (crmSettingRepository.checkByUserId(userId)) {
-                LOGGER.info("UserID's crm setting data exist");
-                CrmSettings userCrmSetting = crmSettingRepository.findByUserId(userId);
-
-                LOGGER.info("Crm setting " + userCrmSetting);
-                try {
-                    Date expiryDate = DateTimeUtils.convertDateStringTODate(userCrmSetting.getAccessTokenExpiryDate());
-
-                    if (!expiryDate.before(new Date())) {
-                        LOGGER.info("Access token has not expired. Using the same");
-                        String accessToken = EncryptionAes.localDecrypt(userCrmSetting.getAccessToken());
-                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                        Map<String, Object> result = makeApiCall(accessToken, url);
-                        return ResponseEntity.status(HttpStatus.OK).body(result);
-                    } else {
-                        LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
-                        JSONObject resJson = accessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
-                        String updatedAcessToken = resJson.getString("access_token");
-                        userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
-                        userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
-                                TimeZone.getTimeZone("UTC"),
-                                resJson.getInt("expires_in")));
-                        crmSettingRepository.save(userCrmSetting);
-                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                        Map<String, Object> result = makeApiCall(updatedAcessToken, url);
-                        return ResponseEntity.status(HttpStatus.OK).body(result);
-                    }
-                } catch (Exception e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-        return ResponseEntity.status(HttpStatus.OK).body("Failed");
-    }
-
-
-    private JSONObject accessTokenUsingRefreshToken(String userId, String refreshToken) {
+    private JSONObject getAccessTokenUsingRefreshToken(String userId, String refreshToken) {
         if (StringUtil.isEmpty(userId) || StringUtil.isEmpty(refreshToken)) {
             LOGGER.info("User Id or refresh token is empty");
             throw new IllegalArgumentException("User ID and refresh token must not be empty");
@@ -239,4 +197,92 @@ public class PipedriveConnectorService {
         return Collections.singletonMap("Error", "Error while fetching data");
     }
 
+    public ResponseEntity<?> getContacts(String userId) {
+        if (userId == null) {
+            throw new IllegalArgumentException("The userId is null");
+        }
+        if (userRepository.existsById(userId)) {
+            LOGGER.info("User ID exist " + userId);
+            if (crmSettingRepository.checkByUserId(userId)) {
+                LOGGER.info("UserID's crm setting data exist");
+                CrmSettings userCrmSetting = crmSettingRepository.findByUserId(userId);
+
+                LOGGER.info("Crm setting " + userCrmSetting);
+                try {
+                    Date expiryDate = DateTimeUtils.convertDateStringTODate(userCrmSetting.getAccessTokenExpiryDate());
+
+                    if (!expiryDate.before(new Date())) {
+                        LOGGER.info("Access token has not expired. Using the same");
+                        String accessToken = EncryptionAes.localDecrypt(userCrmSetting.getAccessToken());
+                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
+                        Map<String, Object> result = makeApiCall(accessToken, url);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
+                    } else {
+                        LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
+                        JSONObject resJson = getAccessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
+                        String updatedAcessToken = resJson.getString("access_token");
+                        userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
+                        userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+                                TimeZone.getTimeZone("UTC"),
+                                resJson.getInt("expires_in")));
+                        crmSettingRepository.save(userCrmSetting);
+                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
+                        Map<String, Object> result = makeApiCall(updatedAcessToken, url);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
+                    }
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        return ResponseEntity.status(HttpStatus.OK).body("Failed");
+    }
+
+    public ResponseEntity<?> geLeads(String userId) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal server err");
+    }
+
+    public ResponseEntity<?> getLeadContacts(String userId, Map<String, Object> requestBody) {
+        if (userId == null) {
+            throw new IllegalArgumentException("The userID is null");
+        }
+        if (userRepository.existsById(userId)) {
+            CrmSettings userCrmSetting = crmSettingRepository.findByUserId(userId);
+            String builtUrl = UrlBuilder.urlBuilderWithParam(CrmConstants.PIPEDRIVE_BASE_URL + CrmConstants.PIPEDRIVE_LEADS, requestBody);
+            if (userCrmSetting != null) {
+                LOGGER.info("user has crm Setting: " + userCrmSetting);
+                Date expiryDate = DateTimeUtils.convertDateStringTODate(userCrmSetting.getAccessTokenExpiryDate());
+                if (!expiryDate.before(new Date())) {
+                    LOGGER.info("Token has a valid expiry date");
+
+                    LOGGER.info("Built Url: " + builtUrl);
+                    try {
+                        String accessToken = EncryptionAes.localDecrypt(userCrmSetting.getAccessToken());
+                        Map<String, Object> result = makeApiCall(accessToken, builtUrl);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
+                    } catch (Exception e) {
+                        LOGGER.warn("Exception is " + e.getMessage());
+                        throw new RuntimeException(e);
+                    }
+                } else {
+                    LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
+                    try {
+                        JSONObject newCredential = getAccessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
+                        String newAccessToken = newCredential.getString("access_token");
+                        userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+                                TimeZone.getTimeZone("UTC"),
+                                newCredential.getInt("expires_in")));
+                        crmSettingRepository.save(userCrmSetting);
+                        Map<String, Object> result = makeApiCall(newAccessToken, builtUrl);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
+                    } catch (Exception e) {
+                        LOGGER.info("The err is " + e.getMessage());
+                        throw new RuntimeException(e);
+                    }
+
+                }
+            }
+        }
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server err");
+    }
 }
