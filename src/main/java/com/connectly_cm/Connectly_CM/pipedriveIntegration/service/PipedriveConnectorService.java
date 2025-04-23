@@ -235,9 +235,8 @@ public class PipedriveConnectorService {
                 }
             }
         }
-        return ResponseEntity.status(HttpStatus.OK).body("Failed");
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed");
     }
-
 
     public ResponseEntity<?> getLeadContacts(String userId, Map<String, Object> requestBody) {
         if (userId == null) {
@@ -278,8 +277,10 @@ public class PipedriveConnectorService {
                         throw new RuntimeException(e);
                     }
                 }
+            }else {
+                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("user's CrmSetting not found");
             }
         }
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal Server err");
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed");
     }
 }

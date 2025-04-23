@@ -2217,3 +2217,8 @@ java.text.ParseException: Unparseable date: "23-4-2025 17:55:37"
 25/04/24 01:40:38 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
 25/04/24 01:40:39 INFO service.PipedriveConnectorService: Status code: 200
 25/04/24 01:40:39 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/04/24 01:49:57 INFO service.PipedriveConnectorService: user has crm Setting
+25/04/24 01:49:57 INFO service.PipedriveConnectorService: Token has a valid expiry date
+25/04/24 01:49:57 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
+25/04/24 01:49:58 INFO service.PipedriveConnectorService: Status code: 200
+25/04/24 01:49:58 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
