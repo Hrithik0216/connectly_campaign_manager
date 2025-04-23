@@ -2197,3 +2197,23 @@ java.text.ParseException: Unparseable date: "23-4-2025 17:55:37"
 25/04/24 01:33:32 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T21:03:31Z
 25/04/24 01:33:33 INFO service.PipedriveConnectorService: Status code: 200
 25/04/24 01:33:33 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/04/24 01:36:12 INFO service.PipedriveConnectorService: user has crm Setting: com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@677c825
+25/04/24 01:36:12 INFO service.PipedriveConnectorService: Token has a valid expiry date
+25/04/24 01:36:12 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
+25/04/24 01:36:13 INFO service.PipedriveConnectorService: Status code: 401
+25/04/24 01:36:13 INFO service.PipedriveConnectorService: Response body: {"success":false,"error":"Invalid token: access token is invalid","errorCode":401,"error_info":"Please check developers.pipedrive.com"}
+25/04/24 01:39:54 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/24 01:39:54 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/24 01:40:25 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/24 01:40:25 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.4b196c2ca83a9b4115b53578e39a96558940bff1
+25/04/24 01:40:26 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/24 01:40:26 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:Cy2-DIwLORg2fD2pS0nC1wGsIwua2HW0djDJGd7LE-tWBxlgykyW27VwFJGAglpHAb0tdEwTApYksSZAsafEhZ_1WfHQ2BaWxYKxMY-95z2s3FRxaYb9aSB4CtGe36hX-8dMxj6sAY-h3b8JgSZm8w5k8HHbx51l46YgWXg59Ply__2elPwi1UQQtmFFupufSXrf_x4XhsmEXeeUQRW-kFqg-8XOFJr4zoYzwfEmRH94WILA_QcH5ogqcff1rpaAgBq90GPzIVlqbSjSCc3_5nCXxpg-DbwjmYxhJxmN_lCb8b-TGoe5m_QYOvUeq3BFTj0hJT7F6gokOr3iJ1XqXGDqu4cJczLyMrdB983gp76qJgyw7HftaH4NE6SMsmG2NWa0fQivvMXbHNkGG1qx1OWM","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/24 01:40:27 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T20:10:27Z
+25/04/24 01:40:27 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T20:10:27Z
+25/04/24 01:40:27 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T21:10:26Z
+25/04/24 01:40:27 INFO service.PipedriveConnectorService: Saving the crm settings for the user with userId 67f55f28476aaf6b6cd61642
+25/04/24 01:40:38 INFO service.PipedriveConnectorService: user has crm Setting
+25/04/24 01:40:38 INFO service.PipedriveConnectorService: Token has a valid expiry date
+25/04/24 01:40:38 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
+25/04/24 01:40:39 INFO service.PipedriveConnectorService: Status code: 200
+25/04/24 01:40:39 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}

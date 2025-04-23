@@ -238,9 +238,6 @@ public class PipedriveConnectorService {
         return ResponseEntity.status(HttpStatus.OK).body("Failed");
     }
 
-    public ResponseEntity<?> geLeads(String userId) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Internal server err");
-    }
 
     public ResponseEntity<?> getLeadContacts(String userId, Map<String, Object> requestBody) {
         if (userId == null) {
@@ -250,7 +247,7 @@ public class PipedriveConnectorService {
             CrmSettings userCrmSetting = crmSettingRepository.findByUserId(userId);
             String builtUrl = UrlBuilder.urlBuilderWithParam(CrmConstants.PIPEDRIVE_BASE_URL + CrmConstants.PIPEDRIVE_LEADS, requestBody);
             if (userCrmSetting != null) {
-                LOGGER.info("user has crm Setting: " + userCrmSetting);
+                LOGGER.info("user has crm Setting");
                 Date expiryDate = DateTimeUtils.convertDateStringTODate(userCrmSetting.getAccessTokenExpiryDate());
                 if (!expiryDate.before(new Date())) {
                     LOGGER.info("Token has a valid expiry date");
@@ -269,6 +266,7 @@ public class PipedriveConnectorService {
                     try {
                         JSONObject newCredential = getAccessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
                         String newAccessToken = newCredential.getString("access_token");
+                        userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(newAccessToken));
                         userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
                                 TimeZone.getTimeZone("UTC"),
                                 newCredential.getInt("expires_in")));
@@ -279,7 +277,6 @@ public class PipedriveConnectorService {
                         LOGGER.info("The err is " + e.getMessage());
                         throw new RuntimeException(e);
                     }
-
                 }
             }
         }
