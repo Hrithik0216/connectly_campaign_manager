@@ -24,6 +24,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.net.http.HttpClient;
 import java.util.*;
 
 
@@ -63,8 +64,11 @@ public class PipedriveConnectorService {
     }
 
     public JSONObject getTokens(String authCode, String userId) {
-        if (authCode == null || userId == null) {
-            throw new IllegalArgumentException();
+        if (authCode == null ) {
+            throw new IllegalArgumentException("The authCode is null");
+        }
+        if(userId==null){
+            throw new IllegalArgumentException("The userId is null");
         }
         LOGGER.info("Getting tokens for the auth code: " + authCode);
 
@@ -88,7 +92,6 @@ public class PipedriveConnectorService {
                 map.add("grant_type", CrmConstants.PIPEDRIVE_GRANT_TYPE);
                 map.add("code", authCode);
                 map.add("redirect_uri", CrmConstants.PIPEDRIVE_REDIRECT_URL);
-
 
                 HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
@@ -135,6 +138,9 @@ public class PipedriveConnectorService {
     }
 
     public ResponseEntity<?> getContacts(String userId) {
+        if(userId==null){
+            throw new IllegalArgumentException("The userId is null");
+        }
         if (userRepository.existsById(userId)) {
             LOGGER.info("User ID exist " + userId);
             if (crmSettingRepository.checkByUserId(userId)) {
@@ -167,11 +173,7 @@ public class PipedriveConnectorService {
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
-
-
             }
-
-
         }
         return ResponseEntity.status(HttpStatus.OK).body("Failed");
     }
@@ -212,10 +214,8 @@ public class PipedriveConnectorService {
             }
 
             JSONObject resJson = new JSONObject(response.getBody());
-            LOGGER.info("REfresh token : " + resJson);
-//            return resJson.getString("access_token");
+            LOGGER.info("New tokens : " + resJson);
             return resJson;
-
         } catch (HttpClientErrorException e) {
             throw new RuntimeException("Client error during token refresh: " + e.getResponseBodyAsString(), e);
         }
