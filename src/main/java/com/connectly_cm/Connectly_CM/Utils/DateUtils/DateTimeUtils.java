@@ -2,15 +2,19 @@ package com.connectly_cm.Connectly_CM.Utils.DateUtils;
 
 import org.apache.log4j.Logger;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Date;
 import java.util.TimeZone;
 
 public class DateTimeUtils {
     private static final Logger LOGGER = Logger.getLogger(DateTimeUtils.class);
-    private static final String DATE_FORMAT="dd-M-yyyy HH:mm:ss";
+    private static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss'Z'";
+    private static final DateTimeFormatter ISO_FORMATTER = DateTimeFormatter.ofPattern(DATE_FORMAT)
+            .withZone(ZoneId.of("UTC"));
 
     public static final String convertDateToString(Date date, TimeZone timeZone, Integer seconds) {
         if (date == null) {
@@ -21,37 +25,35 @@ public class DateTimeUtils {
             LOGGER.warn("The timeZone is null");
             throw new IllegalArgumentException("The timeZone is null");
         }
-        String dateStr = null;
-        DateFormat df = new SimpleDateFormat(DATE_FORMAT);
-        df.setTimeZone(timeZone);
+
         try {
-            Date modifiedDate = (Date) date.clone();
+            Instant instant = date.toInstant();
             if (seconds != null) {
-                long finalMilliSec = (seconds * 1000L) + modifiedDate.getTime();
-                modifiedDate.setTime(finalMilliSec);
+                instant = instant.plusSeconds(seconds);
             }
-            dateStr = df.format(modifiedDate);
+
+            ZonedDateTime zonedDateTime = instant.atZone(timeZone.toZoneId());
+            String dateStr = zonedDateTime.format(ISO_FORMATTER);
             LOGGER.info("Converted date to String is " + dateStr);
+            return dateStr;
         } catch (Exception ex) {
-            LOGGER.error("Exception in converting date to String: " + ex.getMessage());
-            ex.printStackTrace();
+            LOGGER.error("Exception in converting date to String: " + ex.getMessage(), ex);
+            throw new IllegalArgumentException("Date conversion failed", ex);
         }
-        return dateStr;
     }
 
     public static Date convertDateStringTODate(String stringDate) {
         if (stringDate == null) {
-            LOGGER.warn("Input stringDate or format is null");
+            LOGGER.warn("Input stringDate is null");
             throw new IllegalArgumentException("The stringDate is null");
         }
-        Date date = null;
+
         try {
-            DateFormat iso8601 = new SimpleDateFormat(DATE_FORMAT);
-            date = iso8601.parse(stringDate);
-        } catch (ParseException e) {
-            LOGGER.error("Error occurred while converting given date string to Date dataType " + e.getMessage());
+            Instant instant = Instant.from(ISO_FORMATTER.parse(stringDate));
+            return Date.from(instant);
+        } catch (DateTimeParseException e) {
+            LOGGER.error("Error parsing date string: " + e.getMessage(), e);
             throw new IllegalArgumentException("Invalid date format: " + stringDate, e);
         }
-        return date;
     }
 }

@@ -46,7 +46,6 @@ public class PipedriveConnectorService {
     @Autowired
     CrmSettingRepository crmSettingRepository;
 
-
     public ResponseEntity<?> authenticate(String userId) {
         if (userRepository.existsById(userId)) {
             LOGGER.info("The user exists. UserID: " + userId);
@@ -64,6 +63,9 @@ public class PipedriveConnectorService {
     }
 
     public JSONObject getTokens(String authCode, String userId) {
+        if (authCode == null || userId == null) {
+            throw new IllegalArgumentException();
+        }
         LOGGER.info("Getting tokens for the auth code: " + authCode);
 
         if (!userRepository.existsById(userId)) {
@@ -105,7 +107,9 @@ public class PipedriveConnectorService {
                     crmSettings.setScopes(StringUtil.listSeparatedByComma(jsonRes.getString("scope")));
                     crmSettings.setApiDomain(jsonRes.getString("api_domain"));
                     crmSettings.setTokenType(jsonRes.getString("token_type"));
-                    crmSettings.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), jsonRes.getInt("expires_in")));
+                    crmSettings.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+                            TimeZone.getTimeZone("UTC"),
+                            jsonRes.getInt("expires_in")));
                     if (userData.isPresent()) {
                         crmSettings.setUserId(userData.get().getId());
                         crmSettings.setConnectedEmail(userData.get().getEmail());
@@ -132,36 +136,40 @@ public class PipedriveConnectorService {
 
     public ResponseEntity<?> getContacts(String userId) {
         if (userRepository.existsById(userId)) {
-            LOGGER.info("User ID exist "+userId);
-            if(crmSettingRepository.checkByUserId(userId)){
+            LOGGER.info("User ID exist " + userId);
+            if (crmSettingRepository.checkByUserId(userId)) {
                 LOGGER.info("UserID's crm setting data exist");
-                Optional<List<CrmSettings>> userCrmData = crmSettingRepository.findByUserId(userId);
-                for (CrmSettings crmSetting : userCrmData.get()) {
-                    LOGGER.info("Crm setting "+crmSetting);
-                    try {
-                        Date expiryDate = DateTimeUtils
-                                .convertDateStringTODate(crmSetting.getAccessTokenExpiryDate());
-                        Date currDate = new Date();
-                        if (expiryDate.compareTo(currDate) > 0 || expiryDate.compareTo(currDate) == 0) {
-                            LOGGER.info("Access token has not expired. Using the same");
-                            String accessToken = EncryptionAes.localDecrypt(crmSetting.getAccessToken());
-                            String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                            Map<String, Object> result =makeApiCall(accessToken, url);
-                            return ResponseEntity.status(HttpStatus.OK).body(result);
-                        } else {
-                            LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
-                            String updatedAcessToken = accessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(crmSetting.getRefreshToken()));
-                            String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
-                            Map<String, Object> result=makeApiCall(updatedAcessToken, url);
-                            return ResponseEntity.status(HttpStatus.OK).body(result);
-                        }
-                    } catch (Exception e) {
-                        throw new RuntimeException(e);
+                CrmSettings userCrmSetting = crmSettingRepository.findByUserId(userId);
+
+                LOGGER.info("Crm setting " + userCrmSetting);
+                try {
+                    Date expiryDate = DateTimeUtils.convertDateStringTODate(userCrmSetting.getAccessTokenExpiryDate());
+
+                    if (!expiryDate.before(new Date())) {
+                        LOGGER.info("Access token has not expired. Using the same");
+                        String accessToken = EncryptionAes.localDecrypt(userCrmSetting.getAccessToken());
+                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
+                        Map<String, Object> result = makeApiCall(accessToken, url);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
+                    } else {
+                        LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
+                        JSONObject resJson = accessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
+                        String updatedAcessToken = resJson.getString("access_token");
+                        userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
+                        userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+                                TimeZone.getTimeZone("UTC"),
+                                resJson.getInt("expires_in")));
+                        crmSettingRepository.save(userCrmSetting);
+                        String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
+                        Map<String, Object> result = makeApiCall(updatedAcessToken, url);
+                        return ResponseEntity.status(HttpStatus.OK).body(result);
                     }
-
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
                 }
-            }
 
+
+            }
 
 
         }
@@ -169,7 +177,7 @@ public class PipedriveConnectorService {
     }
 
 
-    private String accessTokenUsingRefreshToken(String userId, String refreshToken) {
+    private JSONObject accessTokenUsingRefreshToken(String userId, String refreshToken) {
         if (StringUtil.isEmpty(userId) || StringUtil.isEmpty(refreshToken)) {
             LOGGER.info("User Id or refresh token is empty");
             throw new IllegalArgumentException("User ID and refresh token must not be empty");
@@ -194,17 +202,19 @@ public class PipedriveConnectorService {
             body.add("refresh_token", refreshToken);
             body.add("redirect_uri", CrmConstants.PIPEDRIVE_REDIRECT_URL);
 
-            HttpEntity<MultiValueMap<String,String>> request = new HttpEntity<>(body,headers);
+            HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
 
             RestTemplate restTemplate = new RestTemplate();
 
-            ResponseEntity<String> response = restTemplate.postForEntity(url,request,String.class);
-            if(!response.getStatusCode().is2xxSuccessful()){
+            ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
+            if (!response.getStatusCode().is2xxSuccessful()) {
                 throw new RuntimeException("Failed to fetch the refresh token");
             }
 
             JSONObject resJson = new JSONObject(response.getBody());
-            return resJson.getString("access_token");
+            LOGGER.info("REfresh token : " + resJson);
+//            return resJson.getString("access_token");
+            return resJson;
 
         } catch (HttpClientErrorException e) {
             throw new RuntimeException("Client error during token refresh: " + e.getResponseBodyAsString(), e);
@@ -219,10 +229,10 @@ public class PipedriveConnectorService {
                 .build();
         try {
             Response response = client.newCall(request).execute();
-            String responseBody = response.body().string(); // Read once
+            String responseBody = response.body().string();
             LOGGER.info("Status code: " + response.code());
             LOGGER.info("Response body: " + responseBody);
-            return new JSONObject(responseBody).toMap(); // Now safe to parse
+            return new JSONObject(responseBody).toMap();
         } catch (IOException e) {
             LOGGER.warn("Exception during API call: " + e.getMessage(), e);
         }

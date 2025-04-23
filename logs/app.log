@@ -1966,3 +1966,228 @@ POST https://oauth2.googleapis.com/token
 25/04/19 23:06:52 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
 25/04/19 23:06:55 INFO service.PipedriveConnectorService: Status code: 200
 25/04/19 23:06:55 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:11:57 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:13:27 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:13:28 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:13:28 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:13:28 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@71cfd04d
+25/04/23 22:13:28 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:13:31 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:13:31 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:18:22 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:18:23 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:18:23 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:18:23 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@65cb40a3
+25/04/23 22:18:23 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:18:25 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:18:25 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:18:40 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:18:40 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:18:40 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:18:41 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@3c995e9c
+25/04/23 22:18:41 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:18:42 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:18:42 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:19:02 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:19:02 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:19:02 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:19:02 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@5f015618
+25/04/23 22:19:02 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:19:04 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:19:04 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:20:44 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:20:44 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:20:44 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:20:44 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@1fb56a18
+25/04/23 22:20:44 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:20:45 INFO service.PipedriveConnectorService: REfresh token : {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:aHDmgqYAORj9o-psotWGq5wSYmsQGtcYJ6bLGrJWZZA8CbwEskfE5cVRlmln0ydN765HUVgMkQkzRTXDf2cIXwt13-dpSkzGBOBHeLixkOZltns9EiMwv5HyGDkSGHIFohkx-nKw2x_Q3dt4sndLIhkX596d3GrCa_hovgqfQCASyYzE6H6V-w3CNt5Hz-TuhOZy2Dp8llQSRYAFO8xUR_7WfcL4OsbdEYDVAt8n5MMRvqL0nCH147coJp0vq5x5jJsvi8fW9YN-NimOW3AiXkOBfS4Bho_dpzA0jhGIVektWNBbKXpwblFb7kZ1cu5WiNjV0vY8qTYDp_XbO4IZq1VzXX6jk3Beg1L1uYjDEKJhpuDLziFpfrzyFqP8alRqGSKUIGXqWWc7c9Vwa73j8uwT","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/04/23 22:20:47 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:20:47 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:25:17 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:25:17 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:25:17 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:25:17 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@2b484d2d
+25/04/23 22:25:17 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:25:19 INFO service.PipedriveConnectorService: REfresh token : {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:NsWwGeYAORh-8PBoDGoFGF55d4ieb2dko0DgKtwaqV0ZysLieQkus8IvQ2D_XhDQNnuF3rEalKTfUjOJ_en-2b6TfOFV2wMe28HulXa2urfvDG62J-k2SlosGwXicOaWrREgk4V-6dxBvs6n_lEdJquzuZZQLFk8uDJ93uNtSsQVdtbSVObcckCAANKll-a9rokAHXTlulYtKQwMXDD7wA721SsknyJscl37_UxoY2Dz8P966sKcvdFGSVk_Yv5j6OsV3ncRCsradVOQMhSlPozdrETAKi1JARvnGK-iBGovATUvC1Tyj1JXyty-aONNnkznr4LYtTkFavRTIM4JUULbiQTl78hWFbjiLUd9nZDsWBs6z9VaAh3bS2kEFjQQMxEVDxZhjGyWAEL3gSxVz5y3","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/04/23 22:25:19 INFO DateUtils.DateTimeUtils: Converted date to String is 23-4-2025 17:55:18
+25/04/23 22:25:20 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:25:20 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:25:37 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:25:37 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:25:37 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:25:37 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@859a6f0
+25/04/23 22:25:37 INFO service.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/04/23 22:25:37 INFO service.PipedriveConnectorService: REfresh token : {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:_C4gheoAORiymJ1DiTRB7R01LiZg8yf35QxXs2ikMbNeC0Yz0MbvEZVzc8Fmppt02hPv5ylDcn599b-PhZbITukC3o_Gokb5LIv96MmkKln1Z4P8dszRuvHTEebd8gzxq4xuHKaRCAfGfLAY8ZFV5la4GMqJIDuHqM_ENsnoYc_iEmqQzUBD5ZuTs1I4_BH5oN3UzWX157mSG6_ukrPIMK13fpps9cuGI1GHER6y2w4dBgcFJLugLTeGuf3PMW8HmA7O26XLQFXtrAeSezQGsU0dcmorlBsfV7cxzlV8NvEFiPrXpGg3YB-el7ck2_VQrmoLDRyu8hnedQPCbl-g4yGXUG66ON3Hlajdiu9MDJ41f3PS6VI_pOki1k1z9ukrzbUs-eQ3hjJ2vVP6CvioaFIT","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/04/23 22:25:38 INFO DateUtils.DateTimeUtils: Converted date to String is 23-4-2025 17:55:37
+25/04/23 22:25:38 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:25:38 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:32:08 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:32:09 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:32:09 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:32:09 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@42dbbec9
+25/04/23 22:32:09 ERROR DateUtils.DateTimeUtils: Error parsing date string: Unparseable date: "23-4-2025 17:55:37"
+java.text.ParseException: Unparseable date: "23-4-2025 17:55:37"
+	at java.base/java.text.DateFormat.parse(DateFormat.java:427)
+	at com.connectly_cm.Connectly_CM.Utils.DateUtils.DateTimeUtils.convertDateStringTODate(DateTimeUtils.java:49)
+	at com.connectly_cm.Connectly_CM.pipedriveIntegration.service.PipedriveConnectorService.getContacts(PipedriveConnectorService.java:143)
+	at com.connectly_cm.Connectly_CM.pipedriveIntegration.controller.PipedriveConnector.getContact(PipedriveConnector.java:73)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/04/23 22:33:44 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/23 22:33:44 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/23 22:34:18 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/23 22:34:18 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.a873a1810d27a1cfdf22792fd641eb4b5c8c9f3b
+25/04/23 22:34:19 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/23 22:34:19 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:vhIq_WMBORj3noPb8gogm6Bf7fyEq5zP24mNZ7k_salZu4oaxeAlgi7lHhQhdZ4wpN9evIwZ853wEWw005xdTHcH5Pm4qpDby7JDVgXiKL_KDlC3R5GS8LEC5FeJduB3gr3ZZF-pLm0xKUm2emftERkjJj8wiiU0_ryo_6e-d7DlnkpbsETeTNlWI4wrqxJ82o2BhEFYqjHe77MLUL_R1vDEJ1Zib0wr4SNqzbU3BiO-7GX_XoZLjhXm8ZY2Bt-ZW362qJruy4uRK_lxLX7XUbF-g9im99EjZCcQKmX9qzpkEZVy0OOmnsrVcc_AAcE4KiC9aRAJSZ09qwYXIDNKiXqHe5HPj8dK_aU8KtDtUxrhiUG5YUKHzcXAYBZbWxeNxdeKNOVFlhdvdy3Ny62xSoBa","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/23 22:34:20 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T17:04:20Z
+25/04/23 22:34:20 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T17:04:20Z
+25/04/23 22:34:20 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T18:04:19Z
+25/04/23 22:34:20 INFO service.PipedriveConnectorService: Saving the crm settings for the user with userId 67f55f28476aaf6b6cd61642
+25/04/23 22:34:56 INFO controller.PipedriveConnector: Header userId: {}null
+25/04/23 22:34:56 INFO controller.PipedriveConnector: Null UserIdnull
+25/04/23 22:35:40 INFO controller.PipedriveConnector: Header userId: {}null
+25/04/23 22:35:40 INFO controller.PipedriveConnector: Null UserIdnull
+25/04/23 22:38:10 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:38:10 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:38:10 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:38:10 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@61f8c6f8
+25/04/23 22:38:10 INFO service.PipedriveConnectorService: Access token has not expired. Using the same
+25/04/23 22:38:12 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:38:12 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:38:42 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@859a6f0
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: Access token has not expired. Using the same
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 22:38:43 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 22:59:40 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/23 22:59:40 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/23 23:00:22 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/23 23:00:22 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.f3f749f0ac56852c5fdcca0191599ef50931583f
+25/04/23 23:00:23 INFO service.PipedriveConnectorService: The response status is 200 OK
+25/04/23 23:00:23 INFO service.PipedriveConnectorService: The response body is {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:BnFXKNACORgjONrcVV7avAWKiZM78VZKUYRVRvTzNN4CA4DfMvr4TdzDnDJYrTFKbCiuNULDoxkMyozmVFg6dW59DaU1WTumwAB9aKSFgPSOCtFSHLOknk2Qsq_l0vKvtBMT2n3SCYusV587ATJYrdja5Yq7Z2BJ2mKAH3K7HSEpM94HCTYPQEdYfhVv7IK4yF3XDRpHuxPW7e_nCkwtrQGzo17JApdrDGPVziOkbarwbelx6WW1zgVLRLqA0Z4w866cY7TJg3ih0HhliIFBSLYVvs7rZT_s22wBNKVlVv3WuxY49uQR656WCtYgixzVysy6SwVL2DiNoQZbMAyKUPhj4NKQihzdPvqbsxxSut0r1YJZy233VJbNE4NpeMOXwP7hqgcp7J7uJiapntBeo_Ew","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/04/23 23:00:24 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T17:30:24Z
+25/04/23 23:00:24 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T17:30:24Z
+25/04/23 23:00:24 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-23T18:30:23Z
+25/04/23 23:00:24 INFO service.PipedriveConnectorService: Saving the crm settings for the user with userId 67f55f28476aaf6b6cd61642
+25/04/23 23:00:40 INFO controller.PipedriveConnector: Header userId: {}null
+25/04/23 23:00:40 INFO controller.PipedriveConnector: Null UserIdnull
+25/04/23 23:00:55 INFO controller.PipedriveConnector: Header userId: {}null
+25/04/23 23:00:55 INFO controller.PipedriveConnector: Null UserIdnull
+25/04/23 23:01:25 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 23:01:26 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 23:01:26 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 23:01:26 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@42c107d8
+25/04/23 23:01:26 INFO service.PipedriveConnectorService: Access token has not expired. Using the same
+25/04/23 23:01:27 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 23:01:27 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 23:35:11 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 23:35:11 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 23:35:11 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 23:35:11 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@3569b57b
+25/04/23 23:35:11 INFO service.PipedriveConnectorService: Access token has not expired. Using the same
+25/04/23 23:35:14 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 23:35:14 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}
+25/04/23 23:36:41 INFO service.PipedriveConnectorService: The user exists. UserID: 67f55f28476aaf6b6cd61642
+25/04/23 23:36:41 INFO service.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/04/23 23:37:15 INFO controller.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/04/23 23:37:15 INFO service.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.17569f7c4d40233df8e0f0cc22db5739f3222480
+25/04/23 23:37:15 INFO service.PipedriveConnectorService: An account is already connected. Please reconnect or disconnect it
+25/04/23 23:38:30 INFO controller.PipedriveConnector: Header userId: {}67f55f28476aaf6b6cd61642
+25/04/23 23:38:30 INFO service.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/04/23 23:38:30 INFO service.PipedriveConnectorService: UserID's crm setting data exist
+25/04/23 23:38:30 INFO service.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings@577417a1
+25/04/23 23:38:30 INFO service.PipedriveConnectorService: Access token has not expired. Using the same
+25/04/23 23:38:31 INFO service.PipedriveConnectorService: Status code: 200
+25/04/23 23:38:31 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":null,"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}}}

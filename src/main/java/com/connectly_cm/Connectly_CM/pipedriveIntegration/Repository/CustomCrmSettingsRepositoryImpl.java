@@ -14,10 +14,10 @@ public class CustomCrmSettingsRepositoryImpl implements CustomCrmSettingsReposit
     MongoTemplate mongoTemplate;
 
     @Override
-    public Optional<List<CrmSettings>> findByUserId(String userId) {
+    public CrmSettings findByUserId(String userId) {
         Criteria criteria = Criteria.where("userId").is(userId);
         Query query = new Query(criteria);
-        return Optional.of(mongoTemplate.find(query, CrmSettings.class));
+        return (mongoTemplate.findOne(query, CrmSettings.class));
     }
 
     @Override
