@@ -2,6 +2,8 @@ package com.connectly_cm.Connectly_CM.pipedriveIntegration.service;
 
 import com.connectly_cm.Connectly_CM.Utils.DateUtils.DateTimeUtils;
 import com.connectly_cm.Connectly_CM.Utils.EncryptionAes.EncryptionAes;
+import com.connectly_cm.Connectly_CM.Utils.HttpClientUtils.PipedriveHttpClientUtils.CrmHttpUtils;
+import com.connectly_cm.Connectly_CM.Utils.NullCheckUtils.PipedriveNullValidation;
 import com.connectly_cm.Connectly_CM.Utils.StringUtils.StringUtil;
 import com.connectly_cm.Connectly_CM.Utils.UrlBuilder.UrlBuilder;
 import com.connectly_cm.Connectly_CM.Utils.usersUtils.model.User;
@@ -64,46 +66,52 @@ public class PipedriveConnectorService {
     }
 
     public JSONObject getTokens(String authCode, String userId) {
-        if (authCode == null) {
-            throw new IllegalArgumentException("The authCode is null");
-        }
-        if (userId == null) {
-            throw new IllegalArgumentException("The userId is null");
-        }
-        LOGGER.info("Getting tokens for the auth code: " + authCode);
+        PipedriveNullValidation.validateAuthCode(authCode);
+        PipedriveNullValidation.validateUserId(userId);
 
+        LOGGER.info("Getting tokens for the auth code: " + authCode);
         if (!userRepository.existsById(userId)) {
             return new JSONObject().put("Error", "The user does not exist in DB");
         }
         if (userRepository.existsById(userId)) {
             if (!crmSettingRepository.checkByUserId(userId)) {
                 Optional<User> userData = userRepository.findById(userId);
-                String getTokenUrl = CrmConstants.PIPEDRIVE_GET_TOKENS_URL;
-                String basicAuthCred = clientId + ":" + clientSecret;
-                String token64 = new String(Base64.getEncoder()
-                        .encode(basicAuthCred.getBytes()));
-                String auth = CrmConstants.AUTH_TYPE + token64;
-
-                HttpHeaders headers = new HttpHeaders();
-                headers.set(CrmConstants.AUTHORIZATION, auth);
-                headers.setContentType(CrmConstants.APPLICATION_FORM_URLENCODED);
-
-                MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-                map.add("grant_type", CrmConstants.PIPEDRIVE_GRANT_TYPE);
-                map.add("code", authCode);
-                map.add("redirect_uri", CrmConstants.PIPEDRIVE_REDIRECT_URL);
-
-                HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
-
-                RestTemplate restTemplate = new RestTemplate();
-                try {
-                    ResponseEntity<String> response = restTemplate.postForEntity(getTokenUrl, request, String.class);
-                    LOGGER.info("The response status is " + response.getStatusCode());
-                    LOGGER.info("The response body is " + response.getBody());
-                    JSONObject jsonRes = new JSONObject(response.getBody());
+                //Util transformation
+                JSONObject jsonRes =CrmHttpUtils.basicAuthorization(CrmConstants.PIPEDRIVE_CRM,authCode);
+                LOGGER.info("Raw response from basicAuthorization: " + jsonRes.toString());
+                //
+//                String getTokenUrl = CrmConstants.PIPEDRIVE_GET_TOKENS_URL;
+//                String basicAuthCred = clientId + ":" + clientSecret;
+//                String token64 = new String(Base64.getEncoder()
+//                        .encode(basicAuthCred.getBytes()));
+//                String auth = CrmConstants.AUTH_TYPE + token64;
+//
+//                HttpHeaders headers = new HttpHeaders();
+//                headers.set(CrmConstants.AUTHORIZATION, auth);
+//                headers.setContentType(CrmConstants.APPLICATION_FORM_URLENCODED);
+//
+//                MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+//                map.add("grant_type", CrmConstants.PIPEDRIVE_GRANT_TYPE);
+//                map.add("code", authCode);
+//                map.add("redirect_uri", CrmConstants.PIPEDRIVE_REDIRECT_URL);
+//
+//                HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
+//
+//                RestTemplate restTemplate = new RestTemplate();
+//                try {
+//                    ResponseEntity<String> response = restTemplate.postForEntity(getTokenUrl, request, String.class);
+//                    LOGGER.info("The response status is " + response.getStatusCode());
+//                    LOGGER.info("The response body is " + response.getBody());
+//                    JSONObject jsonRes = new JSONObject(response.getBody());
                     CrmSettings crmSettings = new CrmSettings();
-                    crmSettings.setAccessToken(EncryptionAes.localEncrypt(jsonRes.getString("access_token")));
-                    crmSettings.setRefreshToken(EncryptionAes.localEncrypt(jsonRes.getString("refresh_token")));
+                    try{
+                        crmSettings.setAccessToken(EncryptionAes.localEncrypt(jsonRes.getString("access_token")));
+                        crmSettings.setRefreshToken(EncryptionAes.localEncrypt(jsonRes.getString("refresh_token")));
+                    }catch (Exception e){
+                        LOGGER.warn("Error occurred while encrypting tokens: "+e.getMessage());
+                        throw new RuntimeException();
+                    }
+
                     crmSettings.setType(CrmConstants.PIPEDRIVE_CRM);
                     crmSettings.setCreateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
                     crmSettings.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
@@ -120,13 +128,14 @@ public class PipedriveConnectorService {
                     LOGGER.info("Saving the crm settings for the user with userId " + userId);
                     crmSettingRepository.save(crmSettings);
                     return jsonRes;
-                } catch (HttpClientErrorException | HttpServerErrorException ex) {
-                    LOGGER.warn("Error caused due to " + ex.getMessage());
-                    return new JSONObject().put("error", ex.getMessage());
-                } catch (Exception e) {
-                    LOGGER.warn("Internal server error" + e.getMessage());
-                    return new JSONObject().put("error", "Internal server err: " + e.getMessage());
-                }
+//                }
+//                catch (HttpClientErrorException | HttpServerErrorException ex) {
+//                    LOGGER.warn("Error caused due to " + ex.getMessage());
+//                    return new JSONObject().put("error", ex.getMessage());
+//                } catch (Exception e) {
+//                    LOGGER.warn("Internal server error" + e.getMessage());
+//                    return new JSONObject().put("error", "Internal server err: " + e.getMessage());
+//                }
             } else {
                 LOGGER.info("An account is already connected. Please reconnect or disconnect it");
             }
@@ -194,7 +203,7 @@ public class PipedriveConnectorService {
         } catch (IOException e) {
             LOGGER.warn("Exception during API call: " + e.getMessage(), e);
         }
-        return Collections.singletonMap("Error", "Error while fetching data");
+        return Map.of("Error", "Error while fetching data");
     }
 
     public ResponseEntity<?> getContacts(String userId) {
