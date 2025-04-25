@@ -189,15 +189,17 @@ public class PipedriveConnectorService {
                 if (!resJson.has("access_token")) {
                     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("Error", "access token is not found"));
                 }
-                if(resJson.has("refresh_token")){
-                    userCrmSetting.setRefreshToken(EncryptionAes.localEncrypt(resJson.getString("refresh_token")));
-                }
+//                if(resJson.has("refresh_token")){
+//                    userCrmSetting.setRefreshToken(EncryptionAes.localEncrypt(resJson.getString("refresh_token")));
+//                }
+
+//                userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
+//                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+//                userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+//                        TimeZone.getTimeZone("UTC"),
+//                        resJson.getInt("expires_in")));
                 String updatedAcessToken = resJson.getString("access_token");
-                userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
-                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
-                userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
-                        TimeZone.getTimeZone("UTC"),
-                        resJson.getInt("expires_in")));
+                CrmHttpUtils.updateCrmSetting(userCrmSetting,resJson);
                 crmSettingRepository.save(userCrmSetting);
                 String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
                 Map<String, Object> result = makeApiCall(updatedAcessToken, url);
@@ -244,19 +246,28 @@ public class PipedriveConnectorService {
             LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
             try {
                 JSONObject newCredential = getAccessTokenUsingRefreshToken(userId, EncryptionAes.localDecrypt(userCrmSetting.getRefreshToken()));
+
+                if (newCredential.has("error")) {
+                    LOGGER.warn("Error fetching tokens using refresh tokens");
+                    return ResponseEntity.status(HttpStatus.CONFLICT)
+                            .body(Map.of("Error", "Error fetching tokens"));
+                }
+
                 LOGGER.info("New credentials: " + newCredential.toString());
                 if (!newCredential.has("access_token")) {
                     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("Error", "access token is not found"));
                 }
-                if(newCredential.has("refresh_token")){
-                    userCrmSetting.setRefreshToken(EncryptionAes.localEncrypt(newCredential.getString("refresh_token")));
-                }
+//                if(newCredential.has("refresh_token")){
+//                    userCrmSetting.setRefreshToken(EncryptionAes.localEncrypt(newCredential.getString("refresh_token")));
+//                }
+
+//                userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(newAccessToken));
+//                userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+//                        TimeZone.getTimeZone("UTC"),
+//                        newCredential.getInt("expires_in")));
+//                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
                 String newAccessToken = newCredential.getString("access_token");
-                userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(newAccessToken));
-                userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
-                        TimeZone.getTimeZone("UTC"),
-                        newCredential.getInt("expires_in")));
-                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+                CrmHttpUtils.updateCrmSetting(userCrmSetting,newCredential);
                 crmSettingRepository.save(userCrmSetting);
 
                 Map<String, Object> result = makeApiCall(newAccessToken, builtUrl);
