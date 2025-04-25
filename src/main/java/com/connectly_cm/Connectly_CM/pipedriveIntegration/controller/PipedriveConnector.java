@@ -58,7 +58,7 @@ public class PipedriveConnector {
 
     @GetMapping("pipedrive/getContacts")
     public ResponseEntity<?> getContact(HttpServletRequest request, HttpServletResponse response){
-        String userId = request.getParameter("userId");
+        String userId = request.getHeader("userId");
         LOGGER.info("Header userId: {}"+userId);
 
         if (userId == null) {
