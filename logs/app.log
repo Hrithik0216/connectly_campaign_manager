@@ -2535,3 +2535,12 @@ java.text.ParseException: Unparseable date: "23-4-2025 17:55:37"
 25/04/25 23:22:12 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
 25/04/25 23:22:13 INFO service.PipedriveConnectorService: Status code: 200
 25/04/25 23:22:13 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/04/25 23:48:54 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/04/25 23:48:54 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/04/25 23:49:11 INFO service.PipedriveConnectorService: UserId exists
+25/04/25 23:49:11 INFO service.PipedriveConnectorService: User's crm setting exists
+25/04/25 23:49:11 INFO service.PipedriveConnectorService: user has crm Setting
+25/04/25 23:49:11 INFO service.PipedriveConnectorService: Token has a valid expiry date
+25/04/25 23:49:11 INFO service.PipedriveConnectorService: Built Url: https://api.pipedrive.com/v1/leads?limit=5
+25/04/25 23:49:13 INFO service.PipedriveConnectorService: Status code: 200
+25/04/25 23:49:13 INFO service.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}

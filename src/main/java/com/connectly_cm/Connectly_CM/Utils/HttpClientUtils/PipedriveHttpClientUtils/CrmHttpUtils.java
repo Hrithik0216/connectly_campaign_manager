@@ -1,6 +1,9 @@
 package com.connectly_cm.Connectly_CM.Utils.HttpClientUtils.PipedriveHttpClientUtils;
 
+import com.connectly_cm.Connectly_CM.Utils.DateUtils.DateTimeUtils;
+import com.connectly_cm.Connectly_CM.Utils.EncryptionAes.EncryptionAes;
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
+import com.connectly_cm.Connectly_CM.pipedriveIntegration.Model.CrmSettings;
 import org.apache.log4j.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,6 +18,8 @@ import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
 import java.util.Base64;
+import java.util.Date;
+import java.util.TimeZone;
 
 @Component
 public class CrmHttpUtils {
@@ -163,5 +168,24 @@ public class CrmHttpUtils {
             default:
                 return new JSONObject();
         }
+    }
+
+    public static void updateCrmSetting(CrmSettings crmSettings, JSONObject response) {
+        try {
+            LOGGER.info("Updating user setting after fetching new credentials");
+            if (response.has("refresh_token")) {
+                crmSettings.setRefreshToken(EncryptionAes.localEncrypt(response.getString("refresh_token")));
+                crmSettings.setAccessToken(EncryptionAes.localEncrypt(response.getString("access_token")));
+                crmSettings.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
+                        TimeZone.getTimeZone("UTC"),
+                        response.getInt("expires_in")));
+                crmSettings.setUpdateTs(DateTimeUtils.convertDateToString(new Date(),
+                        TimeZone.getTimeZone("UTC"), null));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 }
