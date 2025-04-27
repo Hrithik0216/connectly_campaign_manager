@@ -6,25 +6,21 @@ import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.EmailS
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.model.EmailSequenceStep;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.EmailSequenceRepository;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.EmailSequenceStepRepository;
-import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.utils.TimeWindowUtils;
+import com.connectly_cm.Connectly_CM.utils.emailUtils.TimeWindowUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.time.ZoneId;
-import java.time.Duration;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 @Service
 public class EmailSchedulerService {
