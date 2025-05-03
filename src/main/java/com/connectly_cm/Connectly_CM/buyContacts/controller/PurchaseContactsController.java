@@ -2,9 +2,9 @@ package com.connectly_cm.Connectly_CM.buyContacts.controller;
 
 import com.connectly_cm.Connectly_CM.buyContacts.service.PurchaseContactsService;
 import com.connectly_cm.Connectly_CM.buyContacts.model.PurchaseContactRequestBody;
-import com.connectly_cm.Connectly_CM.utils.usersUtils.model.User;
-import com.connectly_cm.Connectly_CM.utils.usersUtils.repository.CustomUserRepository;
-import com.connectly_cm.Connectly_CM.utils.usersUtils.repository.UserRepository;
+import com.connectly_cm.Connectly_CM.models.users.User;
+import com.connectly_cm.Connectly_CM.repositories.userRepository.CustomUserRepository;
+import com.connectly_cm.Connectly_CM.repositories.userRepository.UserRepository;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

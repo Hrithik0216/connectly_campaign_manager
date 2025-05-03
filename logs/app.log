@@ -5028,3 +5028,489 @@ java.text.ParseException: Unparseable date: "23-4-2025 17:55:37"
 25/04/29 00:42:22 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-28T19:12:22Z
 25/04/29 00:42:22 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-28T19:12:22Z
 25/04/29 00:42:22 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-04-28T19:12:22Z
+25/05/03 19:23:00 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 19:23:00 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:27:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:27:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:28:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:28:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:28:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:28:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:30:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:30:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:31:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:31:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:31:22 INFO jwtUtils.JwtUtils: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746370045, iat=1746283645}
+25/05/03 20:32:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 20:32:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 20:32:22 INFO jwtUtils.JwtUtils: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746370045, iat=1746283645}
+25/05/03 21:28:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 21:28:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 21:30:38 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 21:30:38 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 21:38:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 21:38:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 21:41:23 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 21:41:23 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 21:42:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 21:42:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:38:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:38:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:40:37 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:40:37 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:41:29 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:41:29 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:44:29 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:44:29 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:45:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:45:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:46:02 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 22:46:02 ERROR jwtUtils.JwtUtils: Error decoding JWT
+java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Services.users.UserService.findMemberDetails(java.util.Map)" because "com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.userService" is null
+	at com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.decodeJwt(JwtUtils.java:78)
+	at com.connectly_cm.Connectly_CM.controllers.jwt.JwtController.getSecureData(JwtController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.connectly_cm.Connectly_CM.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/05/03 22:47:56 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 22:48:10 ERROR jwtUtils.JwtUtils: Error decoding JWT
+java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Services.users.UserService.findMemberDetails(java.util.Map)" because "com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.userService" is null
+	at com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.decodeJwt(JwtUtils.java:78)
+	at com.connectly_cm.Connectly_CM.controllers.jwt.JwtController.getSecureData(JwtController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.connectly_cm.Connectly_CM.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/05/03 22:50:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:50:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:51:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:51:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:51:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:51:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:51:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:51:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 22:52:25 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 22:53:22 ERROR jwtUtils.JwtUtils: Error decoding JWT
+java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Services.users.UserService.findMemberDetails(java.util.Map)" because "com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.userService" is null
+	at com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.decodeJwt(JwtUtils.java:78)
+	at com.connectly_cm.Connectly_CM.controllers.jwt.JwtController.getSecureData(JwtController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.connectly_cm.Connectly_CM.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:40)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/05/03 22:59:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 22:59:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:03:53 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 23:03:53 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:04:17 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 23:04:17 ERROR jwtUtils.JwtUtils: Error decoding JWT
+java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Services.users.UserService.findMemberDetails(java.util.Map)" because "com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.userService" is null
+	at com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.decodeJwt(JwtUtils.java:78)
+	at com.connectly_cm.Connectly_CM.controllers.jwt.JwtController.getSecureData(JwtController.java:27)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.connectly_cm.Connectly_CM.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/05/03 23:10:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 23:10:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:10:27 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 23:11:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 23:11:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:11:13 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 23:12:12 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 23:12:12 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:13:14 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/03 23:15:17 INFO controller.PurchaseContactsController: User not found for the ID: 67b8b3fac1e3bf2a47a4b63a
+25/05/03 23:15:41 INFO pipedrive.PipedriveConnector: Header userId: 67f55f28476aaf6b6cd61642
+25/05/03 23:15:41 INFO pipedrive.PipedriveConnectorService: User ID exist 67f55f28476aaf6b6cd61642
+25/05/03 23:15:41 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/03 23:15:41 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@b22efc3
+25/05/03 23:15:41 INFO pipedrive.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 67f55f28476aaf6b6cd61642
+25/05/03 23:15:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive accessing refreshtoken
+25/05/03 23:15:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/03 23:15:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using refresh Token: 14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de
+25/05/03 23:15:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/03 23:15:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[refresh_token], refresh_token=[14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/03 23:15:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response status: 200 OK
+25/05/03 23:15:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response body: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:VOPA9nMVPBhkjppW5loMcyftBLLz6La4hmMzPs6e2EVX1Sfof9fZiFYuIlK8x1LCaVCMo13dW_-cQJEjuUbfHuRg1tzxYHVhHffaDQWNRnXPGIoJZdkwEzuJIwQyyS-dfZuqSx9GYe1U4RobXoLFOy6Oz0UH7C4c4WPtrIVecbRlAvoAF31KrC77xfYxUGfOHIrgN-irAvmaO541lMI4MMpH7VPVniKPUf571e2-Q_B5TfB_0PqRq9s_lS3hF_6S8JPGPQvLj8wCwvmoh3iyA2StP6H15ewEFEzsYupf0bHFNDqfCx-lOtqrKfjvvsOBrx524jKw1btHKfLmU4KYvrV0GF1z_Zsa35RblE41pGNyknixGVod4dfcbZtY9O1kbDk7vcFHO2_vndegWwNbi4JR","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/05/03 23:15:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: Parsed JSON response refresh token: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:VOPA9nMVPBhkjppW5loMcyftBLLz6La4hmMzPs6e2EVX1Sfof9fZiFYuIlK8x1LCaVCMo13dW_-cQJEjuUbfHuRg1tzxYHVhHffaDQWNRnXPGIoJZdkwEzuJIwQyyS-dfZuqSx9GYe1U4RobXoLFOy6Oz0UH7C4c4WPtrIVecbRlAvoAF31KrC77xfYxUGfOHIrgN-irAvmaO541lMI4MMpH7VPVniKPUf571e2-Q_B5TfB_0PqRq9s_lS3hF_6S8JPGPQvLj8wCwvmoh3iyA2StP6H15ewEFEzsYupf0bHFNDqfCx-lOtqrKfjvvsOBrx524jKw1btHKfLmU4KYvrV0GF1z_Zsa35RblE41pGNyknixGVod4dfcbZtY9O1kbDk7vcFHO2_vndegWwNbi4JR","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/03 23:15:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: Updating user setting after fetching new credentials
+25/05/03 23:15:43 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T18:45:42Z
+25/05/03 23:15:43 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T17:45:43Z
+25/05/03 23:15:45 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/03 23:15:45 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/03 23:15:45 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T17:45:45Z
+25/05/03 23:15:45 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T17:45:45Z
+25/05/03 23:15:45 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T17:45:45Z
+25/05/03 23:15:45 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T17:45:45Z
+25/05/03 23:17:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/03 23:17:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/03 23:17:40 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}

@@ -2,7 +2,6 @@ package com.connectly_cm.Connectly_CM.Services.pipedrive;
 
 import com.connectly_cm.Connectly_CM.CustomErrorCodes.CrmErrCode;
 import com.connectly_cm.Connectly_CM.CustomErrorCodes.MemberErrCode;
-import com.connectly_cm.Connectly_CM.dtos.pipedrive.ContactsResponse;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.CrmOwnerDetails;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.EmailData;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.PhoneData;
@@ -14,9 +13,9 @@ import com.connectly_cm.Connectly_CM.utils.HttpClientUtils.PipedriveHttpClientUt
 import com.connectly_cm.Connectly_CM.utils.NullCheckUtils.PipedriveNullValidation;
 import com.connectly_cm.Connectly_CM.utils.StringUtils.StringUtil;
 import com.connectly_cm.Connectly_CM.utils.UrlBuilder.UrlBuilder;
-import com.connectly_cm.Connectly_CM.utils.usersUtils.model.User;
+import com.connectly_cm.Connectly_CM.models.users.User;
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
-import com.connectly_cm.Connectly_CM.utils.usersUtils.repository.UserRepository;
+import com.connectly_cm.Connectly_CM.repositories.userRepository.UserRepository;
 import com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings;
 import com.connectly_cm.Connectly_CM.repositories.pipedrive.CrmSettingRepository;
 import okhttp3.OkHttpClient;

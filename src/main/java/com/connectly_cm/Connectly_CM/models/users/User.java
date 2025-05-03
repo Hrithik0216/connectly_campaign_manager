@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.utils.usersUtils.model;
+package com.connectly_cm.Connectly_CM.models.users;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,6 +15,40 @@ public class User {
     private String email;
     private String password;
     private String confirmPassword;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", confirmPassword='" + confirmPassword + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", roles=" + roles +
+                ", isBasicEnabled=" + isBasicEnabled +
+                ", isProENabled=" + isProENabled +
+                ", isEnterpriseEnabled=" + isEnterpriseEnabled +
+                ", yearlyEmailCredits=" + yearlyEmailCredits +
+                ", monthlyEmailCredits=" + monthlyEmailCredits +
+                ", yearlyPhoneCredits=" + yearlyPhoneCredits +
+                ", monthlyPhoneCredits=" + monthlyPhoneCredits +
+                ", yearlyLinkedinCredits=" + yearlyLinkedinCredits +
+                ", monthlyLinkedinCredits=" + monthlyLinkedinCredits +
+                ", noOfEmailsPerMonth=" + noOfEmailsPerMonth +
+                ", noOfEmailsPerYear=" + noOfEmailsPerYear +
+                ", userStatus=" + userStatus +
+                ", isYearlyPlanActive=" + isYearlyPlanActive +
+                ", isEmailValidationEnabled=" + isEmailValidationEnabled +
+                ", zohoIntegrationEnabled=" + zohoIntegrationEnabled +
+                ", hubspotIntegrationEnabled=" + hubspotIntegrationEnabled +
+                ", noOfSequencecs=" + noOfSequencecs +
+                ", nextBillingCycle='" + nextBillingCycle + '\'' +
+                ", autoLoginKey='" + autoLoginKey + '\'' +
+                ", apiToken='" + apiToken + '\'' +
+                '}';
+    }
+
     private String firstName;
     private String phoneNumber;
     private List<String> roles;
@@ -37,6 +71,15 @@ public class User {
     private int noOfSequencecs;
     private String nextBillingCycle;
     private String autoLoginKey;
+    private String apiToken;
+
+    public String getApiToken() {
+        return apiToken;
+    }
+
+    public void setApiToken(String apiToken) {
+        this.apiToken = apiToken;
+    }
 
     public String getId() {
         return id;
