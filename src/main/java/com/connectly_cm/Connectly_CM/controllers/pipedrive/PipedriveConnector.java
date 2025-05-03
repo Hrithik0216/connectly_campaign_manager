@@ -19,8 +19,8 @@ public class PipedriveConnector {
     private static final Logger LOGGER = Logger.getLogger(PipedriveConnector.class);
 
 
-   @Autowired
-   PipedriveConnectorService pipedriveConnectorService;
+    @Autowired
+    PipedriveConnectorService pipedriveConnectorService;
 
     @PostMapping("pipedrive/authenticate")
     public ResponseEntity<?> authenticate(HttpServletRequest request, HttpServletResponse response) {
@@ -42,7 +42,7 @@ public class PipedriveConnector {
             LOGGER.info("The Authorization code is empty");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("Error", "Err"));
         }
-        LOGGER.info("The userId is "+userId);
+        LOGGER.info("The userId is " + userId);
         JSONObject result = pipedriveConnectorService.getTokens(authCode, userId);
         if (result.has("error")) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error", "Internal server error"));
@@ -51,13 +51,13 @@ public class PipedriveConnector {
     }
 
     @GetMapping("pipedrive/getContacts")
-    public ResponseEntity<?> getContact(HttpServletRequest request, HttpServletResponse response){
+    public ResponseEntity<?> getContact(HttpServletRequest request, HttpServletResponse response, @RequestBody) {
         String userId = request.getParameter("userId");
-        LOGGER.info("Header userId: "+userId);
+        LOGGER.info("Header userId: " + userId);
 
         if (StringUtil.isEmpty(userId)) {
             LOGGER.info("The userId is empty");
-            return ResponseEntity.badRequest()
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(Map.of("error", "User ID must be provided in headers or parameters"));
         }
 
@@ -65,12 +65,11 @@ public class PipedriveConnector {
     }
 
     @GetMapping("pipedrive/getLeadContacts")
-    public ResponseEntity<?> getLeadContacts(HttpServletRequest request, HttpServletResponse response, @RequestBody Map<String,Object>requestBody){
+    public ResponseEntity<?> getLeadContacts(HttpServletRequest request, HttpServletResponse response, @RequestBody Map<String, Object> requestBody) {
         String userId = request.getParameter("userId");
-
         if (StringUtil.isEmpty(userId)) {
             LOGGER.info("The userId is empty or null");
-            return ResponseEntity.badRequest()
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
                     .body(Map.of("error", "User ID must be provided in headers or parameters"));
         }
         return pipedriveConnectorService.getLeadContacts(userId, requestBody);
