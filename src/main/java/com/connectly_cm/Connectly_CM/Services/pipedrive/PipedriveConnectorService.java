@@ -2,6 +2,12 @@ package com.connectly_cm.Connectly_CM.Services.pipedrive;
 
 import com.connectly_cm.Connectly_CM.CustomErrorCodes.CrmErrCode;
 import com.connectly_cm.Connectly_CM.CustomErrorCodes.MemberErrCode;
+import com.connectly_cm.Connectly_CM.dtos.pipedrive.ContactsResponse;
+import com.connectly_cm.Connectly_CM.dtos.pipedrive.CrmOwnerDetails;
+import com.connectly_cm.Connectly_CM.dtos.pipedrive.EmailData;
+import com.connectly_cm.Connectly_CM.dtos.pipedrive.PhoneData;
+import com.connectly_cm.Connectly_CM.models.pipedrive.CrmContacts;
+import com.connectly_cm.Connectly_CM.repositories.pipedrive.CrmContactRepository;
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
 import com.connectly_cm.Connectly_CM.utils.EncryptionAes.EncryptionAes;
 import com.connectly_cm.Connectly_CM.utils.HttpClientUtils.PipedriveHttpClientUtils.CrmHttpUtils;
@@ -33,6 +39,9 @@ public class PipedriveConnectorService {
 
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    CrmContactRepository crmContactRepository;
 
     @Value("${pipedrive.client.id}")
     private String clientId;
@@ -172,6 +181,7 @@ public class PipedriveConnectorService {
                 String accessToken = EncryptionAes.localDecrypt(userCrmSetting.getAccessToken());
                 String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
                 Map<String, Object> result = makeApiCall(accessToken, url);
+                ContactsResponse(result, userId);
                 return ResponseEntity.status(HttpStatus.OK).body(result);
             } else {
                 LOGGER.info("Access token has expired. Using refresh token to get access token for the user " + userId);
@@ -184,20 +194,12 @@ public class PipedriveConnectorService {
                 if (!resJson.has("access_token")) {
                     return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("Error", "access token is not found"));
                 }
-//                if(resJson.has("refresh_token")){
-//                    userCrmSetting.setRefreshToken(EncryptionAes.localEncrypt(resJson.getString("refresh_token")));
-//                }
-
-//                userCrmSetting.setAccessToken(EncryptionAes.localEncrypt(updatedAcessToken));
-//                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
-//                userCrmSetting.setAccessTokenExpiryDate(DateTimeUtils.convertDateToString(new Date(),
-//                        TimeZone.getTimeZone("UTC"),
-//                        resJson.getInt("expires_in")));
                 String updatedAcessToken = resJson.getString("access_token");
-                CrmHttpUtils.updateCrmSetting(userCrmSetting,resJson);
+                CrmHttpUtils.updateCrmSetting(userCrmSetting, resJson);
                 crmSettingRepository.save(userCrmSetting);
                 String url = CrmConstants.PIPEDRIVE_COMPANY_DOMAIN + CrmConstants.GET_ALL_CONTACTS;
                 Map<String, Object> result = makeApiCall(updatedAcessToken, url);
+                ContactsResponse(result, userId);
                 return ResponseEntity.status(HttpStatus.OK).body(result);
             }
         } catch (Exception e) {
@@ -262,7 +264,7 @@ public class PipedriveConnectorService {
 //                        newCredential.getInt("expires_in")));
 //                userCrmSetting.setUpdateTs(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
                 String newAccessToken = newCredential.getString("access_token");
-                CrmHttpUtils.updateCrmSetting(userCrmSetting,newCredential);
+                CrmHttpUtils.updateCrmSetting(userCrmSetting, newCredential);
                 crmSettingRepository.save(userCrmSetting);
 
                 Map<String, Object> result = makeApiCall(newAccessToken, builtUrl);
@@ -273,4 +275,90 @@ public class PipedriveConnectorService {
             }
         }
     }
+
+    public void ContactsResponse(Map<String, Object> response, String userId) {
+        Object resultData = response.get("data");
+
+        if (resultData instanceof List<?>) {
+            List<Map<String, Object>> convertedData = (List<Map<String, Object>>) resultData;
+            System.out.println("Total contacts: " + convertedData.size());
+
+            for (Map<String, Object> item : convertedData) {
+                CrmContacts crmContact = new CrmContacts();  // Create contact once per item
+//                System.out.println("Processing contact item: " + item);
+
+                for (Map.Entry<String, Object> entry : item.entrySet()) {
+                    switch (entry.getKey()) {
+                        case "id":
+                            crmContact.setContactId((int) entry.getValue());
+                            break;
+                        case "job_title":
+                            crmContact.setJobTitle((String) entry.getValue());
+                            break;
+                        case "first_name":
+                            crmContact.setFirstName((String) entry.getValue());
+                            break;
+                        case "last_name":
+                            crmContact.setLastName((String) entry.getValue());
+                            break;
+                        case "primary_email":
+                            crmContact.setPrimaryEmail((String) entry.getValue());
+                            break;
+                        case "company_id":
+                            crmContact.setCompanyId((int) entry.getValue());
+                            break;
+                        case "postal_address":
+                            crmContact.setPostalAddress((String) entry.getValue());
+                            break;
+                        case "owner_id":
+                            Map<String, Object> ownerDetails = (Map<String, Object>) entry.getValue();
+                            CrmOwnerDetails crmOwnerDetails = new CrmOwnerDetails();
+                            crmOwnerDetails.setOwnerId((int) ownerDetails.get("id"));
+                            crmOwnerDetails.setOwnerName((String) ownerDetails.get("name"));
+                            crmOwnerDetails.setOwnerMail((String) ownerDetails.get("email"));
+                            crmOwnerDetails.setStatus((boolean) ownerDetails.get("active_flag"));
+                            crmContact.setOwnerDetails(crmOwnerDetails);
+                            break;
+                        case "phone":
+                            List<Map<String, Object>> phoneList = (List<Map<String, Object>>) entry.getValue();
+                            List<PhoneData> phones = new ArrayList<>();
+                            for (Map<String, Object> phoneEntry : phoneList) {
+                                PhoneData phone = new PhoneData();
+                                phone.setLabel((String) phoneEntry.get("label"));
+                                phone.setValue((String) phoneEntry.get("value"));
+                                phone.setPrimary((boolean) phoneEntry.get("primary"));
+                                phones.add(phone);
+                            }
+                            crmContact.setPhoneData(phones);
+                            break;
+                        case "email":
+                            List<Map<String, Object>> emailList = (List<Map<String, Object>>) entry.getValue();
+                            List<EmailData> emails = new ArrayList<>();
+                            for (Map<String, Object> emailEntry : emailList) {
+                                EmailData email = new EmailData();
+                                email.setLabel((String) emailEntry.get("label"));
+                                email.setValue((String) emailEntry.get("value"));
+                                email.setPrimary((boolean) emailEntry.get("primary"));
+                                emails.add(email);
+                            }
+                            crmContact.setEmailData(emails);
+                            break;
+                        case "active_flag":
+                            crmContact.setStatus((boolean) entry.getValue());
+                            break;
+                    }
+                }
+
+                crmContact.setImportType("PIPEDRIVE");
+                crmContact.setUserId(userId);
+               crmContact.setCreateAt(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+               crmContact.setUpdatedAt(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+                crmContactRepository.save(crmContact);
+                // Save the contact
+                System.out.println("Saving CrmContact: " + crmContact.toString());
+                // crmContactRepository.save(crmContact);
+            }
+        }
+    }
+
 }

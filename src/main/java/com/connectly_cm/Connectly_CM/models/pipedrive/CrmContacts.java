@@ -1,5 +1,6 @@
 package com.connectly_cm.Connectly_CM.models.pipedrive;
 
+import com.connectly_cm.Connectly_CM.dtos.pipedrive.CrmOwnerDetails;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.EmailData;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.PhoneData;
 import org.springframework.data.annotation.Id;
@@ -9,17 +10,45 @@ import java.util.List;
 
 @Document("crm_contacts")
 public class CrmContacts {
+
+
     @Id
     private String id;
     //    private long emailMessagesCount
-    private int ownerId;
-    private String ownerName;
-    private String ownerMail;
+    private CrmOwnerDetails ownerDetails;
+
+    @Override
+    public String toString() {
+        return "CrmContacts{" +
+                "id='" + id + '\'' +
+                ", ownerDetails=" + ownerDetails +
+                ", contactId=" + contactId +
+                ", jobTitle='" + jobTitle + '\'' +
+                ", phoneData=" + phoneData +
+                ", status=" + status +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", orgName='" + orgName + '\'' +
+                ", emailData=" + emailData +
+                ", primaryEmail='" + primaryEmail + '\'' +
+                ", companyId=" + companyId +
+                ", createAt='" + createAt + '\'' +
+                ", updatedAt='" + updatedAt + '\'' +
+                ", importType='" + importType + '\'' +
+                ", userId='" + userId + '\'' +
+                ", postalAddressSubpremise='" + postalAddressSubpremise + '\'' +
+                ", postalAddressLocality='" + postalAddressLocality + '\'' +
+                ", postalAddressLong='" + postalAddressLong + '\'' +
+                ", postalAddress='" + postalAddress + '\'' +
+                '}';
+    }
+
     private int contactId;
     private String jobTitle;
     private List<PhoneData> phoneData;
-    private String status;
+    private boolean status;
     private String firstName;
+    private String lastName;
     private String orgName;
     private List<EmailData> emailData;
     private String primaryEmail;
@@ -28,29 +57,67 @@ public class CrmContacts {
     private String updatedAt;
     private String importType;
     private String userId;
+    private String postalAddressSubpremise;
+    private String postalAddressLocality;
+    private String postalAddressLong;
+    private String postalAddress;
 
-    public int getOwnerId() {
-        return ownerId;
+    public String getPostalAddressSubpremise() {
+        return postalAddressSubpremise;
     }
 
-    public void setOwnerId(int ownerId) {
-        this.ownerId = ownerId;
+    public void setPostalAddressSubpremise(String postalAddressSubpremise) {
+        this.postalAddressSubpremise = postalAddressSubpremise;
     }
 
-    public String getOwnerName() {
-        return ownerName;
+    public String getPostalAddressLocality() {
+        return postalAddressLocality;
     }
 
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
+    public void setPostalAddressLocality(String postalAddressLocality) {
+        this.postalAddressLocality = postalAddressLocality;
     }
 
-    public String getOwnerMail() {
-        return ownerMail;
+    public String getPostalAddressLong() {
+        return postalAddressLong;
     }
 
-    public void setOwnerMail(String ownerMail) {
-        this.ownerMail = ownerMail;
+    public void setPostalAddressLong(String postalAddressLong) {
+        this.postalAddressLong = postalAddressLong;
+    }
+
+    public String getPostalAddress() {
+        return postalAddress;
+    }
+
+    public void setPostalAddress(String postalAddress) {
+        this.postalAddress = postalAddress;
+    }
+
+
+
+    public CrmOwnerDetails getOwnerDetails() {
+        return ownerDetails;
+    }
+
+    public void setOwnerDetails(CrmOwnerDetails ownerDetails) {
+        this.ownerDetails = ownerDetails;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public int getContactId() {
@@ -77,11 +144,11 @@ public class CrmContacts {
         this.phoneData = phoneData;
     }
 
-    public String getStatus() {
+    public boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 

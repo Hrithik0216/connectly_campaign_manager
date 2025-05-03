@@ -2,8 +2,17 @@ package com.connectly_cm.Connectly_CM.dtos.pipedrive;
 
 public class PhoneData {
     private String label;
-    private String work;
+    private String value;
     private boolean primary;
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
 
     public String getLabel() {
         return label;
@@ -13,13 +22,6 @@ public class PhoneData {
         this.label = label;
     }
 
-    public String getWork() {
-        return work;
-    }
-
-    public void setWork(String work) {
-        this.work = work;
-    }
 
     public boolean isPrimary() {
         return primary;
