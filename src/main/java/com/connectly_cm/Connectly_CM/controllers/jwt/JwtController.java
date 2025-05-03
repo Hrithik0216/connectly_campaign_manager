@@ -1,7 +1,11 @@
 package com.connectly_cm.Connectly_CM.controllers.jwt;
 
+import com.connectly_cm.Connectly_CM.ErrResponses.UserDataErrResponse;
+import com.connectly_cm.Connectly_CM.Services.users.UserService;
+import com.connectly_cm.Connectly_CM.constants.CustomErrCode;
 import com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils;
 import com.connectly_cm.Connectly_CM.models.users.User;
+import com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,23 +23,23 @@ import java.util.Map;
 public class JwtController {
     @Autowired
     private JwtUtils jwtUtils;
+    @Autowired
+    UserService userService;
+    @Autowired
+    UserUtils userUtils;
+
+
 
     @GetMapping("/secure-data")
-    public User getSecureData(HttpServletRequest request, HttpServletResponse response) {
+    public ResponseEntity<?> getSecureData(HttpServletRequest request, HttpServletResponse response) {
         User user = null;
-        if (jwtUtils.isTokenExpired(request.getHeader("Authorization"))) {
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
-        }
-        try {
-            user = jwtUtils.decodeJwt(request);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+       user= userUtils.getUserData(request);
+
         if (user != null) {
-            return user;
+            return ResponseEntity.status(HttpStatus.OK).body(Map.of(CustomErrCode.USER_DETAILS,user));
         } else {
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED)
+                    .body(new UserDataErrResponse(CustomErrCode.UNAUTHORIZED_USER,"The user does not exists"));
         }
-        return null;
     }
 }
