@@ -5600,3 +5600,24 @@ java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Ser
 25/05/04 01:26:53 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T19:56:53Z
 25/05/04 01:26:53 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T19:56:53Z
 25/05/04 01:26:53 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-03T19:56:53Z
+25/05/04 13:23:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:23:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 13:25:24 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:25:24 INFO userUtils.UserUtils: token validation true
+25/05/04 13:25:24 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:25:24 INFO users.UserService: finding member details {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:25:24 INFO users.UserService: APi key
+25/05/04 13:26:15 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:26:15 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 13:26:18 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:26:18 INFO userUtils.UserUtils: token validation true
+25/05/04 13:26:18 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:26:18 INFO users.UserService: finding member details {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:26:18 INFO users.UserService: APi key
+25/05/04 13:40:12 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:40:12 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 13:40:16 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:40:16 INFO userUtils.UserUtils: token validation true
+25/05/04 13:40:16 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:40:16 INFO users.UserService: finding member details {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 13:40:16 INFO users.UserService: APi key

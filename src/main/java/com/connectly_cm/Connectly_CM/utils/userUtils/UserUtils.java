@@ -6,11 +6,12 @@ import com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
-@Service
+@Component
 public class UserUtils {
     private static final Logger LOGGER = Logger.getLogger(UserUtils.class);
     @Autowired
