@@ -1,6 +1,5 @@
 package com.connectly_cm.Connectly_CM.Services.pipedrive;
 
-import com.connectly_cm.Connectly_CM.CustomErrorCodes.CrmErrCode;
 import com.connectly_cm.Connectly_CM.CustomErrorCodes.MemberErrCode;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.CrmOwnerDetails;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.EmailData;
@@ -55,33 +54,16 @@ public class PipedriveConnectorService {
     CrmSettingRepository crmSettingRepository;
 
     public ResponseEntity<?> authenticate(String userId) {
-        if (!userRepository.existsById(userId)) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("Error", "The userId does not exist"));
-        }
-        if (userRepository.existsById(userId)) {
-            LOGGER.info("The user exists. UserID: " + userId);
-            String authenticationUrl = CrmConstants.PIPEDRIVE_OAUTH_URL + "client_id=" + clientId + "&redirect_uri=" + CrmConstants.PIPEDRIVE_REDIRECT_URL;
-            LOGGER.info("The pipedrive authentication url is " + authenticationUrl);
-            HashMap<String, String> resp = new HashMap<>();
-            resp.put("authorizationUrl", authenticationUrl);
-            return ResponseEntity.status(HttpStatus.OK).body(resp);
-        } else {
-            LOGGER.info("The userId is not found in db " + userId + ".");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body("The user with userId " + userId + " not found in DB");
-        }
-
+        LOGGER.info("The user exists. UserID: " + userId);
+        String authenticationUrl = CrmConstants.PIPEDRIVE_OAUTH_URL + "client_id=" + clientId + "&redirect_uri=" + CrmConstants.PIPEDRIVE_REDIRECT_URL;
+        LOGGER.info("The pipedrive authentication url is " + authenticationUrl);
+        HashMap<String, String> resp = new HashMap<>();
+        resp.put("authorizationUrl", authenticationUrl);
+        return ResponseEntity.status(HttpStatus.OK).body(resp);
     }
 
     public JSONObject getTokens(String authCode, String userId) {
-        PipedriveNullValidation.validateAuthCode(authCode);
-        PipedriveNullValidation.validateUserId(userId);
-
         LOGGER.info("Getting tokens for the auth code: " + authCode);
-        if (!userRepository.existsById(userId)) {
-            return new JSONObject().put(MemberErrCode.MEMBER_DOES_NO_EXIST, "The user does not exist in DB");
-        }
-
         if (!crmSettingRepository.checkByUserId(userId)) {
             Optional<User> userData = userRepository.findById(userId);
             JSONObject jsonRes = CrmHttpUtils.basicAuthorization(CrmConstants.PIPEDRIVE_CRM, authCode);
@@ -95,7 +77,7 @@ public class PipedriveConnectorService {
                 crmSettings.setRefreshToken(EncryptionAes.localEncrypt(jsonRes.getString("refresh_token")));
             } catch (Exception e) {
                 LOGGER.warn("Error occurred while encrypting tokens: " + e.getMessage());
-                throw new RuntimeException();
+                return new JSONObject().put("serverErr","Internal server err");
             }
 
             crmSettings.setType(CrmConstants.PIPEDRIVE_CRM);
@@ -122,8 +104,6 @@ public class PipedriveConnectorService {
     }
 
     private JSONObject getAccessTokenUsingRefreshToken(String userId, String refreshToken) {
-        PipedriveNullValidation.validateUserId(userId);
-        PipedriveNullValidation.validateRefreshToken(refreshToken);
         if (!crmSettingRepository.checkByUserId(userId)) {
             LOGGER.info("User's crm setting does not exists");
             return new JSONObject().put("Error", "user's crm setting does not exists");
@@ -196,7 +176,7 @@ public class PipedriveConnectorService {
             }
         } catch (Exception e) {
             LOGGER.warn("Error occured due to " + e.getMessage());
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error","Error occured while fetching contacts"));
         }
     }
 
@@ -240,7 +220,7 @@ public class PipedriveConnectorService {
             }
         } catch (Exception e) {
             LOGGER.warn("Error occured due to " + e.getMessage());
-            throw new RuntimeException(e);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error","Error occured while fetching contacts"));
         }
 
     }
@@ -346,103 +326,7 @@ public class PipedriveConnectorService {
                 crmContact.setUpdatedAt(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
                 crmContactRepository.save(crmContact);
                 // Save the contact
-                System.out.println("Saving CrmContact: " + crmContact.toString());
-                // crmContactRepository.save(crmContact);
-            }
-        }
-    }
-
-
-    public void LeadContactsResponse(Map<String, Object> response, String userId, String contactDataType) {
-        Object resultData = response.get("data");
-
-        if (resultData instanceof List<?>) {
-            List<Map<String, Object>> convertedData = (List<Map<String, Object>>) resultData;
-            LOGGER.info("Total contacts: " + convertedData.size());
-
-            for (Map<String, Object> item : convertedData) {
-                LOGGER.info("First item: " + item);
-                CrmContacts crmContact = new CrmContacts();
-
-                for (Map.Entry<String, Object> entry : item.entrySet()) {
-                    LOGGER.info("First entry: " + entry);
-                    switch (entry.getKey()) {
-                        case "id":
-                            crmContact.setContactId((int) entry.getValue());
-                            break;
-                        case "job_title":
-                            crmContact.setJobTitle((String) entry.getValue());
-                            break;
-                        case "first_name":
-                            crmContact.setFirstName((String) entry.getValue());
-                            break;
-                        case "last_name":
-                            crmContact.setLastName((String) entry.getValue());
-                            break;
-                        case "primary_email":
-                            crmContact.setPrimaryEmail((String) entry.getValue());
-                            break;
-                        case "company_id":
-                            crmContact.setCompanyId((int) entry.getValue());
-                            break;
-                        case "postal_address":
-                            crmContact.setPostalAddress((String) entry.getValue());
-                            break;
-                        case "owner_id":
-                            switch (contactDataType) {
-                                case ("PIPEDRIVE_PERSON"):
-                                    Map<String, Object> ownerDetails = (Map<String, Object>) entry.getValue();
-                                    CrmOwnerDetails crmOwnerDetails = new CrmOwnerDetails();
-                                    crmOwnerDetails.setOwnerId((int) ownerDetails.get("id"));
-                                    crmOwnerDetails.setOwnerName((String) ownerDetails.get("name"));
-                                    crmOwnerDetails.setOwnerMail((String) ownerDetails.get("email"));
-                                    crmOwnerDetails.setStatus((boolean) ownerDetails.get("active_flag"));
-                                    crmContact.setOwnerDetails(crmOwnerDetails);
-                                    break;
-                                case ("PIPEDRIVE_LEAD"):
-                                    crmContact.setPipedriveLeadOwnerId((int) entry.getValue());
-                                default:
-                                    break;
-                            }
-                            break;
-                        case "phone":
-                            List<Map<String, Object>> phoneList = (List<Map<String, Object>>) entry.getValue();
-                            List<PhoneData> phones = new ArrayList<>();
-                            for (Map<String, Object> phoneEntry : phoneList) {
-                                PhoneData phone = new PhoneData();
-                                phone.setLabel((String) phoneEntry.get("label"));
-                                phone.setValue((String) phoneEntry.get("value"));
-                                phone.setPrimary((boolean) phoneEntry.get("primary"));
-                                phones.add(phone);
-                            }
-                            crmContact.setPhoneData(phones);
-                            break;
-                        case "email":
-                            List<Map<String, Object>> emailList = (List<Map<String, Object>>) entry.getValue();
-                            List<EmailData> emails = new ArrayList<>();
-                            for (Map<String, Object> emailEntry : emailList) {
-                                EmailData email = new EmailData();
-                                email.setLabel((String) emailEntry.get("label"));
-                                email.setValue((String) emailEntry.get("value"));
-                                email.setPrimary((boolean) emailEntry.get("primary"));
-                                emails.add(email);
-                            }
-                            crmContact.setEmailData(emails);
-                            break;
-                        case "active_flag":
-                            crmContact.setStatus((boolean) entry.getValue());
-                            break;
-                    }
-                }
-
-                crmContact.setImportType("PIPEDRIVE");
-                crmContact.setContactDataType(contactDataType);
-                crmContact.setUserId(userId);
-                crmContact.setCreateAt(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
-                crmContact.setUpdatedAt(DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
-                crmContactRepository.save(crmContact);
-                // Save the contact
-                System.out.println("Saving CrmContact: " + crmContact.toString());
+                LOGGER.info("Saving CrmContact: " + crmContact.toString());
                 // crmContactRepository.save(crmContact);
             }
         }

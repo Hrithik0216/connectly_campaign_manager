@@ -54,6 +54,9 @@ public class PipedriveConnector {
             if (result.has("error")) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(Map.of("error", "The oauth code has expired"));
             }
+            if (result.has("serverErr")) {
+                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error", "The oauth code has expired"));
+            }
             return ResponseEntity.status(HttpStatus.OK).body(result.toMap());
         } else {
             LOGGER.warn("The user does not exist");
