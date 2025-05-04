@@ -22,7 +22,7 @@ public class UserUtils {
     public User getUserData(HttpServletRequest request) {
         LOGGER.info(" getUserData");
         User user = null;
-        String token = request.getHeader("Authorization");
+        String token = request.getParameter("Authorization");
         LOGGER.info("Token : "+token);
         if (!userService.validateToken(token)) {
             try {

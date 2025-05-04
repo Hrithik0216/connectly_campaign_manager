@@ -6550,3 +6550,33 @@ java.lang.NullPointerException: Cannot invoke "Object.toString()" because the re
 25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: person_id=1
 25/05/04 21:19:39 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T15:49:39Z
 25/05/04 21:19:39 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T15:49:39Z
+25/05/04 21:55:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 21:55:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 21:55:13 INFO userUtils.UserUtils:  getUserData
+25/05/04 21:55:13 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:55:13 INFO userUtils.UserUtils: token is valid
+25/05/04 21:55:13 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:55:13 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:55:13 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:55:13 INFO users.UserService: APi key
+25/05/04 21:55:14 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 21:55:14 INFO pipedrive.PipedriveConnectorService: The user exists. UserID: 681728b2a3807f72f3d682be
+25/05/04 21:55:14 INFO pipedrive.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/05/04 21:55:44 INFO userUtils.UserUtils:  getUserData
+25/05/04 21:55:44 INFO userUtils.UserUtils: Token : null
+25/05/04 21:56:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 21:56:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 21:56:39 INFO userUtils.UserUtils:  getUserData
+25/05/04 21:56:39 INFO userUtils.UserUtils: Token : null
+25/05/04 21:57:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 21:57:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 21:57:26 INFO userUtils.UserUtils:  getUserData
+25/05/04 21:57:26 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:57:26 INFO userUtils.UserUtils: token is valid
+25/05/04 21:57:26 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:57:27 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:57:27 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:57:27 INFO users.UserService: APi key
+25/05/04 21:57:27 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 21:57:27 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.771507c5cdae2f84f0b937c000c06a74ce826e21
+25/05/04 21:57:27 INFO pipedrive.PipedriveConnectorService: An account is already connected. Please reconnect or disconnect it
