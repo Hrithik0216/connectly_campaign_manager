@@ -23,9 +23,10 @@ public class UserUtils {
         LOGGER.info(" getUserData");
         User user = null;
         String token = request.getHeader("Authorization");
+        LOGGER.info("Token : "+token);
         if (!userService.validateToken(token)) {
             try {
-                LOGGER.info("token validation true");
+                LOGGER.info("token is valid");
                 user = jwtUtils.decodeJwt(request);
                 return user;
             } catch (IOException e) {

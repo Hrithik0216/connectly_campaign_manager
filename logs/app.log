@@ -5621,3 +5621,932 @@ java.lang.NullPointerException: Cannot invoke "com.connectly_cm.Connectly_CM.Ser
 25/05/04 13:40:16 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
 25/05/04 13:40:16 INFO users.UserService: finding member details {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
 25/05/04 13:40:16 INFO users.UserService: APi key
+25/05/04 13:54:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:54:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 13:55:09 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:56:38 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:58:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:58:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 13:58:58 INFO userUtils.UserUtils:  getUserData
+25/05/04 13:59:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 13:59:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:00:08 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:00:08 INFO userUtils.UserUtils: Token : null
+25/05/04 14:00:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:00:49 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:00:52 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:00:52 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTYxYjcwYWM5ZjMxNmM0MWQxMzgxMSIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa3NoYW5tdTJAZ29vZ2xlLmNvbSIsInN1YiI6ImhyaXRoaWtzaGFubXUyQGdvb2dsZS5jb20iLCJpYXQiOjE3NDYyODgwNTIsImV4cCI6MTc0NjM3NDQ1Mn0.MdH7xCRj66qEEvo5D6eWXnU0061QHmb3ECHJZ3P4_D4
+25/05/04 14:00:52 INFO userUtils.UserUtils: token validation true
+25/05/04 14:02:58 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:02:58 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:03:03 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:03:03 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTYxYjcwYWM5ZjMxNmM0MWQxMzgxMSIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa3NoYW5tdTJAZ29vZ2xlLmNvbSIsInN1YiI6ImhyaXRoaWtzaGFubXUyQGdvb2dsZS5jb20iLCJpYXQiOjE3NDYyODgwNTIsImV4cCI6MTc0NjM3NDQ1Mn0.MdH7xCRj66qEEvo5D6eWXnU0061QHmb3ECHJZ3P4_D4
+25/05/04 14:03:03 INFO userUtils.UserUtils: token is valid
+25/05/04 14:03:03 INFO jwtUtils.JwtUtils: token received for decode: null
+25/05/04 14:03:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:03:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:03:28 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:03:28 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTYxYjcwYWM5ZjMxNmM0MWQxMzgxMSIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa3NoYW5tdTJAZ29vZ2xlLmNvbSIsInN1YiI6ImhyaXRoaWtzaGFubXUyQGdvb2dsZS5jb20iLCJpYXQiOjE3NDYyODgwNTIsImV4cCI6MTc0NjM3NDQ1Mn0.MdH7xCRj66qEEvo5D6eWXnU0061QHmb3ECHJZ3P4_D4
+25/05/04 14:03:28 INFO userUtils.UserUtils: token is valid
+25/05/04 14:03:28 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTYxYjcwYWM5ZjMxNmM0MWQxMzgxMSIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa3NoYW5tdTJAZ29vZ2xlLmNvbSIsInN1YiI6ImhyaXRoaWtzaGFubXUyQGdvb2dsZS5jb20iLCJpYXQiOjE3NDYyODgwNTIsImV4cCI6MTc0NjM3NDQ1Mn0.MdH7xCRj66qEEvo5D6eWXnU0061QHmb3ECHJZ3P4_D4
+25/05/04 14:03:28 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 14:03:28 INFO users.UserService: finding member details {sub=hrithikshanmu2@google.com, apiToken=68161b70ac9f316c41d13811, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithikshanmu2@google.com, exp=1746374452, iat=1746288052}
+25/05/04 14:03:28 INFO users.UserService: APi key
+25/05/04 14:03:29 INFO pipedrive.PipedriveConnector: Header userId: 68161b70ac9f316c41d13812
+25/05/04 14:03:29 INFO pipedrive.PipedriveConnectorService: User ID exist 68161b70ac9f316c41d13812
+25/05/04 14:03:29 INFO pipedrive.PipedriveConnectorService: User's crm setting does not exist
+25/05/04 14:07:57 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:07:57 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sInVzZXJFbWFpbCI6ImhyaXRoaWt0ZXN0aW5nQGdvb2dsZS5jb20iLCJzdWIiOiJocml0aGlrdGVzdGluZ0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ3ODQ5LCJleHAiOjE3NDY0MzQyNDl9.iIuByOqOCU2vmGsVJkTGcyis9uzcY0IeSJms-ekliK8
+25/05/04 14:07:57 INFO userUtils.UserUtils: token is valid
+25/05/04 14:07:57 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiLCJST0xFX0FETUlOIl0sInVzZXJFbWFpbCI6ImhyaXRoaWt0ZXN0aW5nQGdvb2dsZS5jb20iLCJzdWIiOiJocml0aGlrdGVzdGluZ0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ3ODQ5LCJleHAiOjE3NDY0MzQyNDl9.iIuByOqOCU2vmGsVJkTGcyis9uzcY0IeSJms-ekliK8
+25/05/04 14:07:57 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithiktesting@google.com, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithiktesting@google.com, exp=1746434249, iat=1746347849}
+25/05/04 14:07:57 INFO users.UserService: finding member details {sub=hrithiktesting@google.com, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithiktesting@google.com, exp=1746434249, iat=1746347849}
+25/05/04 14:07:57 ERROR jwtUtils.JwtUtils: Error decoding JWT
+java.lang.NullPointerException: Cannot invoke "Object.toString()" because the return value of "java.util.Map.get(Object)" is null
+	at com.connectly_cm.Connectly_CM.Services.users.UserService.findMemberDetails(UserService.java:22)
+	at com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils.decodeJwt(JwtUtils.java:84)
+	at com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils.getUserData(UserUtils.java:30)
+	at com.connectly_cm.Connectly_CM.controllers.pipedrive.PipedriveConnector.getContact(PipedriveConnector.java:60)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.connectly_cm.Connectly_CM.config.JwtAuthFilter.doFilterInternal(JwtAuthFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243)
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+25/05/04 14:07:57 INFO pipedrive.PipedriveConnector: The userId is empty
+25/05/04 14:13:53 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:13:53 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 14:13:53 INFO userUtils.UserUtils: token is valid
+25/05/04 14:13:53 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 14:13:53 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 14:13:53 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 14:13:53 INFO users.UserService: APi key
+25/05/04 14:13:53 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 14:13:53 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 14:13:53 INFO pipedrive.PipedriveConnectorService: User's crm setting does not exist
+25/05/04 14:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:19:37 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:19:37 INFO userUtils.UserUtils: Token : null
+25/05/04 14:42:47 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:42:47 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:43:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:43:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:43:20 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:43:20 INFO userUtils.UserUtils: Token : null
+25/05/04 14:43:54 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:43:54 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:43:58 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:43:58 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 14:43:58 INFO userUtils.UserUtils: token is valid
+25/05/04 14:43:58 INFO jwtUtils.JwtUtils: token received for decode: null
+25/05/04 14:44:21 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 14:44:21 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 14:44:24 INFO userUtils.UserUtils:  getUserData
+25/05/04 14:44:24 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 14:44:24 INFO userUtils.UserUtils: token is valid
+25/05/04 14:44:24 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 14:44:24 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 14:44:24 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 14:44:24 INFO users.UserService: APi key
+25/05/04 14:44:25 INFO pipedrive.PipedriveConnectorService: The user exists. UserID: 681728b2a3807f72f3d682be
+25/05/04 14:44:25 INFO pipedrive.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/05/04 15:11:34 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:11:34 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:11:34 INFO userUtils.UserUtils: token is valid
+25/05/04 15:11:34 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:11:34 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:11:34 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:11:34 INFO users.UserService: APi key
+25/05/04 15:11:34 INFO pipedrive.PipedriveConnectorService: The user exists. UserID: 681728b2a3807f72f3d682be
+25/05/04 15:11:34 INFO pipedrive.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/05/04 15:12:25 INFO pipedrive.PipedriveConnector: The userId is 67f55f28476aaf6b6cd61642
+25/05/04 15:12:25 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:28:17 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:28:17 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:28:44 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:28:44 INFO userUtils.UserUtils: Token : null
+25/05/04 15:29:30 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:29:30 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:29:34 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:29:34 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:29:34 INFO userUtils.UserUtils: token is valid
+25/05/04 15:29:34 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:29:34 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:29:34 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:29:34 INFO users.UserService: APi key
+25/05/04 15:29:35 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:29:35 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:29:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:29:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:29:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:29:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:29:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:29:36 WARN PipedriveHttpClientUtils.CrmHttpUtils: HttpClientErrorException Error occurred while fetching tokens: 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code is invalid","error":"invalid_grant"}"
+25/05/04 15:29:36 INFO pipedrive.PipedriveConnectorService: Raw response from basicAuthorization: {"error":"400 Bad Request on POST request for \"https://oauth.pipedrive.com/oauth/token\": \"{\"success\":false,\"message\":\"Invalid grant: authorization code is invalid\",\"error\":\"invalid_grant\"}\""}
+25/05/04 15:29:36 WARN pipedrive.PipedriveConnectorService: Error occurred while encrypting tokens: JSONObject["access_token"] not found.
+25/05/04 15:31:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:31:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:31:30 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:31:30 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:31:30 INFO userUtils.UserUtils: token is valid
+25/05/04 15:31:30 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:31:30 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:31:30 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:31:30 INFO users.UserService: APi key
+25/05/04 15:31:30 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:31:30 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:31:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:31:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:31:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:31:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:31:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:31:32 WARN PipedriveHttpClientUtils.CrmHttpUtils: HttpClientErrorException Error occurred while fetching tokens: 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code is invalid","error":"invalid_grant"}"
+25/05/04 15:31:32 INFO pipedrive.PipedriveConnectorService: Raw response from basicAuthorization: {"error":"400 Bad Request on POST request for \"https://oauth.pipedrive.com/oauth/token\": \"{\"success\":false,\"message\":\"Invalid grant: authorization code is invalid\",\"error\":\"invalid_grant\"}\""}
+25/05/04 15:31:32 WARN pipedrive.PipedriveConnectorService: Error occurred while encrypting tokens: JSONObject["access_token"] not found.
+25/05/04 15:43:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:43:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:43:34 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:43:34 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:43:34 INFO userUtils.UserUtils: token is valid
+25/05/04 15:43:34 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:43:35 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:43:35 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:43:35 INFO users.UserService: APi key
+25/05/04 15:43:35 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:43:35 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:43:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:43:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:43:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:43:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:43:35 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:43:36 WARN PipedriveHttpClientUtils.CrmHttpUtils: HttpClientErrorException Error occurred while fetching tokens: 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code is invalid","error":"invalid_grant"}"
+25/05/04 15:44:15 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:44:15 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:44:27 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:44:27 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:44:27 INFO userUtils.UserUtils: token is valid
+25/05/04 15:44:27 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:44:27 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:44:27 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:44:27 INFO users.UserService: APi key
+25/05/04 15:44:28 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:44:28 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:44:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:44:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:44:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:44:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:44:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:44:29 WARN PipedriveHttpClientUtils.CrmHttpUtils: HttpClientErrorException Error occurred while fetching tokens: 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code is invalid","error":"invalid_grant"}"
+25/05/04 15:55:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:55:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:56:04 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:56:04 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:56:04 INFO userUtils.UserUtils: token is valid
+25/05/04 15:56:04 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:56:04 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:56:04 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:56:04 INFO users.UserService: APi key
+25/05/04 15:56:04 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:56:04 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:56:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:56:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:56:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d
+25/05/04 15:56:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:56:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.ead8055f272cb7863e0232bb3930c9fa60d2c75d], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:56:05 WARN PipedriveHttpClientUtils.CrmHttpUtils: HttpClientErrorException Error occurred while fetching tokens: 400 Bad Request on POST request for "https://oauth.pipedrive.com/oauth/token": "{"success":false,"message":"Invalid grant: authorization code is invalid","error":"invalid_grant"}"
+25/05/04 15:56:55 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:56:55 INFO userUtils.UserUtils: Token : null
+25/05/04 15:57:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:57:50 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:57:55 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:57:55 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:57:55 INFO userUtils.UserUtils: token is valid
+25/05/04 15:57:55 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:57:55 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:57:55 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:57:55 INFO users.UserService: APi key
+25/05/04 15:57:55 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:57:56 INFO pipedrive.PipedriveConnectorService: The user exists. UserID: 681728b2a3807f72f3d682be
+25/05/04 15:57:56 INFO pipedrive.PipedriveConnectorService: The pipedrive authentication url is https://oauth.pipedrive.com/oauth/authorize?client_id=7ce255df35ae6eff&redirect_uri=http://localhost:3000/connect/pipedrive/callback
+25/05/04 15:58:36 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:58:36 INFO userUtils.UserUtils: Token : null
+25/05/04 15:59:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 15:59:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 15:59:15 INFO userUtils.UserUtils:  getUserData
+25/05/04 15:59:15 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:59:15 INFO userUtils.UserUtils: token is valid
+25/05/04 15:59:15 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 15:59:15 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:59:15 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 15:59:15 INFO users.UserService: APi key
+25/05/04 15:59:16 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 15:59:16 INFO pipedrive.PipedriveConnectorService: Getting tokens for the auth code: 14460063.23998751.f58ec2b84b66a3205b53450cee4f077f62d0e3cc
+25/05/04 15:59:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive Basic Auth
+25/05/04 15:59:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 15:59:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using authCode: 14460063.23998751.f58ec2b84b66a3205b53450cee4f077f62d0e3cc
+25/05/04 15:59:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 15:59:16 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[authorization_code], code=[14460063.23998751.f58ec2b84b66a3205b53450cee4f077f62d0e3cc], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 15:59:17 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response status: 200 OK
+25/05/04 15:59:17 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response body: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:PXf8izdMPBgBZdYRhkVaA0nTMc42U88p7SQp9OKFcNIEXSep6d0085RlfUrENW5LEdSveNVaHigvaXIO1ZraKgOJ_38jn7iS9jJuEEabqQaQFo3w5EaBO2dIBtLCWWiYFzQeSebg4xKVRxbRcG6907wQuBh_IY3526Ww8dGKNe7QGDMqSnoRjECogqYGczUyodn20g9R-9sB1bFH6S9Ub34nb-flGzwihaFfl1DnEuTZOzDInrJXu_fc13-fki5xwVPMz1ogLmRPfIE95LajyDU7Hpr1sA_F0y_xP0527OnNwHAn0GF2IfgMRxZfc5WdT1ei59-hzsfpMwPgazrkjIw7JNYkT7ZtZnX3a0PF3I9UQ0yTJmODU9QC9NJPD7iOXi3yimQ1pNH8_VD4ZHXgGtu5","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/05/04 15:59:17 INFO PipedriveHttpClientUtils.CrmHttpUtils: Parsed JSON response: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:PXf8izdMPBgBZdYRhkVaA0nTMc42U88p7SQp9OKFcNIEXSep6d0085RlfUrENW5LEdSveNVaHigvaXIO1ZraKgOJ_38jn7iS9jJuEEabqQaQFo3w5EaBO2dIBtLCWWiYFzQeSebg4xKVRxbRcG6907wQuBh_IY3526Ww8dGKNe7QGDMqSnoRjECogqYGczUyodn20g9R-9sB1bFH6S9Ub34nb-flGzwihaFfl1DnEuTZOzDInrJXu_fc13-fki5xwVPMz1ogLmRPfIE95LajyDU7Hpr1sA_F0y_xP0527OnNwHAn0GF2IfgMRxZfc5WdT1ei59-hzsfpMwPgazrkjIw7JNYkT7ZtZnX3a0PF3I9UQ0yTJmODU9QC9NJPD7iOXi3yimQ1pNH8_VD4ZHXgGtu5","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 15:59:17 INFO pipedrive.PipedriveConnectorService: Raw response from basicAuthorization: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:PXf8izdMPBgBZdYRhkVaA0nTMc42U88p7SQp9OKFcNIEXSep6d0085RlfUrENW5LEdSveNVaHigvaXIO1ZraKgOJ_38jn7iS9jJuEEabqQaQFo3w5EaBO2dIBtLCWWiYFzQeSebg4xKVRxbRcG6907wQuBh_IY3526Ww8dGKNe7QGDMqSnoRjECogqYGczUyodn20g9R-9sB1bFH6S9Ub34nb-flGzwihaFfl1DnEuTZOzDInrJXu_fc13-fki5xwVPMz1ogLmRPfIE95LajyDU7Hpr1sA_F0y_xP0527OnNwHAn0GF2IfgMRxZfc5WdT1ei59-hzsfpMwPgazrkjIw7JNYkT7ZtZnX3a0PF3I9UQ0yTJmODU9QC9NJPD7iOXi3yimQ1pNH8_VD4ZHXgGtu5","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 15:59:17 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:29:17Z
+25/05/04 15:59:17 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:29:17Z
+25/05/04 15:59:17 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:29:16Z
+25/05/04 15:59:17 INFO pipedrive.PipedriveConnectorService: Saving the crm settings for the user with userId 681728b2a3807f72f3d682be
+25/05/04 16:04:23 INFO userUtils.UserUtils:  getUserData
+25/05/04 16:04:23 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:04:23 INFO userUtils.UserUtils: token is valid
+25/05/04 16:04:23 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:04:23 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:04:23 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:04:23 INFO users.UserService: APi key
+25/05/04 16:04:23 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 16:04:23 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 16:04:23 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/04 16:04:23 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@3c7b2608
+25/05/04 16:04:23 INFO pipedrive.PipedriveConnectorService: Access token has not expired. Using the same
+25/05/04 16:04:25 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 16:04:25 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/04 16:04:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:34:25Z
+25/05/04 16:04:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:34:25Z
+25/05/04 16:04:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:34:25Z
+25/05/04 16:04:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T10:34:25Z
+25/05/04 16:35:36 INFO userUtils.UserUtils:  getUserData
+25/05/04 16:35:36 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:35:36 INFO userUtils.UserUtils: token is valid
+25/05/04 16:35:36 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:35:36 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:35:36 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:35:36 INFO users.UserService: APi key
+25/05/04 16:35:36 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 16:35:36 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 16:35:36 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/04 16:35:36 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@50846229
+25/05/04 16:35:36 INFO pipedrive.PipedriveConnectorService: Access token has not expired. Using the same
+25/05/04 16:35:37 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 16:35:37 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/04 16:35:37 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:05:37Z
+25/05/04 16:35:37 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:05:37Z
+25/05/04 16:35:37 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:05:37Z
+25/05/04 16:35:37 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:05:37Z
+25/05/04 16:37:44 INFO userUtils.UserUtils:  getUserData
+25/05/04 16:37:44 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:37:44 INFO userUtils.UserUtils: token is valid
+25/05/04 16:37:44 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:37:44 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:37:44 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:37:44 INFO users.UserService: APi key
+25/05/04 16:37:44 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 16:37:45 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 16:37:45 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/04 16:37:45 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@b61db4e
+25/05/04 16:37:45 INFO pipedrive.PipedriveConnectorService: Access token has not expired. Using the same
+25/05/04 16:37:46 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 16:37:46 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/04 16:37:46 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:07:46Z
+25/05/04 16:37:46 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:07:46Z
+25/05/04 16:37:46 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:07:46Z
+25/05/04 16:37:46 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:07:46Z
+25/05/04 16:49:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 16:49:01 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 16:49:23 INFO userUtils.UserUtils:  getUserData
+25/05/04 16:49:23 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:49:23 INFO userUtils.UserUtils: token is valid
+25/05/04 16:49:23 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 16:49:23 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:49:23 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 16:49:23 INFO users.UserService: APi key
+25/05/04 16:49:23 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 16:49:23 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 16:49:23 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/04 16:49:23 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@67946fa4
+25/05/04 16:49:23 INFO pipedrive.PipedriveConnectorService: Access token has not expired. Using the same
+25/05/04 16:49:24 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 16:49:24 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/04 16:49:24 INFO pipedrive.PipedriveConnectorService: Total contacts: 2
+25/05/04 16:49:24 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:19:24Z
+25/05/04 16:49:24 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:19:24Z
+25/05/04 16:49:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:19:25Z
+25/05/04 16:49:25 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:19:25Z
+25/05/04 17:05:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:05:42 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:06:06 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:06:06 INFO userUtils.UserUtils: Token : null
+25/05/04 17:06:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:06:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:07:04 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:07:04 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:07:04 INFO userUtils.UserUtils: token is valid
+25/05/04 17:07:04 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:07:04 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:07:04 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:07:04 INFO users.UserService: APi key
+25/05/04 17:07:04 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:07:04 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:07:04 INFO pipedrive.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 681728b2a3807f72f3d682be
+25/05/04 17:07:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive accessing refreshtoken
+25/05/04 17:07:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 17:07:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using refresh Token: 14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de
+25/05/04 17:07:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 17:07:05 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[refresh_token], refresh_token=[14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 17:07:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response status: 200 OK
+25/05/04 17:07:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response body: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:lMrXKOtPPBgbx0gDbvll8LW_pNyD6J6cpTsV9DOZsfg-omBhjHKDRO3td4Wb5-tcgqLOnuATxw4ywxwsaCTDz6js_RM_4cFZjwawtqPhpU_vJbPpXLPIXGaimtl2ZzK8w2tq9KvvcEUy_MrZxYH4AT_U7tF7HLTGxk38eHThiemTw_JMOBHoF7xdtFQ6-bYYb3F8Oqo0axmTTzu0-s8X-PtJhRF1mZuPLdNl2h7Omx4YnfsqBeOK0sBQ_c-Y7kqZ6wHoXmEQ6CIpQWpNwojp0exEVo0jbI63MrA_UMjguebfnwzvryEitjTQmBKRxu2HLNUENiswhNil_WRgk3x_bF_J82_FT4iCtBzZ4usW_3xzmZXhPyQXPv3AMW8M4hw3LhWAUEc4YErpcoBZUjopn9vJ","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/05/04 17:07:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: Parsed JSON response refresh token: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:lMrXKOtPPBgbx0gDbvll8LW_pNyD6J6cpTsV9DOZsfg-omBhjHKDRO3td4Wb5-tcgqLOnuATxw4ywxwsaCTDz6js_RM_4cFZjwawtqPhpU_vJbPpXLPIXGaimtl2ZzK8w2tq9KvvcEUy_MrZxYH4AT_U7tF7HLTGxk38eHThiemTw_JMOBHoF7xdtFQ6-bYYb3F8Oqo0axmTTzu0-s8X-PtJhRF1mZuPLdNl2h7Omx4YnfsqBeOK0sBQ_c-Y7kqZ6wHoXmEQ6CIpQWpNwojp0exEVo0jbI63MrA_UMjguebfnwzvryEitjTQmBKRxu2HLNUENiswhNil_WRgk3x_bF_J82_FT4iCtBzZ4usW_3xzmZXhPyQXPv3AMW8M4hw3LhWAUEc4YErpcoBZUjopn9vJ","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 17:07:07 INFO pipedrive.PipedriveConnectorService: New credentials: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:lMrXKOtPPBgbx0gDbvll8LW_pNyD6J6cpTsV9DOZsfg-omBhjHKDRO3td4Wb5-tcgqLOnuATxw4ywxwsaCTDz6js_RM_4cFZjwawtqPhpU_vJbPpXLPIXGaimtl2ZzK8w2tq9KvvcEUy_MrZxYH4AT_U7tF7HLTGxk38eHThiemTw_JMOBHoF7xdtFQ6-bYYb3F8Oqo0axmTTzu0-s8X-PtJhRF1mZuPLdNl2h7Omx4YnfsqBeOK0sBQ_c-Y7kqZ6wHoXmEQ6CIpQWpNwojp0exEVo0jbI63MrA_UMjguebfnwzvryEitjTQmBKRxu2HLNUENiswhNil_WRgk3x_bF_J82_FT4iCtBzZ4usW_3xzmZXhPyQXPv3AMW8M4hw3LhWAUEc4YErpcoBZUjopn9vJ","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 17:07:07 INFO PipedriveHttpClientUtils.CrmHttpUtils: Updating user setting after fetching new credentials
+25/05/04 17:07:07 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T12:37:06Z
+25/05/04 17:07:07 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:37:07Z
+25/05/04 17:07:08 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:07:08 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:07:08 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 17:07:08 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.Integer cannot be cast to class java.util.Map (java.lang.Integer and java.util.Map are in module java.base of loader 'bootstrap')
+25/05/04 17:09:23 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:09:23 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:09:30 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:09:30 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:09:30 INFO userUtils.UserUtils: token is valid
+25/05/04 17:09:30 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:09:30 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:09:30 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:09:30 INFO users.UserService: APi key
+25/05/04 17:09:30 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:09:31 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:09:31 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:09:32 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:09:32 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:09:32 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 17:09:32 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.Integer cannot be cast to class java.util.Map (java.lang.Integer and java.util.Map are in module java.base of loader 'bootstrap')
+25/05/04 17:10:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:10:04 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:12:48 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:12:48 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:12:48 INFO userUtils.UserUtils: token is valid
+25/05/04 17:12:48 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:12:48 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:12:48 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:12:48 INFO users.UserService: APi key
+25/05/04 17:12:48 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:12:48 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:12:49 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:12:50 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:12:50 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:22:58 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:22:58 INFO userUtils.UserUtils: Token : null
+25/05/04 17:23:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:23:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:23:41 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:23:41 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:23:41 INFO userUtils.UserUtils: token is valid
+25/05/04 17:23:41 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:23:41 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:23:41 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:23:41 INFO users.UserService: APi key
+25/05/04 17:23:41 INFO pipedrive.PipedriveConnector: Header userId: 681728b2a3807f72f3d682be
+25/05/04 17:23:41 INFO pipedrive.PipedriveConnectorService: User ID exist 681728b2a3807f72f3d682be
+25/05/04 17:23:41 INFO pipedrive.PipedriveConnectorService: UserID's crm setting data exist
+25/05/04 17:23:41 INFO pipedrive.PipedriveConnectorService: Crm setting com.connectly_cm.Connectly_CM.models.pipedrive.CrmSettings@40769e70
+25/05/04 17:23:41 INFO pipedrive.PipedriveConnectorService: Access token has not expired. Using the same
+25/05/04 17:23:42 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:23:42 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":1,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":1},"name":"Hrithik","first_name":"Hrithik","last_name":null,"open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"9443128095","primary":true}],"email":[{"label":"work","value":"hrithik@salesgear.io","primary":true}],"first_char":"h","update_time":"2025-04-24 04:33:32","delete_time":null,"add_time":"2025-04-24 04:33:31","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"Salesgear","owner_name":"Hrithik","primary_email":"hrithik@salesgear.io","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063},{"id":2,"owner_id":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true,"value":23998751},"org_id":{"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik","value":2},"name":"Nitin Velusamy","first_name":"Nitin","last_name":"Velusamy","open_deals_count":0,"related_open_deals_count":0,"closed_deals_count":0,"related_closed_deals_count":0,"participant_open_deals_count":0,"participant_closed_deals_count":0,"email_messages_count":0,"activities_count":0,"done_activities_count":0,"undone_activities_count":0,"files_count":0,"notes_count":0,"followers_count":1,"won_deals_count":0,"related_won_deals_count":0,"lost_deals_count":0,"related_lost_deals_count":0,"active_flag":true,"phone":[{"label":"work","value":"7708902647","primary":true}],"email":[{"label":"work","value":"nitinsparks007@gmail.com","primary":true}],"first_char":"n","update_time":"2025-04-27 10:56:39","delete_time":null,"add_time":"2025-04-27 08:34:24","visible_to":"3","picture_id":null,"next_activity_date":null,"next_activity_time":null,"next_activity_id":null,"last_activity_id":null,"last_activity_date":null,"last_incoming_mail_time":null,"last_outgoing_mail_time":null,"label":null,"label_ids":[],"im":[{"value":"","primary":true}],"postal_address":null,"postal_address_lat":null,"postal_address_long":null,"postal_address_subpremise":null,"postal_address_street_number":null,"postal_address_route":null,"postal_address_sublocality":null,"postal_address_locality":null,"postal_address_admin_area_level_1":null,"postal_address_admin_area_level_2":null,"postal_address_country":null,"postal_address_postal_code":null,"postal_address_formatted_address":null,"notes":null,"birthday":null,"job_title":null,"org_name":"comcast","owner_name":"Hrithik","primary_email":"nitinsparks007@gmail.com","cc_email":"hrithik-sandbox@pipedrivemail.com","company_id":14460063}],"additional_data":{"pagination":{"start":0,"limit":100,"more_items_in_collection":false}},"related_objects":{"organization":{"1":{"id":1,"name":"Salesgear","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"},"2":{"id":2,"name":"comcast","people_count":1,"owner_id":23998751,"address":null,"label_ids":[],"active_flag":true,"cc_email":"hrithik-sandbox@pipedrivemail.com","owner_name":"Hrithik"}},"user":{"23998751":{"id":23998751,"name":"Hrithik","email":"hrithik3285@gmail.com","has_pic":0,"pic_hash":null,"active_flag":true}}}}
+25/05/04 17:23:42 INFO pipedrive.PipedriveConnectorService: Total contacts: 2
+25/05/04 17:23:42 INFO pipedrive.PipedriveConnectorService: First item: {related_closed_deals_count=0, notes=null, email_messages_count=0, owner_id={name=Hrithik, has_pic=0, active_flag=true, id=23998751, value=23998751, email=hrithik3285@gmail.com, pic_hash=null}, open_deals_count=0, cc_email=hrithik-sandbox@pipedrivemail.com, postal_address_subpremise=null, next_activity_date=null, participant_open_deals_count=0, postal_address_locality=null, id=1, job_title=null, postal_address_long=null, postal_address=null, owner_name=Hrithik, im=[{value=, primary=true}], related_won_deals_count=0, label_ids=[], undone_activities_count=0, last_activity_date=null, next_activity_id=null, postal_address_country=null, phone=[{label=work, value=9443128095, primary=true}], visible_to=3, org_id={address=null, owner_name=Hrithik, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox@pipedrivemail.com, name=Salesgear, active_flag=true, people_count=1, value=1}, notes_count=0, name=Hrithik, participant_closed_deals_count=0, lost_deals_count=0, next_activity_time=null, birthday=null, delete_time=null, postal_address_postal_code=null, last_outgoing_mail_time=null, active_flag=true, picture_id=null, last_activity_id=null, update_time=2025-04-24 04:33:32, activities_count=0, postal_address_route=null, org_name=Salesgear, first_name=Hrithik, email=[{label=work, value=hrithik@salesgear.io, primary=true}], postal_address_street_number=null, won_deals_count=0, files_count=0, company_id=14460063, last_incoming_mail_time=null, first_char=h, closed_deals_count=0, last_name=null, label=null, related_open_deals_count=0, related_lost_deals_count=0, postal_address_formatted_address=null, postal_address_sublocality=null, postal_address_admin_area_level_2=null, postal_address_lat=null, postal_address_admin_area_level_1=null, followers_count=1, primary_email=hrithik@salesgear.io, add_time=2025-04-24 04:33:31, done_activities_count=0}
+25/05/04 17:23:42 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:53:42Z
+25/05/04 17:23:42 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:53:42Z
+25/05/04 17:23:43 INFO pipedrive.PipedriveConnectorService: First item: {related_closed_deals_count=0, notes=null, email_messages_count=0, owner_id={name=Hrithik, has_pic=0, active_flag=true, id=23998751, value=23998751, email=hrithik3285@gmail.com, pic_hash=null}, open_deals_count=0, cc_email=hrithik-sandbox@pipedrivemail.com, postal_address_subpremise=null, next_activity_date=null, participant_open_deals_count=0, postal_address_locality=null, id=2, job_title=null, postal_address_long=null, postal_address=null, owner_name=Hrithik, im=[{value=, primary=true}], related_won_deals_count=0, label_ids=[], undone_activities_count=0, last_activity_date=null, next_activity_id=null, postal_address_country=null, phone=[{label=work, value=7708902647, primary=true}], visible_to=3, org_id={address=null, owner_name=Hrithik, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox@pipedrivemail.com, name=comcast, active_flag=true, people_count=1, value=2}, notes_count=0, name=Nitin Velusamy, participant_closed_deals_count=0, lost_deals_count=0, next_activity_time=null, birthday=null, delete_time=null, postal_address_postal_code=null, last_outgoing_mail_time=null, active_flag=true, picture_id=null, last_activity_id=null, update_time=2025-04-27 10:56:39, activities_count=0, postal_address_route=null, org_name=comcast, first_name=Nitin, email=[{label=work, value=nitinsparks007@gmail.com, primary=true}], postal_address_street_number=null, won_deals_count=0, files_count=0, company_id=14460063, last_incoming_mail_time=null, first_char=n, closed_deals_count=0, last_name=Velusamy, label=null, related_open_deals_count=0, related_lost_deals_count=0, postal_address_formatted_address=null, postal_address_sublocality=null, postal_address_admin_area_level_2=null, postal_address_lat=null, postal_address_admin_area_level_1=null, followers_count=1, primary_email=nitinsparks007@gmail.com, add_time=2025-04-27 08:34:24, done_activities_count=0}
+25/05/04 17:23:43 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:53:43Z
+25/05/04 17:23:43 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T11:53:43Z
+25/05/04 17:25:34 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:25:34 INFO userUtils.UserUtils: Token : null
+25/05/04 17:25:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:25:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:26:23 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:26:23 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:26:23 INFO userUtils.UserUtils: token is valid
+25/05/04 17:26:23 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:26:23 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:26:23 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:26:23 INFO users.UserService: APi key
+25/05/04 17:26:24 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:26:24 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:26:24 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:26:26 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:26:26 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:27:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:27:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:27:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:27:59 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:30:17 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:30:17 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:30:17 INFO userUtils.UserUtils: token is valid
+25/05/04 17:30:17 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:30:17 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:30:17 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:30:17 INFO users.UserService: APi key
+25/05/04 17:30:17 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:30:18 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:30:18 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: First entry: expected_close_date=null
+25/05/04 17:30:19 INFO pipedrive.PipedriveConnectorService: First entry: owner_id=23998751
+25/05/04 17:30:19 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.Integer cannot be cast to class java.util.Map (java.lang.Integer and java.util.Map are in module java.base of loader 'bootstrap')
+25/05/04 17:37:47 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:37:47 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:37:52 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:37:52 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:37:52 INFO userUtils.UserUtils: token is valid
+25/05/04 17:37:52 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:37:52 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:37:52 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:37:52 INFO users.UserService: APi key
+25/05/04 17:37:53 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:37:53 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:37:53 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:37:54 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:37:54 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:37:54 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 17:37:54 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 17:37:54 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 17:40:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:40:46 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 17:40:54 INFO userUtils.UserUtils:  getUserData
+25/05/04 17:40:54 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:40:54 INFO userUtils.UserUtils: token is valid
+25/05/04 17:40:54 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 17:40:54 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:40:54 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 17:40:54 INFO users.UserService: APi key
+25/05/04 17:40:54 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 17:40:54 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 17:40:54 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: expected_close_date=null
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: owner_id=23998751
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: label_ids=[]
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: origin=ManuallyCreated
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: was_seen=true
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: channel=null
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: archive_time=null
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: origin_id=null
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: title=Salesgear lead
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: next_activity_id=null
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: update_time=2025-04-24T04:33:32.170Z
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: is_archived=false
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: visible_to=3
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: organization_id=1
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: creator_id=23998751
+25/05/04 17:40:56 INFO pipedrive.PipedriveConnectorService: First entry: id=471526a0-20c5-11f0-bc02-8f615133870d
+25/05/04 17:40:56 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 17:47:58 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 17:47:58 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:42:18 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:42:18 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:42:18 INFO userUtils.UserUtils: token is valid
+25/05/04 18:42:18 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:42:18 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:42:18 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:42:18 INFO users.UserService: APi key
+25/05/04 18:42:18 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 18:42:19 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 18:42:19 INFO pipedrive.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 681728b2a3807f72f3d682be
+25/05/04 18:42:19 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive accessing refreshtoken
+25/05/04 18:42:19 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 18:42:19 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using refresh Token: 14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de
+25/05/04 18:42:19 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 18:42:19 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[refresh_token], refresh_token=[14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 18:42:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response status: 200 OK
+25/05/04 18:42:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response body: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:2oyxVh1VPBhTbzy5A6TkNGXoepId3tsvpwnYkSvVIUdFSDdfI3e5lgRyUnqe_LBI_tk2fLhCxHgud4rCXX1oY1yxtjnVBmuyHwxPo7TNwcyTvcc69chmpR9JMKR-zvZyBQVw7Q_W_Xg8WwOzXfMaKUKrKeqYJAdhw1oBs4SEWPcnNAzef6j3LvZzCmoTv5T9B_Y_Gja-QnqUIFe-gP01B5JtLEgE3gpDTz9KB71jW1iuwtT6-WOlghELjTLdLNN9WZvaCiEA4WTg19GgQ-OkLj_EPSkV04F70xyuQrNb2NjULj_Rq4G9tZ_2iTfovuoIR6CKF07EMRU-DDNQg5EkNbvTHSKEQndk7flAtXaczIshBZEtmpQ-ykqiHmAB8cUHMWxefT6l6_8O4PpbP-Zf_FLa","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/05/04 18:42:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: Parsed JSON response refresh token: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:2oyxVh1VPBhTbzy5A6TkNGXoepId3tsvpwnYkSvVIUdFSDdfI3e5lgRyUnqe_LBI_tk2fLhCxHgud4rCXX1oY1yxtjnVBmuyHwxPo7TNwcyTvcc69chmpR9JMKR-zvZyBQVw7Q_W_Xg8WwOzXfMaKUKrKeqYJAdhw1oBs4SEWPcnNAzef6j3LvZzCmoTv5T9B_Y_Gja-QnqUIFe-gP01B5JtLEgE3gpDTz9KB71jW1iuwtT6-WOlghELjTLdLNN9WZvaCiEA4WTg19GgQ-OkLj_EPSkV04F70xyuQrNb2NjULj_Rq4G9tZ_2iTfovuoIR6CKF07EMRU-DDNQg5EkNbvTHSKEQndk7flAtXaczIshBZEtmpQ-ykqiHmAB8cUHMWxefT6l6_8O4PpbP-Zf_FLa","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 18:42:20 INFO pipedrive.PipedriveConnectorService: New credentials: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:2oyxVh1VPBhTbzy5A6TkNGXoepId3tsvpwnYkSvVIUdFSDdfI3e5lgRyUnqe_LBI_tk2fLhCxHgud4rCXX1oY1yxtjnVBmuyHwxPo7TNwcyTvcc69chmpR9JMKR-zvZyBQVw7Q_W_Xg8WwOzXfMaKUKrKeqYJAdhw1oBs4SEWPcnNAzef6j3LvZzCmoTv5T9B_Y_Gja-QnqUIFe-gP01B5JtLEgE3gpDTz9KB71jW1iuwtT6-WOlghELjTLdLNN9WZvaCiEA4WTg19GgQ-OkLj_EPSkV04F70xyuQrNb2NjULj_Rq4G9tZ_2iTfovuoIR6CKF07EMRU-DDNQg5EkNbvTHSKEQndk7flAtXaczIshBZEtmpQ-ykqiHmAB8cUHMWxefT6l6_8O4PpbP-Zf_FLa","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 18:42:20 INFO PipedriveHttpClientUtils.CrmHttpUtils: Updating user setting after fetching new credentials
+25/05/04 18:42:20 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T14:12:19Z
+25/05/04 18:42:20 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T13:12:20Z
+25/05/04 18:42:21 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 18:42:21 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 18:42:21 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 18:42:21 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 18:42:21 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T13:12:21Z
+25/05/04 18:42:21 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T13:12:21Z
+25/05/04 18:44:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:44:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:45:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:45:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:47:29 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:47:29 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:47:29 INFO userUtils.UserUtils: token is valid
+25/05/04 18:47:29 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:47:29 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:47:29 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:47:29 INFO users.UserService: APi key
+25/05/04 18:47:30 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 18:47:30 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 18:47:30 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 18:47:31 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 18:47:31 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 18:47:31 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 18:47:31 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 18:47:31 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 18:47:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:47:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:49:06 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:49:06 INFO userUtils.UserUtils: Token : null
+25/05/04 18:49:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:49:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:50:27 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:50:27 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:50:27 INFO userUtils.UserUtils: token is valid
+25/05/04 18:50:27 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:50:27 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:50:27 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:50:27 INFO users.UserService: APi key
+25/05/04 18:50:27 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 18:50:27 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 18:50:28 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 18:50:29 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 18:50:29 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 18:50:29 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 18:50:29 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 18:50:29 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 18:51:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:51:22 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:53:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:53:43 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:53:54 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:53:54 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:53:54 INFO userUtils.UserUtils: token is valid
+25/05/04 18:53:54 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:53:54 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:53:54 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:53:54 INFO users.UserService: APi key
+25/05/04 18:53:55 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 18:53:56 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 18:53:56 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 18:54:02 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 18:54:02 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 18:57:51 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 18:57:51 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 18:59:34 INFO userUtils.UserUtils:  getUserData
+25/05/04 18:59:34 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:59:34 INFO userUtils.UserUtils: token is valid
+25/05/04 18:59:34 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 18:59:34 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:59:34 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 18:59:34 INFO users.UserService: APi key
+25/05/04 18:59:35 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 18:59:35 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 18:59:35 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 18:59:36 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 18:59:36 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:00:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:00:28 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:00:42 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:00:42 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:00:42 INFO userUtils.UserUtils: token is valid
+25/05/04 19:00:42 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:00:42 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:00:42 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:00:42 INFO users.UserService: APi key
+25/05/04 19:00:42 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:00:42 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:00:42 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:00:43 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:00:43 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:01:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:01:31 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:01:35 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:01:35 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:01:35 INFO userUtils.UserUtils: token is valid
+25/05/04 19:01:35 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:01:35 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:01:35 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:01:35 INFO users.UserService: APi key
+25/05/04 19:01:35 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:01:35 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:01:35 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:01:37 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:01:37 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:02:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:02:45 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:03:03 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:03:05 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:03:06 INFO userUtils.UserUtils: token is valid
+25/05/04 19:03:07 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:03:07 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:03:08 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:03:10 INFO users.UserService: APi key
+25/05/04 19:03:23 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:03:23 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:03:24 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:04:35 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:04:35 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:04:44 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:04:44 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:04:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:04:55 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:05:04 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:05:04 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:05:04 INFO userUtils.UserUtils: token is valid
+25/05/04 19:05:04 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:05:04 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:05:12 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:05:12 INFO users.UserService: APi key
+25/05/04 19:05:12 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:05:12 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:05:12 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:05:13 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:05:13 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:05:21 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:05:21 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:05:24 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:05:24 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:05:24 INFO userUtils.UserUtils: token is valid
+25/05/04 19:05:24 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:05:24 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:05:24 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:05:24 INFO users.UserService: APi key
+25/05/04 19:05:25 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:05:25 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:05:25 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:05:26 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:05:26 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:05:32 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:05:34 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:05:38 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:05:45 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:05:56 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:06:02 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:06:06 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:06:09 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:06:16 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:06:19 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:06:30 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:06:53 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:07:50 WARN pipedrive.PipedriveConnectorService: Error occured due to class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+25/05/04 19:08:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientId: 7ce255df35ae6eff
+25/05/04 19:08:06 INFO PipedriveHttpClientUtils.CrmHttpUtils: pipedriveClientSecret1e6a9bd292d6ede153fbd6f220c4649c06a3dfb7
+25/05/04 19:08:11 INFO userUtils.UserUtils:  getUserData
+25/05/04 19:08:11 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:08:11 INFO userUtils.UserUtils: token is valid
+25/05/04 19:08:11 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 19:08:11 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:08:11 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 19:08:11 INFO users.UserService: APi key
+25/05/04 19:08:12 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 19:08:12 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 19:08:12 INFO pipedrive.PipedriveConnectorService: Token is valid and the built Url is https://api.pipedrive.com/v1/leads?limit=5
+25/05/04 19:08:13 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 19:08:13 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 19:08:17 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 19:08:17 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 19:08:18 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 19:08:19 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 19:08:21 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 19:08:24 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 19:08:27 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 19:08:29 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 19:08:30 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 19:08:31 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 19:08:32 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 19:08:33 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 19:08:36 INFO pipedrive.PipedriveConnectorService: entry: next_activity_id=null
+25/05/04 19:08:37 INFO pipedrive.PipedriveConnectorService: entry: update_time=2025-04-24T04:33:32.170Z
+25/05/04 19:08:40 INFO pipedrive.PipedriveConnectorService: entry: is_archived=false
+25/05/04 19:08:42 INFO pipedrive.PipedriveConnectorService: entry: visible_to=3
+25/05/04 19:08:43 INFO pipedrive.PipedriveConnectorService: entry: organization_id=1
+25/05/04 19:08:46 INFO pipedrive.PipedriveConnectorService: entry: creator_id=23998751
+25/05/04 19:08:48 INFO pipedrive.PipedriveConnectorService: entry: id=471526a0-20c5-11f0-bc02-8f615133870d
+25/05/04 19:08:55 INFO pipedrive.PipedriveConnectorService: entry: value=null
+25/05/04 19:08:56 INFO pipedrive.PipedriveConnectorService: entry: channel_id=null
+25/05/04 19:08:56 INFO pipedrive.PipedriveConnectorService: entry: add_time=2025-04-24T04:33:32.170Z
+25/05/04 19:08:56 INFO pipedrive.PipedriveConnectorService: entry: source_name=Manually created
+25/05/04 19:08:56 INFO pipedrive.PipedriveConnectorService: entry: person_id=1
+25/05/04 19:08:56 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T13:38:56Z
+25/05/04 19:08:56 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T13:38:56Z
+25/05/04 21:19:27 INFO userUtils.UserUtils:  getUserData
+25/05/04 21:19:27 INFO userUtils.UserUtils: Token : eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:19:27 INFO userUtils.UserUtils: token is valid
+25/05/04 21:19:27 INFO jwtUtils.JwtUtils: token received for decode: eyJhbGciOiJIUzI1NiJ9.eyJhcGlUb2tlbiI6IjY4MTcyOGIyYTM4MDdmNzJmM2Q2ODJiZCIsInJvbGVzIjpbIlJPTEVfVVNFUiIsIlJPTEVfQURNSU4iXSwidXNlckVtYWlsIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwic3ViIjoiaHJpdGhpa0Bnb29nbGUuY29tIiwiaWF0IjoxNzQ2MzQ4MjIzLCJleHAiOjE3NDY0MzQ2MjN9.AQhDrqsL7Wffp1ccP1CdXdTPjCmFth_pCQTnEhc4Du4
+25/05/04 21:19:27 INFO jwtUtils.JwtUtils: Decoded JWT payload: {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:19:27 INFO users.UserService: finding member details {sub=hrithik@google.com, apiToken=681728b2a3807f72f3d682bd, roles=[ROLE_USER, ROLE_ADMIN], userEmail=hrithik@google.com, exp=1746434623, iat=1746348223}
+25/05/04 21:19:27 INFO users.UserService: APi key
+25/05/04 21:19:27 INFO pipedrive.PipedriveConnector: The userId is 681728b2a3807f72f3d682be
+25/05/04 21:19:27 INFO pipedrive.PipedriveConnectorService: user has crm Setting
+25/05/04 21:19:27 INFO pipedrive.PipedriveConnectorService: Access token has expired. Using refresh token to get access token for the user 681728b2a3807f72f3d682be
+25/05/04 21:19:27 INFO PipedriveHttpClientUtils.CrmHttpUtils: Case: Pipedrive accessing refreshtoken
+25/05/04 21:19:27 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using clientId: 7ce255df35ae6eff
+25/05/04 21:19:27 INFO PipedriveHttpClientUtils.CrmHttpUtils: Using refresh Token: 14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de
+25/05/04 21:19:27 INFO PipedriveHttpClientUtils.CrmHttpUtils: Encoded auth: N2NlMjU1ZGYzNWFlNmVmZjoxZTZhOWJkMjkyZDZlZGUxNTNmYmQ2ZjIyMGM0NjQ5YzA2YTNkZmI3
+25/05/04 21:19:32 INFO PipedriveHttpClientUtils.CrmHttpUtils: MultiValueMapMap for request {grant_type=[refresh_token], refresh_token=[14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de], redirect_uri=[http://localhost:3000/connect/pipedrive/callback]}
+25/05/04 21:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response status: 200 OK
+25/05/04 21:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: Response body: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:VloK3bFdPBg6v8AhHKE02w9Qa1CpfPzhRpmMPnKiiVTPHKe4Ku4BFqSoNI9DxGUjwRtPYQ6wDOrDDXHGQsprq3Brq0iiaTdthZAoaxtLzLiGiITMpBOqYSdfWuW_RmQcbMggWqR3TGAvTV7rytg16qnL-mFcPZ3MXmobx4KWtprGW44CIrmrkoYQewekCHUwGWceCT6aGz3yhLHXXGpZUMW3PTHoJQuYeIIifxltb9pM1IFU69snzbrEaba43H4XwRTI4tJWni4vYUiaW8T9qe0NMePwGGb7KPOxFeyfW_6zuWvlSgbMjBod1lJ9xiQ-YnUX-pUtkY33D8gGPjQ7tKZpMH-lv7fHzcO8Qu8RQblfAEYAqpqTlxLn9-e4kfqDUyhx_aC1Mh2785JKWK_8ED7i","token_type":"Bearer","expires_in":3599,"refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com"}
+25/05/04 21:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: Parsed JSON response refresh token: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:VloK3bFdPBg6v8AhHKE02w9Qa1CpfPzhRpmMPnKiiVTPHKe4Ku4BFqSoNI9DxGUjwRtPYQ6wDOrDDXHGQsprq3Brq0iiaTdthZAoaxtLzLiGiITMpBOqYSdfWuW_RmQcbMggWqR3TGAvTV7rytg16qnL-mFcPZ3MXmobx4KWtprGW44CIrmrkoYQewekCHUwGWceCT6aGz3yhLHXXGpZUMW3PTHoJQuYeIIifxltb9pM1IFU69snzbrEaba43H4XwRTI4tJWni4vYUiaW8T9qe0NMePwGGb7KPOxFeyfW_6zuWvlSgbMjBod1lJ9xiQ-YnUX-pUtkY33D8gGPjQ7tKZpMH-lv7fHzcO8Qu8RQblfAEYAqpqTlxLn9-e4kfqDUyhx_aC1Mh2785JKWK_8ED7i","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 21:19:34 INFO pipedrive.PipedriveConnectorService: New credentials: {"access_token":"v1u:AQIBAHj-LzTNK2yuuuaLqifzhWb9crUNKTpk4FlQ9rjnXqp_6AH1xWIuX4UNV4pLjxXmWX9qAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMFHdktw7w7f0Pjg7rAgEQgDvdZiq5D_z3NrqUDbPJtST4-2TOMCW6wX9bysOeNz1dnXk2iat6N4tJCtsyTenFd4dHuS53Kg7r436P0Q:VloK3bFdPBg6v8AhHKE02w9Qa1CpfPzhRpmMPnKiiVTPHKe4Ku4BFqSoNI9DxGUjwRtPYQ6wDOrDDXHGQsprq3Brq0iiaTdthZAoaxtLzLiGiITMpBOqYSdfWuW_RmQcbMggWqR3TGAvTV7rytg16qnL-mFcPZ3MXmobx4KWtprGW44CIrmrkoYQewekCHUwGWceCT6aGz3yhLHXXGpZUMW3PTHoJQuYeIIifxltb9pM1IFU69snzbrEaba43H4XwRTI4tJWni4vYUiaW8T9qe0NMePwGGb7KPOxFeyfW_6zuWvlSgbMjBod1lJ9xiQ-YnUX-pUtkY33D8gGPjQ7tKZpMH-lv7fHzcO8Qu8RQblfAEYAqpqTlxLn9-e4kfqDUyhx_aC1Mh2785JKWK_8ED7i","refresh_token":"14460063:23998751:8e283ecdbca47b331c1a67057e4a49dc1f9c46de","scope":"base,deals:read,mail:full,activities:full,contacts:full,users:read,recents:read,search:read,leads:full","api_domain":"https://hrithik-sandbox.pipedrive.com","token_type":"Bearer","expires_in":3599}
+25/05/04 21:19:34 INFO PipedriveHttpClientUtils.CrmHttpUtils: Updating user setting after fetching new credentials
+25/05/04 21:19:34 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T16:49:33Z
+25/05/04 21:19:34 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T15:49:34Z
+25/05/04 21:19:35 INFO pipedrive.PipedriveConnectorService: Status code: 200
+25/05/04 21:19:35 INFO pipedrive.PipedriveConnectorService: Response body: {"success":true,"data":[{"id":"471526a0-20c5-11f0-bc02-8f615133870d","title":"Salesgear lead","owner_id":23998751,"creator_id":23998751,"label_ids":[],"value":null,"expected_close_date":null,"person_id":1,"organization_id":1,"is_archived":false,"archive_time":null,"source_name":"Manually created","origin":"ManuallyCreated","origin_id":null,"channel":null,"channel_id":null,"was_seen":true,"next_activity_id":null,"add_time":"2025-04-24T04:33:32.170Z","update_time":"2025-04-24T04:33:32.170Z","visible_to":"3","cc_email":"hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com"}],"additional_data":{"pagination":{"start":0,"limit":5,"more_items_in_collection":false}}}
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: Total contacts: 1
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: First item: {expected_close_date=null, owner_id=23998751, label_ids=[], cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com, origin=ManuallyCreated, was_seen=true, channel=null, archive_time=null, origin_id=null, title=Salesgear lead, next_activity_id=null, update_time=2025-04-24T04:33:32.170Z, is_archived=false, visible_to=3, organization_id=1, creator_id=23998751, id=471526a0-20c5-11f0-bc02-8f615133870d, value=null, channel_id=null, add_time=2025-04-24T04:33:32.170Z, source_name=Manually created, person_id=1}
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: expected_close_date=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: owner_id=23998751
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: label_ids=[]
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: cc_email=hrithik-sandbox+14460063+lead47hwq5x6n6uuqmc6r63od1t71@pipedrivemail.com
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: origin=ManuallyCreated
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: was_seen=true
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: channel=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: archive_time=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: origin_id=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: title=Salesgear lead
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: next_activity_id=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: update_time=2025-04-24T04:33:32.170Z
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: is_archived=false
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: visible_to=3
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: organization_id=1
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: creator_id=23998751
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: id=471526a0-20c5-11f0-bc02-8f615133870d
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: value=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: channel_id=null
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: add_time=2025-04-24T04:33:32.170Z
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: source_name=Manually created
+25/05/04 21:19:39 INFO pipedrive.PipedriveConnectorService: entry: person_id=1
+25/05/04 21:19:39 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T15:49:39Z
+25/05/04 21:19:39 INFO DateUtils.DateTimeUtils: Converted date to String is 2025-05-04T15:49:39Z

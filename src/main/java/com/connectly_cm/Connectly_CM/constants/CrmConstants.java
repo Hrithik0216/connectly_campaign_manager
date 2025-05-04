@@ -20,6 +20,8 @@ public final class CrmConstants {
     public static final String PIPEDRIVE_CRM ="PIPEDRIVE";
     public static final String PIPEDRIVE_LEADS="/leads";
     public static final String PIPEDRIVE_REFRESH_TOKEN = "PIPEDRIVE_REFRESH_TOKEN";
+    public static final String PIPEDRIVE_PERSON = "PIPEDRIVE_PERSON";
+    public static final String PIPEDRIVE_LEAD = "PIPEDRIVE_LEAD";
 
     public CrmConstants() {
     }

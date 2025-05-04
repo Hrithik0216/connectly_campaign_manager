@@ -61,6 +61,57 @@ public class CrmContacts {
     private String postalAddressLocality;
     private String postalAddressLong;
     private String postalAddress;
+    private String contactDataType;
+    private int pipedriveLeadOwnerId;
+
+    private int pipedriveLeadOrgId;
+
+    public int getPipedriveLeadPersonId() {
+        return pipedriveLeadPersonId;
+    }
+
+    public void setPipedriveLeadPersonId(int pipedriveLeadPersonId) {
+        this.pipedriveLeadPersonId = pipedriveLeadPersonId;
+    }
+
+    private int pipedriveLeadPersonId;
+
+
+    public int getPipedriveLeadOrgId() {
+        return pipedriveLeadOrgId;
+    }
+
+    public void setPipedriveLeadOrgId(int pipedriveLeadOrgId) {
+        this.pipedriveLeadOrgId = pipedriveLeadOrgId;
+    }
+
+
+    public int getPipedriveLeadOwnerId() {
+        return pipedriveLeadOwnerId;
+    }
+
+    public void setPipedriveLeadOwnerId(int pipedriveLeadOwnerId) {
+        this.pipedriveLeadOwnerId = pipedriveLeadOwnerId;
+    }
+
+    public String getPipedriveLeadId() {
+        return pipedriveLeadId;
+    }
+
+    public void setPipedriveLeadId(String pipedriveLeadId) {
+        this.pipedriveLeadId = pipedriveLeadId;
+    }
+
+    private String pipedriveLeadId;
+
+
+    public String getContactDataType() {
+        return contactDataType;
+    }
+
+    public void setContactDataType(String contactDataType) {
+        this.contactDataType = contactDataType;
+    }
 
     public String getPostalAddressSubpremise() {
         return postalAddressSubpremise;
@@ -93,7 +144,6 @@ public class CrmContacts {
     public void setPostalAddress(String postalAddress) {
         this.postalAddress = postalAddress;
     }
-
 
 
     public CrmOwnerDetails getOwnerDetails() {
