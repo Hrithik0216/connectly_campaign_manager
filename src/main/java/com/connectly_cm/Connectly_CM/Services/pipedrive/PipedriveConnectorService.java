@@ -1,6 +1,5 @@
 package com.connectly_cm.Connectly_CM.Services.pipedrive;
 
-import com.connectly_cm.Connectly_CM.CustomErrorCodes.MemberErrCode;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.CrmOwnerDetails;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.EmailData;
 import com.connectly_cm.Connectly_CM.dtos.pipedrive.PhoneData;
@@ -9,7 +8,6 @@ import com.connectly_cm.Connectly_CM.repositories.pipedrive.CrmContactRepository
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
 import com.connectly_cm.Connectly_CM.utils.EncryptionAes.EncryptionAes;
 import com.connectly_cm.Connectly_CM.utils.HttpClientUtils.PipedriveHttpClientUtils.CrmHttpUtils;
-import com.connectly_cm.Connectly_CM.utils.NullCheckUtils.PipedriveNullValidation;
 import com.connectly_cm.Connectly_CM.utils.StringUtils.StringUtil;
 import com.connectly_cm.Connectly_CM.utils.UrlBuilder.UrlBuilder;
 import com.connectly_cm.Connectly_CM.models.users.User;
