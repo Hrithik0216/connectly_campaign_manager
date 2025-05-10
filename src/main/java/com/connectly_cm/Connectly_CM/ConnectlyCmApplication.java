@@ -9,7 +9,7 @@ public class ConnectlyCmApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConnectlyCmApplication.class, args);
-		String log4jConfPath = "D:/Connectly Campaign manager/Connectly_CM/src/main/resources/log4j.properties";
+		String log4jConfPath = "/home/hrithik/Desktop/Connectly/connectly_campaign_manager/src/main/resources/log4j.properties";
 		PropertyConfigurator.configure(log4jConfPath);
 	}
 
