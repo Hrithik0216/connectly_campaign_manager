@@ -36,12 +36,15 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                                     FilterChain filterChain)
             throws ServletException, IOException {
 
+
+
         try {
             String jwt = jwtUtils.getTokenFromRequest(request);
             if (jwt == null) {
                 filterChain.doFilter(request, response);
                 return;
             }
+
 
             // Extract claims directly from token
             Claims claims = jwtUtils.extractAllClaims(jwt);

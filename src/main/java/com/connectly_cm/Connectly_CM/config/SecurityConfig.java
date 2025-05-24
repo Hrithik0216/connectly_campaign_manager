@@ -25,11 +25,11 @@ public class SecurityConfig {
                         // Allow access to OAuth2 endpoints
                         .requestMatchers("/login/gmailCallback", "/login/oauth2/code/google", "/login/gmail","/api/email/**").permitAll()
                         // Secure all other endpoints
-                        .requestMatchers("/sendEmail","/redirect","/removeAcc","buyContacts/**","/crm/**","/jwt/**").permitAll()
+                        .requestMatchers("/sendEmail","/redirect","/removeAcc","buyContacts/**","/crm/**","/jwt/**","/config/**").permitAll()
                         .anyRequest().authenticated()
 
                 )
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
+//                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 // Disable CSRF protection (required for OAuth2 callbacks)
                 .csrf(csrf -> csrf.disable())
                 // Disable sessions for stateless APIs (optional)

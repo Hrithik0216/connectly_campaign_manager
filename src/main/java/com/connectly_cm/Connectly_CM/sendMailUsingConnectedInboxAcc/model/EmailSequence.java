@@ -39,8 +39,6 @@ public class EmailSequence {
         this.emailSteps = emailSteps;
     }
 
-
-
     public String getId() {
         return id;
     }
