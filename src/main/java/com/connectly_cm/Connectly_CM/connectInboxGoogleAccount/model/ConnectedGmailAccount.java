@@ -9,6 +9,19 @@ public class ConnectedGmailAccount {
 
     private String accessToken;
     private String refreshToken;
+
+    @Override
+    public String toString() {
+        return "ConnectedGmailAccount{" +
+                "scopes=" + scopes +
+                ", connectedMail='" + connectedMail + '\'' +
+                ", accessToken='" + accessToken + '\'' +
+                ", refreshToken='" + refreshToken + '\'' +
+                ", timestamp=" + timestamp +
+                ", tokenExpiryTime=" + tokenExpiryTime +
+                '}';
+    }
+
     private Date timestamp;
     private Date tokenExpiryTime;
 

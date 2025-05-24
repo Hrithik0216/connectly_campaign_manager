@@ -5,8 +5,8 @@ import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.Timewind
 import java.util.List;
 
 public class UserConfiguration {
-    private String fromAddress;
     private List<Timewindow> timeWindow;
+    private long delayInSeconds;
 
     public long getDelayInSeconds() {
         return delayInSeconds;
@@ -14,15 +14,6 @@ public class UserConfiguration {
 
     public void setDelayInSeconds(long delayInSeconds) {
         this.delayInSeconds = delayInSeconds;
-    }
-
-    private long delayInSeconds;
-    public String getFromAddress() {
-        return fromAddress;
-    }
-
-    public void setFromAddress(String fromAddress) {
-        this.fromAddress = fromAddress;
     }
 
     public List<Timewindow> getTimeWindow() {
