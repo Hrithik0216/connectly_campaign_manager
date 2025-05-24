@@ -23,7 +23,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         // Allow access to OAuth2 endpoints
-                        .requestMatchers("/login/gmailCallback", "/login/oauth2/code/google", "/login/gmail","/api/email/**").permitAll()
+                        .requestMatchers("/login/gmailCallback", "/login/oauth2/code/google", "/login/gmail","/api/email/**","/getUserId").permitAll()
                         // Secure all other endpoints
                         .requestMatchers("/sendEmail","/redirect","/removeAcc","buyContacts/**",
                                 "/crm/**","/jwt/**","/config/**","/connectAccount/**").permitAll()

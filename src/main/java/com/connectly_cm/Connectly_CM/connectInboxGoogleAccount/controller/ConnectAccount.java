@@ -2,10 +2,13 @@ package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller;
 
 //import statements remain untouched
 
+import com.connectly_cm.Connectly_CM.Services.sequences.GoogleCredentilsService;
 import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.ConnectedGmailAccount;
 import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.service.ConnectAccountService;
+import com.connectly_cm.Connectly_CM.models.users.User;
+import com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils;
 import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.auth.oauth2.TokenResponse;
@@ -19,6 +22,8 @@ import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.gmail.Gmail;
 import com.google.api.services.gmail.GmailScopes;
 import com.google.gson.JsonObject;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -41,54 +46,39 @@ public class ConnectAccount {
     private static final Logger LOGGER = Logger.getLogger(ConnectAccount.class);
     private static final String APPLICATION_NAME = "ConnectlyTesting";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
-    private HttpTransport httpTransport;
-    private GoogleAuthorizationCodeFlow flow;
-
-    @Value("${google.client-id}")
-    private String clientId;
-
-    @Value("${google.client-secret}")
-    private String clientSecret;
 
     @Value("${google.client.redirect-uri}")
     private String redirectUri;
 
-    @Value("${google.client.scope}")
-    private String scope;
 
     @Autowired
     ConnectedUnifiedInboxAccounts connectedUnifiedInboxAccounts;
 
     @Autowired
-    ConnectAccountService connectAccountService;
+    UserUtils userUtils;
 
     @Autowired
     MongoTemplate mongoTemplate;
 
-    @PostConstruct
-    public void init() throws Exception {
-        Details web = new Details();
-        web.setClientId(clientId);
-        web.setClientSecret(clientSecret);
-        GoogleClientSecrets clientSecrets = new GoogleClientSecrets().setWeb(web);
-        List<String> scopes = Arrays.asList(GmailScopes.GMAIL_SEND, GmailScopes.GMAIL_READONLY);
+    @Autowired
+    GoogleCredentilsService googleCredentilsService;
 
-        httpTransport = GoogleNetHttpTransport.newTrustedTransport();
-        flow = new GoogleAuthorizationCodeFlow.Builder(httpTransport, JSON_FACTORY, clientSecrets,
-                scopes)
-                .setAccessType("offline")
-                .build();
+    //For internal use only. Get UserId pass it to login/oauth2Code
+    @RequestMapping(value = "/getUserId",method = RequestMethod.GET)
+    public ResponseEntity<Map<Object, Object>> initiateGoogleOauth(HttpServletResponse response, HttpServletRequest request) {
+        User user = userUtils.getUserData(request);
+        if (user != null) {
+            return ResponseEntity.status(HttpStatus.OK).body(Map.of("userId", user.getId()));
+        } else {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(Map.of("userId", "user does not exist"));
+        }
     }
 
-//    @RequestMapping(value = "/redirect", method = RequestMethod.GET)
-//    public RedirectView redirectTogoogele(){
-//        return new RedirectView("https://www.google.com");
-//    }
 
     @RequestMapping(value = "/login/gmail", method = RequestMethod.GET)
     public RedirectView googleConnectionStatus(@RequestParam String userId) throws Exception {
         LOGGER.info("Google OAuth initiated...");
-        return new RedirectView(authorize(userId));
+        return new RedirectView(googleCredentilsService.authorize(userId));
     }
 
     @RequestMapping(value = "/login/oauth2/code/google", method = RequestMethod.GET, params = "code")
@@ -98,12 +88,14 @@ public class ConnectAccount {
         LOGGER.info("OAuth entered with the userId:" + userId);
 
         try {
-            LOGGER.info("OAuth Callback: Received Code: " + code);
+            GoogleAuthorizationCodeFlow flow = googleCredentilsService.getFlow();
+            HttpTransport httpTransport = googleCredentilsService.getHttpTransport();
+            LOGGER.info("OAuth Callback: Received Code");
             TokenResponse response = flow.newTokenRequest(code).setRedirectUri(redirectUri).execute();
-            LOGGER.info("Step 1: OAuth Token Retrieved: " + response.getAccessToken());
+            LOGGER.info("Step 1: OAuth Token Retrieved");
             Credential credential = flow.createAndStoreCredential(response, "userID");
             LOGGER.info("Step 2: Credential Created");
-            LOGGER.info("OAuth Token Response: " + response.toPrettyString());
+            LOGGER.info("Received OAuth Token Response");
 
             // Use the access token to interact with the Gmail API
             Gmail service = new Gmail.Builder(httpTransport, JSON_FACTORY, credential)
@@ -158,7 +150,7 @@ public class ConnectAccount {
             unifiedInboxAccounts.setConnectedEmailAccounts(Arrays.asList(addNewAcc));
             unifiedInboxAccounts.setUserId(userId);
             connectedUnifiedInboxAccounts.save(unifiedInboxAccounts);
-            LOGGER.info("Added the inbox acc "+ userEmail+" by creating a new document for the userID "+userId);
+            LOGGER.info("Added the inbox acc " + userEmail + " by creating a new document for the userID " + userId);
 
             json.addProperty("response", "Got credentials");
             json.addProperty("userMail", userEmail);
@@ -170,33 +162,6 @@ public class ConnectAccount {
             json.addProperty("error", e.getMessage());
             return new ResponseEntity<>(json.toString(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }
-
-    @RequestMapping(value = "/removeAcc", method = RequestMethod.DELETE)
-    public ResponseEntity<?> removeAccount(@RequestBody String userId) {
-        return connectAccountService.removeAccount(userId);
-    }
-
-
-    private String authorize(String userId) throws Exception {
-        if (flow == null) {
-            Details web = new Details();
-            web.setClientId(clientId);
-            web.setClientSecret(clientSecret);
-            GoogleClientSecrets clientSecrets = new GoogleClientSecrets().setWeb(web);
-
-            httpTransport = GoogleNetHttpTransport.newTrustedTransport();
-            flow = new GoogleAuthorizationCodeFlow.Builder(httpTransport, JSON_FACTORY, clientSecrets,
-                    Collections.singleton(GmailScopes.GMAIL_READONLY)).build();
-        }
-
-        AuthorizationCodeRequestUrl authorizationUrl = flow.newAuthorizationUrl().
-                setRedirectUri(redirectUri).
-                setState(userId).
-                set("prompt", "consent");  // Force re-approval
-        LOGGER.info("Authorization URL: " + authorizationUrl.build());
-        //System.out.println("Authorization URL: " + authorizationUrl.build());
-        return authorizationUrl.build();
     }
 }
 
