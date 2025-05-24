@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model;
+package com.connectly_cm.Connectly_CM.models.connectInboxModels;
 
 import java.util.Date;
 import java.util.List;

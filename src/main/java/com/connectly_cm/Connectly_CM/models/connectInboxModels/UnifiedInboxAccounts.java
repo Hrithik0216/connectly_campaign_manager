@@ -1,10 +1,9 @@
-package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model;
+package com.connectly_cm.Connectly_CM.models.connectInboxModels;
 
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
 import java.util.List;
 
 @Document

@@ -1,26 +1,20 @@
-package com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller;
+package com.connectly_cm.Connectly_CM.controllers.connectInboxAccounts;
 
 //import statements remain untouched
 
 import com.connectly_cm.Connectly_CM.Services.sequences.GoogleCredentilsService;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.ConnectedGmailAccount;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.service.ConnectAccountService;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.ConnectedGmailAccount;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.repositories.connectInboxRepositories.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.models.users.User;
 import com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils;
-import com.google.api.client.auth.oauth2.AuthorizationCodeRequestUrl;
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.auth.oauth2.TokenResponse;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
-import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
-import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets.Details;
-import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
 import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.gmail.Gmail;
-import com.google.api.services.gmail.GmailScopes;
 import com.google.gson.JsonObject;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -37,13 +31,12 @@ import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.data.mongodb.core.query.Query;
 
 
-import javax.annotation.PostConstruct;
 import java.util.*;
 
 @RestController
-public class ConnectAccount {
+public class ConnectInboxAccountController {
 
-    private static final Logger LOGGER = Logger.getLogger(ConnectAccount.class);
+    private static final Logger LOGGER = Logger.getLogger(ConnectInboxAccountController.class);
     private static final String APPLICATION_NAME = "ConnectlyTesting";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
 

@@ -1,11 +1,10 @@
 package com.connectly_cm.Connectly_CM.Services.userConfig;
 
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.repositories.connectInboxRepositories.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.dtos.userConfig.UserConfiguration;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.repositories.userConfig.UserConfigRepository;
-import org.apache.catalina.startup.UserConfig;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

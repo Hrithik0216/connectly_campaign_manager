@@ -1,6 +1,5 @@
 package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.controller;
 
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.controller.ConnectAccount;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailRequest;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service.SendEmailService;
 import org.apache.log4j.Logger;

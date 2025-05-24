@@ -1,8 +1,8 @@
 package com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.service;
 
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.ConnectedGmailAccount;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.model.UnifiedInboxAccounts;
-import com.connectly_cm.Connectly_CM.connectInboxGoogleAccount.repository.ConnectedUnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.ConnectedGmailAccount;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
+import com.connectly_cm.Connectly_CM.repositories.connectInboxRepositories.ConnectedUnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.EmailResponse;
 import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.repository.ConnectedAccountRepository;
 import com.connectly_cm.Connectly_CM.utils.emailUtils.CreateEmail;
