@@ -1,11 +1,8 @@
 package com.connectly_cm.Connectly_CM.security;
 
-import com.connectly_cm.Connectly_CM.Services.users.UserService;
 import com.connectly_cm.Connectly_CM.models.users.User;
 import com.connectly_cm.Connectly_CM.utils.jwtUtils.JwtUtils;
-import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.SignatureException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -20,7 +17,6 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import javax.naming.MalformedLinkException;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
@@ -28,8 +24,6 @@ import java.util.stream.Collectors;
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
     @Autowired
     JwtUtils jwtUtils;
-    @Autowired
-    UserService userService;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
