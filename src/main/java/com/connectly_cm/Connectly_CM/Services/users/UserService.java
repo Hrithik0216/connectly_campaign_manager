@@ -23,7 +23,7 @@ public class UserService {
         String userMail = mapping.get("userEmail").toString() != null ? mapping.get("userEmail").toString() : null;
         try {
             if (!StringUtil.isEmpty(apiKey)) {
-                LOGGER.info("APi key");
+                LOGGER.info("APi key exists");
                 return userRepository.findByapiToken(apiKey);
             } else if (!StringUtil.isEmpty(userMail)) {
                 LOGGER.info("email key");

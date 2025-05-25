@@ -6,13 +6,13 @@ import java.util.List;
 
 public class UserConfiguration {
     private List<Timewindow> timeWindow;
-    private long delayInSeconds;
+    private Long delayInSeconds;
 
-    public long getDelayInSeconds() {
+    public Long getDelayInSeconds() {
         return delayInSeconds;
     }
 
-    public void setDelayInSeconds(long delayInSeconds) {
+    public void setDelayInSeconds(Long delayInSeconds) {
         this.delayInSeconds = delayInSeconds;
     }
 
