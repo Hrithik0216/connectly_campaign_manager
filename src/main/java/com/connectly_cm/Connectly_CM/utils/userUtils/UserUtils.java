@@ -20,20 +20,25 @@ public class UserUtils {
     JwtUtils jwtUtils;
 
     public User getUserData(HttpServletRequest request) {
-        LOGGER.info(" getUserData");
+        String authHeader = request.getHeader("Authorization");
+        if(authHeader==null || !authHeader.startsWith("Bearer")){
+            LOGGER.info("Authorization Header is not found");
+            return null;
+        }
+
         User user = null;
-        String token = request.getHeader("Authorization");
+        String token = authHeader.substring(7);
         LOGGER.info("Token : "+token);
-        if (!userService.validateToken(token)) {
+        if (userService.isTokenValid(token)) {
             try {
-                LOGGER.info("token is valid");
-                user = jwtUtils.decodeJwt(request);
+                LOGGER.info("Valid token");
+                user = jwtUtils.decodeJwt(token);
                 return user;
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
         }
-        LOGGER.info("null user");
+        LOGGER.info("Invalid token");
         return null;
     }
 }

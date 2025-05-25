@@ -50,10 +50,7 @@ public class UserService {
         return null;
     }
 
-    public boolean validateToken(String token){
-        if(StringUtil.isEmpty(token)){
-            return true;
-        }
-        return false;
+    public boolean isTokenValid(String token){
+        return !StringUtil.isEmpty(token);
     }
  }

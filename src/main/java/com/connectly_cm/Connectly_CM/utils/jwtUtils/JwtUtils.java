@@ -60,9 +60,7 @@ public class JwtUtils {
                 .getBody();
     }
 
-    public User decodeJwt(HttpServletRequest request) throws IOException {
-        String token = request.getHeader("Authorization");
-        LOGGER.info("token received for decode: "+token);
+    public User decodeJwt(String token) throws IOException {
         if (StringUtil.isEmpty(token)) {
             return null;
         }
