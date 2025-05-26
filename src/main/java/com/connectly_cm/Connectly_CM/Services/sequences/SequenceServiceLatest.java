@@ -57,4 +57,9 @@ public class SequenceServiceLatest {
             return result;
         }
     }
+
+    public ResponseEntity<?> activateSequence(String seqId) {
+        emailSequenceLatestRepository.updateSequenceState(seqId,true);
+        return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.OK.value()));
+    }
 }

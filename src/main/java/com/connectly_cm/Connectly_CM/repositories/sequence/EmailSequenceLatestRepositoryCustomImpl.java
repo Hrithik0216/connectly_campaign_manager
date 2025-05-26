@@ -15,7 +15,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
-public class EmailSequenceLatestRepositoryCustomImpl implements EmailSequenceLatestRepositoryCustom{
+public class EmailSequenceLatestRepositoryCustomImpl implements EmailSequenceLatestRepositoryCustom {
     @Autowired
     MongoTemplate mongoTemplate;
 
@@ -35,10 +35,21 @@ public class EmailSequenceLatestRepositoryCustomImpl implements EmailSequenceLat
                     step.setStepCompleted(false);
                     return step;
                 }).toList();
-        update.set("emailSteps",newEmailSeqSteps);
-        update.set("delayInSeconds",userConfig.getDelayInSeconds());
-        update.set("fromAddress",userConfig.getFromAddress());
-        update.set("timeWindow",userConfig.getTimeWindow());
-        mongoTemplate.updateFirst(query,update, EmailSequenceLatest.class);
+        update.set("emailSteps", newEmailSeqSteps);
+        update.set("delayInSeconds", userConfig.getDelayInSeconds());
+        update.set("fromAddress", userConfig.getFromAddress());
+        update.set("timeWindow", userConfig.getTimeWindow());
+        mongoTemplate.updateFirst(query, update, EmailSequenceLatest.class);
+    }
+
+
+    @Override
+    public void updateSequenceState(String seqId, boolean seqState) {
+        Query query = new Query(Criteria.where("_id").is(seqId));
+        Update update = new Update();
+        update.set("isActive", seqState);
+        update.set("lastStepProcessedAt",
+                DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+        mongoTemplate.updateFirst(query, update, EmailSequenceLatest.class);
     }
 }

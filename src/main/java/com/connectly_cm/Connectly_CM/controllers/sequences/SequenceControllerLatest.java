@@ -37,12 +37,18 @@ public class SequenceControllerLatest {
                                             @RequestBody String sequenceName) {
         User user = userUtils.getUserData(request);
         if (user != null) {
-            try {
-                return sequenceServiceLatest.createSequence(StringUtil.trimString(sequenceName), user.getId());
-            } catch (Exception e) {
-                LOGGER.error("Error occurred while creating a sequence. " + e.getMessage());
-                response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-                return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+            if (!StringUtil.isEmpty(sequenceName)) {
+                try {
+                    return sequenceServiceLatest.createSequence(StringUtil.trimString(sequenceName), user.getId());
+                } catch (Exception e) {
+                    LOGGER.error("Error occurred while creating a sequence. " + e.getMessage());
+                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+                    return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+                }
+            } else {
+                LOGGER.info("sequenceName is empty");
+                response.setStatus(HttpStatus.BAD_REQUEST.value());
+                return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.BAD_REQUEST.value()));
             }
         } else {
             LOGGER.info("The user does not exist");
@@ -68,6 +74,7 @@ public class SequenceControllerLatest {
                     }
                 } catch (Exception e) {
                     LOGGER.error("Error occurred while creating sequence. " + e.getMessage());
+                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
                 }
             } else {
                 response.setStatus(HttpStatus.BAD_REQUEST.value());
@@ -77,5 +84,30 @@ public class SequenceControllerLatest {
             response.setStatus(HttpStatus.UNAUTHORIZED.value());
         }
         return null;
+    }
+
+    @PostMapping("/activateSequence")
+    public ResponseEntity<?> activateSequence(HttpServletRequest request, HttpServletResponse response,
+                                              @RequestBody String sequenceId) {
+        User user = userUtils.getUserData(request);
+        if (user != null) {
+            if (!StringUtil.isEmpty(sequenceId)) {
+                try {
+                    return sequenceServiceLatest.activateSequence(StringUtil.trimString(sequenceId));
+                } catch (Exception e) {
+                    LOGGER.error("Error occurred while activating a sequence. " + e.getMessage());
+                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+                    return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+                }
+            } else {
+                LOGGER.info("SequenceId is empty");
+                response.setStatus(HttpStatus.BAD_REQUEST.value());
+                return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.BAD_REQUEST.value()));
+            }
+        } else {
+            LOGGER.info("The user does not exist");
+            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.UNAUTHORIZED.value()));
+        }
     }
 }
