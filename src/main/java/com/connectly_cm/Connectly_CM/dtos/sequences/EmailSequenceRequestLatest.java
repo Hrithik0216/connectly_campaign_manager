@@ -6,27 +6,16 @@ import com.connectly_cm.Connectly_CM.sendMailUsingConnectedInboxAcc.dto.Timewind
 import java.util.List;
 
 public class EmailSequenceRequestLatest {
-    private String fromAddress;
-    private List<Timewindow> timeWindow;
-
-    public List<Timewindow> getTimeWindow() {
-        return timeWindow;
-    }
-
-    public void setTimeWindow(List<Timewindow> timeWindow) {
-        this.timeWindow = timeWindow;
-    }
-
+   private String sequenceId;
     private List<EmailSequenceStepRequest> emailSteps;
 
-    public String getFromAddress() {
-        return fromAddress;
+    public String getSequenceId() {
+        return sequenceId;
     }
 
-    public void setFromAddress(String fromAddress) {
-        this.fromAddress = fromAddress;
+    public void setSequenceId(String sequenceId) {
+        this.sequenceId = sequenceId;
     }
-
 
     public List<EmailSequenceStepRequest> getEmailSteps() {
         return emailSteps;
@@ -39,8 +28,6 @@ public class EmailSequenceRequestLatest {
     @Override
     public String toString() {
         return "EmailSequenceRequest{" +
-                ", fromAddress='" + fromAddress + '\'' +
-                ", timeWindow=" + (timeWindow != null ? timeWindow.toString() : "[]") +  // ✅ Ensures proper printing
                 ", emailSteps=" + (emailSteps != null ? emailSteps.toString() : "[]") +
                 '}';
     }

@@ -1,7 +1,7 @@
 package com.connectly_cm.Connectly_CM.controllers.userConfig;
 
 import com.connectly_cm.Connectly_CM.Services.userConfig.UserConfigService;
-import com.connectly_cm.Connectly_CM.apiResponses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.ResultResponse;
 import com.connectly_cm.Connectly_CM.dtos.userConfig.UserConfiguration;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.models.users.User;
@@ -11,11 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/config")

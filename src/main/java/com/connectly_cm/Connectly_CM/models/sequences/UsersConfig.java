@@ -31,7 +31,7 @@ public class UsersConfig {
         this.userId = userId;
     }
 
-    public String getFromAddress(String fromAddress) {
+    public String getFromAddress() {
         return this.fromAddress;
     }
 

@@ -6,7 +6,6 @@ public class EmailSequenceStepRequest {
     private String toEmailAddress;
     private String subject;
     private String bodyText;
-    private long delayInSeconds;
     private boolean isCompleted;
     private Date scheduledAt;
     private String sequenceId;
@@ -43,14 +42,6 @@ public class EmailSequenceStepRequest {
         this.bodyText = bodyText;
     }
 
-    public long getDelayInSeconds() {
-        return delayInSeconds;
-    }
-
-    public void setDelayInSeconds(long delayInSeconds) {
-        this.delayInSeconds = delayInSeconds;
-    }
-
     public boolean isCompleted() {
         return isCompleted;
     }
@@ -65,18 +56,6 @@ public class EmailSequenceStepRequest {
 
     public void setScheduledAt(Date scheduledAt) {
         this.scheduledAt = scheduledAt;
-    }
-    @Override
-    public String toString() {
-        return "EmailSequenceStepRequest{" +
-                "sequenceId='" + sequenceId + '\'' +
-                ", toEmailAddress='" + toEmailAddress + '\'' +
-                ", subject='" + subject + '\'' +
-                ", bodyText='" + bodyText + '\'' +
-                ", delayInSeconds=" + delayInSeconds +
-                ", isCompleted=" + isCompleted +
-                ", scheduledAt=" + scheduledAt +
-                '}';
     }
 
 }

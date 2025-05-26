@@ -13,4 +13,9 @@ public class StringUtil extends StringUtils {
     public static List<String> listSeparatedByComma(String s){
         return new ArrayList<>(List.of(s.split(COMMA_SEPARATOR_REGEX)));
     }
+
+    public static String trimString(String str) {
+        if (str == null) return null;
+        return str.replaceAll("^[\"']+|[\"']+$", "").trim();
+    }
 }

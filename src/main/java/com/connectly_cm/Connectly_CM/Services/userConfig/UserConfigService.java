@@ -1,6 +1,6 @@
 package com.connectly_cm.Connectly_CM.Services.userConfig;
 
-import com.connectly_cm.Connectly_CM.apiResponses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.ResultResponse;
 import com.connectly_cm.Connectly_CM.constants.ConfigurationConstants;
 import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.repositories.connectInboxRepositories.ConnectedUnifiedInboxAccounts;
@@ -61,22 +61,23 @@ public class UserConfigService {
         return res;
     }
 
-    public ResultResponse updateConfiguration(String userId, UserConfiguration userConfiguration) {
+    public ResultResponse updateConfiguration(String userId, UserConfiguration newUserConfiguration) {
         UsersConfig existingUserConfig = userConfigRepository.findByUserId(userId);
         ResultResponse res = new ResultResponse();
-        if (userConfiguration != null) {
+        if (newUserConfiguration != null) {
             if (existingUserConfig != null) {
                 LOGGER.info("User's config and new config exist");
-                if (userConfiguration.getDelayInSeconds() != null) {
-                    res = checkDelayConfiguration(userConfiguration, res);
+                if (newUserConfiguration.getDelayInSeconds() != null) {
+                    res = checkDelayConfiguration(newUserConfiguration, res);
                     if (res.getStatusCode() == 400) {
+                        return res;
+                    } else {
+                        userConfigRepository.updateConfigByFindingFirst(userId, newUserConfiguration);
+                        res.setMessage("Updated with the new configuration");
+                        res.setStatusCode(HttpStatus.OK.value());
                         return res;
                     }
                 }
-                userConfigRepository.updateConfigByFindingFirst(userId, userConfiguration);
-                res.setMessage("Updated with the new configuration");
-                res.setStatusCode(HttpStatus.OK.value());
-                return res;
             } else {
                 LOGGER.info("User's config does not exist");
                 res.setStatusCode(HttpStatus.NOT_FOUND.value());
@@ -89,6 +90,7 @@ public class UserConfigService {
             res.setMessage("Update Configuration was not found");
             return res;
         }
+        return null;
     }
 
     public ResultResponse checkDelayConfiguration(UserConfiguration userConfiguration, ResultResponse res) {

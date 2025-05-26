@@ -59,7 +59,7 @@ public class EmailSchedulerService {
                     step.setToEmailAddress(emailsStep.getToEmailAddress());
                     step.setSubject(emailsStep.getSubject());
                     step.setBodyText(emailsStep.getBodyText());
-                    step.setDelayInSeconds(emailsStep.getDelayInSeconds());
+//                    step.setDelayInSeconds(emailsStep.getDelayInSeconds());
                     step.setCreatedAt(new Date());
                     return step;
                 })

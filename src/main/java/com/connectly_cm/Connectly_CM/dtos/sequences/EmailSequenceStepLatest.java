@@ -6,9 +6,8 @@ public class EmailSequenceStepLatest {
     private String toEmailAddress;
     private String subject;
     private String bodyText;
-    private long delayInSeconds;
-    private boolean isCompleted;
-    private String scheduledAt;
+    private boolean isStepCompleted;
+    private String stepScheduledAt;
     private String createdAt;
     private String updatedAt;
 
@@ -36,28 +35,20 @@ public class EmailSequenceStepLatest {
         this.bodyText = bodyText;
     }
 
-    public long getDelayInSeconds() {
-        return delayInSeconds;
+    public boolean isStepCompleted() {
+        return isStepCompleted;
     }
 
-    public void setDelayInSeconds(long delayInSeconds) {
-        this.delayInSeconds = delayInSeconds;
+    public void setStepCompleted(boolean stepCompleted) {
+        isStepCompleted = stepCompleted;
     }
 
-    public boolean isCompleted() {
-        return isCompleted;
+    public String getStepScheduledAt() {
+        return stepScheduledAt;
     }
 
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
-    }
-
-    public String getScheduledAt() {
-        return scheduledAt;
-    }
-
-    public void setScheduledAt(String scheduledAt) {
-        this.scheduledAt = scheduledAt;
+    public void setStepScheduledAt(String stepScheduledAt) {
+        this.stepScheduledAt = stepScheduledAt;
     }
 
     public String getCreatedAt() {
@@ -75,6 +66,4 @@ public class EmailSequenceStepLatest {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
-
-
 }
