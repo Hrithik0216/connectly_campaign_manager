@@ -1,15 +1,23 @@
 package com.connectly_cm.Connectly_CM.dtos.sequences;
 
-import java.util.Date;
+import com.connectly_cm.Connectly_CM.enums.SequenceStepStaus;
 
 public class EmailSequenceStepLatest {
     private String toEmailAddress;
     private String subject;
     private String bodyText;
-    private boolean isStepCompleted;
     private String stepScheduledAt;
     private String createdAt;
     private String updatedAt;
+    private SequenceStepStaus stepStatus;
+
+    public SequenceStepStaus getStepStatus() {
+        return stepStatus;
+    }
+
+    public void setStepStatus(SequenceStepStaus stepStatus) {
+        this.stepStatus = stepStatus;
+    }
 
     public String getToEmailAddress() {
         return toEmailAddress;
@@ -33,14 +41,6 @@ public class EmailSequenceStepLatest {
 
     public void setBodyText(String bodyText) {
         this.bodyText = bodyText;
-    }
-
-    public boolean isStepCompleted() {
-        return isStepCompleted;
-    }
-
-    public void setStepCompleted(boolean stepCompleted) {
-        isStepCompleted = stepCompleted;
     }
 
     public String getStepScheduledAt() {

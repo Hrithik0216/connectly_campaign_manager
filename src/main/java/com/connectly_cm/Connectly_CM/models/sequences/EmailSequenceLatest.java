@@ -15,11 +15,21 @@ public class EmailSequenceLatest {
     private String userId;
     private String fromAddress;
     private List<Timewindow> timeWindow;
-    private boolean isActive;
+
     private String createdAt;
     private String lastStepProcessedAt;
     private List<EmailSequenceStepLatest> emailSteps;
     private Long delayInSeconds;
+    private String seqStatus;
+
+    public String getSeqStatus() {
+        return seqStatus;
+    }
+
+    public void setSeqStatus(String seqStatus) {
+        this.seqStatus = seqStatus;
+    }
+
 
     public Long getDelayInSeconds() {
         return delayInSeconds;
@@ -69,14 +79,6 @@ public class EmailSequenceLatest {
         this.timeWindow = timeWindow;
     }
 
-    public boolean isActive() {
-        return isActive;
-    }
-
-    public void setActive(boolean active) {
-        isActive = active;
-    }
-
     public String getCreatedAt() {
         return createdAt;
     }
@@ -100,20 +102,5 @@ public class EmailSequenceLatest {
     public void setEmailSteps(List<EmailSequenceStepLatest> emailSteps) {
         this.emailSteps = emailSteps;
     }
-
-    @Override
-    public String toString() {
-        return "EmailSequenceLatest{" +
-                "id='" + id + '\'' +
-                ", userId='" + userId + '\'' +
-                ", fromAddress='" + fromAddress + '\'' +
-                ", timeWindow=" + timeWindow +
-                ", isActive=" + isActive +
-                ", createdAt='" + createdAt + '\'' +
-                ", lastStepProcessedAt='" + lastStepProcessedAt + '\'' +
-                ", emailSteps=" + emailSteps +
-                '}';
-    }
-
 
 }

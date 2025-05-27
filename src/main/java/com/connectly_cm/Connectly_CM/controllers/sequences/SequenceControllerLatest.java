@@ -1,6 +1,7 @@
 package com.connectly_cm.Connectly_CM.controllers.sequences;
 
 import com.connectly_cm.Connectly_CM.Services.sequences.SequenceServiceLatest;
+import com.connectly_cm.Connectly_CM.dtos.sequences.ActivateDeactivateSeq;
 import com.connectly_cm.Connectly_CM.dtos.sequences.EmailSequenceRequestLatest;
 import com.connectly_cm.Connectly_CM.models.users.User;
 import com.connectly_cm.Connectly_CM.responses.ResultResponse;
@@ -87,13 +88,13 @@ public class SequenceControllerLatest {
     }
 
     @PostMapping("/activateSequence")
-    public ResponseEntity<?> activateSequence(HttpServletRequest request, HttpServletResponse response,
-                                              @RequestBody String sequenceId) {
+    public ResponseEntity<?> activateDeactivateSequence(HttpServletRequest request, HttpServletResponse response,
+                                              @RequestBody ActivateDeactivateSeq activateDeactivateSeq) {
         User user = userUtils.getUserData(request);
         if (user != null) {
-            if (!StringUtil.isEmpty(sequenceId)) {
+            if (!StringUtil.isEmpty(activateDeactivateSeq.getSeqId())) {
                 try {
-                    return sequenceServiceLatest.activateSequence(StringUtil.trimString(sequenceId));
+                    return sequenceServiceLatest.activateDeactivateSequence(activateDeactivateSeq);
                 } catch (Exception e) {
                     LOGGER.error("Error occurred while activating a sequence. " + e.getMessage());
                     response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());

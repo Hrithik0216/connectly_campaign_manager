@@ -1,7 +1,10 @@
 package com.connectly_cm.Connectly_CM.repositories.sequence;
 
+import com.connectly_cm.Connectly_CM.dtos.sequences.ActivateDeactivateSeq;
 import com.connectly_cm.Connectly_CM.dtos.sequences.EmailSequenceRequestLatest;
 import com.connectly_cm.Connectly_CM.dtos.sequences.EmailSequenceStepLatest;
+import com.connectly_cm.Connectly_CM.enums.SequenceStatus;
+import com.connectly_cm.Connectly_CM.enums.SequenceStepStaus;
 import com.connectly_cm.Connectly_CM.models.sequences.EmailSequenceLatest;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
@@ -32,7 +35,7 @@ public class EmailSequenceLatestRepositoryCustomImpl implements EmailSequenceLat
                     step.setBodyText(emailStep.getBodyText());
                     step.setCreatedAt(DateTimeUtils.convertDateToString(new Date(),
                             TimeZone.getTimeZone("UTC"), null));
-                    step.setStepCompleted(false);
+                    step.setStepStatus(SequenceStepStaus.TO_BE_PROCESSED);
                     return step;
                 }).toList();
         update.set("emailSteps", newEmailSeqSteps);
@@ -44,12 +47,10 @@ public class EmailSequenceLatestRepositoryCustomImpl implements EmailSequenceLat
 
 
     @Override
-    public void updateSequenceState(String seqId, boolean seqState) {
-        Query query = new Query(Criteria.where("_id").is(seqId));
+    public void updateSequenceState(ActivateDeactivateSeq seqState) {
+        Query query = new Query(Criteria.where("_id").is(seqState.getSeqId()));
         Update update = new Update();
-        update.set("isActive", seqState);
-        update.set("lastStepProcessedAt",
-                DateTimeUtils.convertDateToString(new Date(), TimeZone.getTimeZone("UTC"), null));
+        update.set("seqStatus", seqState.getSeqStatus());
         mongoTemplate.updateFirst(query, update, EmailSequenceLatest.class);
     }
 }
