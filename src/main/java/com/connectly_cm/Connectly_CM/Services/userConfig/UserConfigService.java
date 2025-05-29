@@ -1,6 +1,6 @@
 package com.connectly_cm.Connectly_CM.Services.userConfig;
 
-import com.connectly_cm.Connectly_CM.responses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.constants.ConfigurationConstants;
 import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.repositories.connectInboxRepositories.ConnectedUnifiedInboxAccounts;

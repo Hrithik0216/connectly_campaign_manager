@@ -1,4 +1,4 @@
-package com.connectly_cm.Connectly_CM.responses;
+package com.connectly_cm.Connectly_CM.responses.resultResponses;
 
 public class ResultResponse {
     private int statusCode;

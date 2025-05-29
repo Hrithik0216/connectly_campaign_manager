@@ -4,21 +4,18 @@ import com.connectly_cm.Connectly_CM.Services.sequences.SequenceServiceLatest;
 import com.connectly_cm.Connectly_CM.dtos.sequences.ActivateDeactivateSeq;
 import com.connectly_cm.Connectly_CM.dtos.sequences.EmailSequenceRequestLatest;
 import com.connectly_cm.Connectly_CM.models.users.User;
-import com.connectly_cm.Connectly_CM.responses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.utils.StringUtils.StringUtil;
 import com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.juli.logging.Log;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 @RequestMapping("/sequence")

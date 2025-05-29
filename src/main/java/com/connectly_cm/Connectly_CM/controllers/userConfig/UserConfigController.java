@@ -1,7 +1,7 @@
 package com.connectly_cm.Connectly_CM.controllers.userConfig;
 
 import com.connectly_cm.Connectly_CM.Services.userConfig.UserConfigService;
-import com.connectly_cm.Connectly_CM.responses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.dtos.userConfig.UserConfiguration;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.models.users.User;

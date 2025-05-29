@@ -6,7 +6,7 @@ import com.connectly_cm.Connectly_CM.models.sequences.EmailSequenceLatest;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.repositories.sequence.EmailSequenceLatestRepository;
 import com.connectly_cm.Connectly_CM.repositories.userConfig.UserConfigRepository;
-import com.connectly_cm.Connectly_CM.responses.ResultResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
