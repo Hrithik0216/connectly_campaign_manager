@@ -1,5 +1,7 @@
 package com.connectly_cm.Connectly_CM.Services.userConfig;
 
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ErrResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.FortuneResponse;
 import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.constants.ConfigurationConstants;
 import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
@@ -10,6 +12,7 @@ import com.connectly_cm.Connectly_CM.repositories.userConfig.UserConfigRepositor
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -27,81 +30,74 @@ public class UserConfigService {
         return userConfig;
     }
 
-    public ResultResponse configureUserConfig(String userId, UserConfiguration userConfiguration) {
+    public ResponseEntity<Object> configureUserConfig(String userId, UserConfiguration userConfiguration) {
         UsersConfig checkForExistingConfig = userConfigRepository.findByUserId(userId);
         UnifiedInboxAccounts connectedAccount = connectedMailAccounts.findByUserId(userId);
-        ResultResponse res = new ResultResponse();
+
         if (connectedAccount == null) {
             LOGGER.info("An account for sending Emails is not connected. Please connect your mail account");
-            res.setStatusCode(HttpStatus.NOT_FOUND.value());
-            res.setMessage("An account for sending Emails is not connected. Please connect your mail account");
-            return res;
+            ErrResponse err = new ErrResponse.Builder("An account for sending Emails is not connected. Please connect your mail account",
+                    HttpStatus.NOT_FOUND.value()).build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).body(err);
+        }
 
+        if (checkForExistingConfig != null) {
+            LOGGER.info("The user already have a config");
+            ErrResponse err = new ErrResponse.Builder("The user already have a config",
+                    HttpStatus.CONFLICT.value()).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT.value()).body(err);
         }
-        if (checkForExistingConfig == null) {
-            LOGGER.info("The user does not own a config");
-            UsersConfig usersConfig = new UsersConfig();
-            usersConfig.setTimeWindow(userConfiguration.getTimeWindow());
-            usersConfig.setUserId(userId);
-            res = checkDelayConfiguration(userConfiguration, res);
-            if (res.getStatusCode() == 400) {
-                return res;
-            }
-            usersConfig.setDelayInSeconds(userConfiguration.getDelayInSeconds());
-            usersConfig.setFromAddress(connectedAccount.getConnectedEmailAccounts().get(0).getConnectedMail());
-            userConfigRepository.save(usersConfig);
-            res.setStatusCode(HttpStatus.CREATED.value());
-            res.setMessage("Saved users config");
-            res.setData(usersConfig);
-            return res;
+
+        LOGGER.info("The user does not own a config");
+        UsersConfig usersConfig = new UsersConfig();
+        usersConfig.setTimeWindow(userConfiguration.getTimeWindow());
+        usersConfig.setUserId(userId);
+        int delayCheck = checkDelayConfiguration(userConfiguration);
+
+        if (delayCheck == 400) {
+            ErrResponse err = new ErrResponse.Builder("The delay cannot be less than 24hrs or greater than 74hrs",
+                    HttpStatus.BAD_REQUEST.value()).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT.value()).body(err);
         }
-        LOGGER.info("The user already have a config");
-        res.setStatusCode(HttpStatus.CONFLICT.value());
-        res.setMessage("The user already have a config");
-        return res;
+
+        usersConfig.setDelayInSeconds(userConfiguration.getDelayInSeconds());
+        usersConfig.setFromAddress(connectedAccount.getConnectedEmailAccounts().get(0).getConnectedMail());
+        userConfigRepository.save(usersConfig);
+        FortuneResponse result = new FortuneResponse.Builder(HttpStatus.CREATED.value(), usersConfig).setMessage("Saved user config");
+        return ResponseEntity.status(HttpStatus.OK.value()).body(result);
     }
 
-    public ResultResponse updateConfiguration(String userId, UserConfiguration newUserConfiguration) {
+    public ResponseEntity<Object> updateConfiguration(String userId, UserConfiguration newUserConfiguration) {
         UsersConfig existingUserConfig = userConfigRepository.findByUserId(userId);
         ResultResponse res = new ResultResponse();
-        if (newUserConfiguration != null) {
-            if (existingUserConfig != null) {
-                LOGGER.info("User's config and new config exist");
-                if (newUserConfiguration.getDelayInSeconds() != null) {
-                    res = checkDelayConfiguration(newUserConfiguration, res);
-                    if (res.getStatusCode() == 400) {
-                        return res;
-                    } else {
-                        userConfigRepository.updateConfigByFindingFirst(userId, newUserConfiguration);
-                        res.setMessage("Updated with the new configuration");
-                        res.setStatusCode(HttpStatus.OK.value());
-                        return res;
-                    }
-                }
-            } else {
-                LOGGER.info("User's config does not exist");
-                res.setStatusCode(HttpStatus.NOT_FOUND.value());
-                res.setMessage("Existing configuration was not found. Please configure your requirements before updating");
-                return res;
-            }
-        } else {
-            LOGGER.info("User's new config does not exist");
-            res.setStatusCode(HttpStatus.BAD_REQUEST.value());
-            res.setMessage("Update Configuration was not found");
-            return res;
+        if (existingUserConfig == null) {
+            LOGGER.info("User's config does not exist");
+            ErrResponse err = new ErrResponse.Builder("Existing configuration was not found. Please configure your requirements before updating",
+                    HttpStatus.BAD_REQUEST.value()).build();
+            return ResponseEntity.status(HttpStatus.CONFLICT.value()).body(err);
         }
-        return null;
+        LOGGER.info("User's config and new config exist");
+        if (newUserConfiguration.getDelayInSeconds() != null) {
+            int delaySeconds = checkDelayConfiguration(newUserConfiguration);
+            if (delaySeconds == 400) {
+                ErrResponse err = new ErrResponse.Builder("The delay cannot be less than 24hrs or greater than 74hrs",
+                        HttpStatus.BAD_REQUEST.value()).build();
+                return ResponseEntity.status(HttpStatus.CONFLICT.value()).body(err);
+            }
+        }
+        userConfigRepository.updateConfigByFindingFirst(userId, newUserConfiguration);
+        FortuneResponse fr = new FortuneResponse.Builder(HttpStatus.OK.value(), newUserConfiguration)
+                .setMessage("Updated with the new configuration");
+        return ResponseEntity.status(HttpStatus.OK.value()).body(fr);
     }
 
-    public ResultResponse checkDelayConfiguration(UserConfiguration userConfiguration, ResultResponse res) {
+    public int checkDelayConfiguration(UserConfiguration userConfiguration) {
         if (userConfiguration.getDelayInSeconds() > ConfigurationConstants.THREE_DAYS ||
                 userConfiguration.getDelayInSeconds() < ConfigurationConstants.ONE_DAY) {
-            res.setStatusCode(HttpStatus.BAD_REQUEST.value());
-            res.setMessage("We don't allow configuring delay for more than 72hrs and less than 24hrs.");
-            return res;
+            return 400;
+
         } else {
-            res.setStatusCode(HttpStatus.OK.value());
-            return res;
+            return 200;
         }
     }
 }
