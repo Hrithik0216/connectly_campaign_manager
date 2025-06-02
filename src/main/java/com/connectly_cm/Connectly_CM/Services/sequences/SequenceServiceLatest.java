@@ -6,6 +6,8 @@ import com.connectly_cm.Connectly_CM.models.sequences.EmailSequenceLatest;
 import com.connectly_cm.Connectly_CM.models.sequences.UsersConfig;
 import com.connectly_cm.Connectly_CM.repositories.sequence.EmailSequenceLatestRepository;
 import com.connectly_cm.Connectly_CM.repositories.userConfig.UserConfigRepository;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ErrResponse;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.FortuneResponse;
 import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
 import org.apache.log4j.Logger;
@@ -38,36 +40,33 @@ public class SequenceServiceLatest {
         newSeq.setCreatedAt(DateTimeUtils.convertDateToString
                 (new Date(), TimeZone.getTimeZone("UTC"), null));
         emailSequenceLatestRepository.save(newSeq);
-        LOGGER.info("Created the sequence "+seqName);
-        return new ResponseEntity<>(HttpStatusCode.valueOf(
-                HttpStatus.CREATED.value()));
+        LOGGER.info("Created the sequence" + " " + seqName);
+        FortuneResponse fr = new FortuneResponse.Builder(HttpStatus.CREATED.value(), "Created a new sequence" + seqName).build();
+        return ResponseEntity.status(HttpStatus.CREATED.value()).body(fr);
     }
 
-    public ResultResponse addDataToSequence(EmailSequenceRequestLatest emailSequenceRequest, String userId) {
+    public ResponseEntity<?> addDataToSequence(EmailSequenceRequestLatest emailSequenceRequest, String userId) {
         UsersConfig userConfig = userConfigRepository.findByUserId(userId);
         Optional<EmailSequenceLatest> existingSeq = emailSequenceLatestRepository.findById(emailSequenceRequest.getSequenceId());
 
-        ResultResponse result = new ResultResponse();
-        if (existingSeq.isPresent()){
-
+        if (existingSeq.isPresent()) {
             if (userConfig != null) {
                 LOGGER.info("The seq and userConfig exists. Adding data");
+
                 emailSequenceLatestRepository.updateSequenceData(emailSequenceRequest, userConfig);
-                result.setStatusCode(HttpStatus.OK.value());
-                result.setData(emailSequenceRequest);
-                result.setMessage("New sequence created with provided data.");
-                return result;
+                FortuneResponse res = new FortuneResponse.Builder(HttpStatus.OK.value(), emailSequenceRequest).build();
+                return ResponseEntity.status(HttpStatus.OK.value()).body(res);
             } else {
-                LOGGER.info("The userConfig does not exist.");
-                result.setMessage("UserConfig not found. Please configure your requirements");
-                result.setStatusCode(HttpStatus.BAD_REQUEST.value());
-                return result;
+                LOGGER.error("The userConfig does not exist.");
+                ErrResponse er = new ErrResponse.Builder("UserConfig not found. Please configure your requirements",
+                        HttpStatus.BAD_REQUEST.value()).build();
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
             }
-        }else{
-            LOGGER.info("Sequence with the given seqId is not found. Please Create a seq and then add data");
-            result.setMessage("Sequence with the given seqId is not found. Please Create a seq and then add data");
-            result.setStatusCode(HttpStatus.BAD_REQUEST.value());
-            return result;
+        } else {
+            LOGGER.error("Sequence with the given seqId is not found. Please Create a seq and then add data");
+            ErrResponse er = new ErrResponse.Builder("Sequence with the given seqId is not found. Please Create a seq and then add data",
+                    HttpStatus.BAD_REQUEST.value()).build();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
         }
 
     }
@@ -75,14 +74,14 @@ public class SequenceServiceLatest {
     public ResponseEntity<?> activateDeactivateSequence(ActivateDeactivateSeq seqData) {
         Optional<EmailSequenceLatest> existingSeq = emailSequenceLatestRepository.findById(seqData.getSeqId());
 
-        if (existingSeq.isPresent()){
+        if (existingSeq.isPresent()) {
             LOGGER.info("Sequence with the given seqId exists");
             emailSequenceLatestRepository.updateSequenceState(seqData);
-            return  ResponseEntity.status(HttpStatus.OK).body(Map.of("message",
+            return ResponseEntity.status(HttpStatus.OK).body(Map.of("message",
                     "updated the data"));
-        }else{
+        } else {
             LOGGER.info("Sequence with the given seqId is not found. Please Create a seq and then add data");
-            return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", "sequence not found"));
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", "sequence not found"));
         }
 
     }

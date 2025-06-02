@@ -4,6 +4,7 @@ import com.connectly_cm.Connectly_CM.Services.sequences.SequenceServiceLatest;
 import com.connectly_cm.Connectly_CM.dtos.sequences.ActivateDeactivateSeq;
 import com.connectly_cm.Connectly_CM.dtos.sequences.EmailSequenceRequestLatest;
 import com.connectly_cm.Connectly_CM.models.users.User;
+import com.connectly_cm.Connectly_CM.responses.resultResponses.ErrResponse;
 import com.connectly_cm.Connectly_CM.responses.resultResponses.ResultResponse;
 import com.connectly_cm.Connectly_CM.utils.StringUtils.StringUtil;
 import com.connectly_cm.Connectly_CM.utils.userUtils.UserUtils;
@@ -40,25 +41,26 @@ public class SequenceControllerLatest {
                     return sequenceServiceLatest.createSequence(StringUtil.trimString(sequenceName), user.getId());
                 } catch (Exception e) {
                     LOGGER.error("Error occurred while creating a sequence. " + e.getMessage());
-                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-                    return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+                    ErrResponse er = new ErrResponse.Builder("Error occurred while creating a sequence. " + e.getMessage(),
+                            HttpStatus.INTERNAL_SERVER_ERROR.value()).build();
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR.value()).body(er);
                 }
             } else {
+                ErrResponse er = new ErrResponse.Builder("sequenceName is empty", HttpStatus.BAD_REQUEST.value()).build();
                 LOGGER.info("sequenceName is empty");
-                response.setStatus(HttpStatus.BAD_REQUEST.value());
-                return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.BAD_REQUEST.value()));
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
             }
         } else {
+            ErrResponse er = new ErrResponse.Builder("User does not exists", HttpStatus.UNAUTHORIZED.value()).build();
             LOGGER.info("The user does not exist");
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
-            return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.UNAUTHORIZED.value()));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED.value()).body(er);
         }
 
     }
 
     @PostMapping("/configureSequenceData")
-    public ResultResponse createSequence(HttpServletResponse response, HttpServletRequest request,
-                                         @RequestBody EmailSequenceRequestLatest emailSequenceRequest) {
+    public ResponseEntity<?> createSequence(HttpServletResponse response, HttpServletRequest request,
+                                            @RequestBody EmailSequenceRequestLatest emailSequenceRequest) {
         User user = userUtils.getUserData(request);
         if (user != null) {
             if (!emailSequenceRequest.getSequenceId().isEmpty() && emailSequenceRequest.getEmailSteps() != null) {
@@ -69,24 +71,31 @@ public class SequenceControllerLatest {
                     } else {
                         LOGGER.info("Email sequence requestBody not found.");
                         response.setStatus(HttpStatus.BAD_REQUEST.value());
+                        ErrResponse er = new ErrResponse.Builder("Email sequence requestBody not found.",
+                                HttpStatus.BAD_REQUEST.value()).build();
+                        return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
                     }
                 } catch (Exception e) {
                     LOGGER.error("Error occurred while creating sequence. " + e.getMessage());
-                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+                    ErrResponse er = new ErrResponse.Builder("Error occurred while creating sequence. Internal server error",
+                            HttpStatus.INTERNAL_SERVER_ERROR.value()).build();
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR.value()).body(er);
                 }
             } else {
-                response.setStatus(HttpStatus.BAD_REQUEST.value());
+                ErrResponse er = new ErrResponse.Builder("User does not exists", HttpStatus.BAD_REQUEST.value()).build();
+                LOGGER.info("The user does not exist");
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
             }
         } else {
-            LOGGER.info("User not found.");
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
+            ErrResponse er = new ErrResponse.Builder("User does not exists", HttpStatus.UNAUTHORIZED.value()).build();
+            LOGGER.info("The user does not exist");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED.value()).body(er);
         }
-        return null;
     }
 
     @PostMapping("/activateSequence")
     public ResponseEntity<?> activateDeactivateSequence(HttpServletRequest request, HttpServletResponse response,
-                                              @RequestBody ActivateDeactivateSeq activateDeactivateSeq) {
+                                                        @RequestBody ActivateDeactivateSeq activateDeactivateSeq) {
         User user = userUtils.getUserData(request);
         if (user != null) {
             if (!StringUtil.isEmpty(activateDeactivateSeq.getSeqId())) {
