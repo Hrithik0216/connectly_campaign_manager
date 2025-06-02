@@ -56,4 +56,31 @@ public class DateTimeUtils {
             throw new IllegalArgumentException("Invalid date format: " + stringDate, e);
         }
     }
+
+    public static final String convertDateToStringWithOffset(Date date, TimeZone timeZone, Long seconds) {
+        if (date == null) {
+            LOGGER.warn("The date is null");
+            throw new IllegalArgumentException("The date is null");
+        }
+        if (timeZone == null) {
+            LOGGER.warn("The timeZone is null");
+            throw new IllegalArgumentException("The timeZone is null");
+        }
+
+        try {
+            Instant instant = date.toInstant();
+            if (seconds != null) {
+                instant = instant.plusSeconds(seconds);
+            }
+
+            ZonedDateTime zonedDateTime = instant.atZone(timeZone.toZoneId());
+            String dateStr = zonedDateTime.format(ISO_FORMATTER);
+            LOGGER.info("Converted date to String is " + dateStr);
+            return dateStr;
+        } catch (Exception ex) {
+            LOGGER.error("Exception in converting date to String: " + ex.getMessage(), ex);
+            throw new IllegalArgumentException("Date conversion failed", ex);
+        }
+    }
+
 }

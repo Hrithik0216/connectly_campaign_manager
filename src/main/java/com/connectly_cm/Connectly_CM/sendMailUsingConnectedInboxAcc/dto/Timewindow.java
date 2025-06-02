@@ -36,13 +36,4 @@ public class Timewindow {
         return days.contains(currentDay);
     }
 
-    @Override
-    public String toString() {
-        return "Timewindow{" +
-                "start='" + start + '\'' +
-                ", end='" + end + '\'' +
-                ", days=" + (days != null ? days.toString() : "[]") +
-                '}';
-    }
-
 }

@@ -71,17 +71,29 @@ public class SequenceServiceLatest {
 
     }
 
-    public ResponseEntity<?> activateDeactivateSequence(ActivateDeactivateSeq seqData) {
+    public ResponseEntity<?> activateDeactivateSequence(ActivateDeactivateSeq seqData, String userId) {
         Optional<EmailSequenceLatest> existingSeq = emailSequenceLatestRepository.findById(seqData.getSeqId());
-
+        UsersConfig userConfig = userConfigRepository.findByUserId(userId);
+        if (userConfig == null) {
+            LOGGER.error("The userConfig does not exist.");
+            ErrResponse er = new ErrResponse.Builder("UserConfig not found. Please configure your requirements",
+                    HttpStatus.BAD_REQUEST.value()).build();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
+        }
         if (existingSeq.isPresent()) {
             LOGGER.info("Sequence with the given seqId exists");
-            emailSequenceLatestRepository.updateSequenceState(seqData);
-            return ResponseEntity.status(HttpStatus.OK).body(Map.of("message",
-                    "updated the data"));
+            int res = emailSequenceLatestRepository.updateSequenceState(seqData, userConfig);
+            if (res == -1) {
+                LOGGER.info("Please add email steps before activating the sequence");
+                ErrResponse er = new ErrResponse.Builder("Please add email steps before activating the sequence", HttpStatus.BAD_REQUEST.value()).build();
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
+            }
+            FortuneResponse response = new FortuneResponse.Builder(HttpStatus.OK.value(), "Activated the seq. " + existingSeq.get().getSequenceName()).build();
+            return ResponseEntity.status(HttpStatus.OK.value()).body(response);
         } else {
             LOGGER.info("Sequence with the given seqId is not found. Please Create a seq and then add data");
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("message", "sequence not found"));
+            ErrResponse er = new ErrResponse.Builder("Sequence with the given seqId is not found. Please Create a seq and then add data", HttpStatus.UNAUTHORIZED.value()).build();
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
         }
 
     }

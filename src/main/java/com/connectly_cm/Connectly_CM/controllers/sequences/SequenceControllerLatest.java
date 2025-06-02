@@ -98,23 +98,23 @@ public class SequenceControllerLatest {
                                                         @RequestBody ActivateDeactivateSeq activateDeactivateSeq) {
         User user = userUtils.getUserData(request);
         if (user != null) {
-            if (!StringUtil.isEmpty(activateDeactivateSeq.getSeqId())) {
+            if (!StringUtil.isEmpty(activateDeactivateSeq.getSeqId()) && activateDeactivateSeq.getSeqStatus() != null) {
                 try {
-                    return sequenceServiceLatest.activateDeactivateSequence(activateDeactivateSeq);
+                    return sequenceServiceLatest.activateDeactivateSequence(activateDeactivateSeq, user.getId());
                 } catch (Exception e) {
                     LOGGER.error("Error occurred while activating a sequence. " + e.getMessage());
-                    response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
-                    return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.INTERNAL_SERVER_ERROR.value()));
+                    ErrResponse er = new ErrResponse.Builder("Error occurred while activating a sequence.", HttpStatus.INTERNAL_SERVER_ERROR.value()).build();
+                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR.value()).body(er);
                 }
             } else {
-                LOGGER.info("SequenceId is empty");
-                response.setStatus(HttpStatus.BAD_REQUEST.value());
-                return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.BAD_REQUEST.value()));
+                LOGGER.info("SequenceId or seq status is empty");
+                ErrResponse er = new ErrResponse.Builder("SequenceId or seq status is empty", HttpStatus.BAD_REQUEST.value()).build();
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST.value()).body(er);
             }
         } else {
+            ErrResponse er = new ErrResponse.Builder("User does not exists", HttpStatus.UNAUTHORIZED.value()).build();
             LOGGER.info("The user does not exist");
-            response.setStatus(HttpStatus.UNAUTHORIZED.value());
-            return new ResponseEntity<>(HttpStatusCode.valueOf(HttpStatus.UNAUTHORIZED.value()));
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED.value()).body(er);
         }
     }
 }
