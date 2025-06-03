@@ -1,5 +1,8 @@
 package com.connectly_cm.Connectly_CM.utils.HttpClientUtils.PipedriveHttpClientUtils;
 
+import com.connectly_cm.Connectly_CM.constants.GoogleConstants;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.ConnectedGmailAccount;
+import com.connectly_cm.Connectly_CM.models.connectInboxModels.UnifiedInboxAccounts;
 import com.connectly_cm.Connectly_CM.utils.DateUtils.DateTimeUtils;
 import com.connectly_cm.Connectly_CM.utils.EncryptionAes.EncryptionAes;
 import com.connectly_cm.Connectly_CM.constants.CrmConstants;
@@ -17,9 +20,7 @@ import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.PostConstruct;
-import java.util.Base64;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.*;
 
 @Component
 public class CrmHttpUtils {
@@ -28,25 +29,39 @@ public class CrmHttpUtils {
 
     private static String pipedriveClientId = "";
     private static String pipedriveClientSecret = "";
+    private static String gmailClientId = "";
+    private static String gmailClientSecret = "";
 
     @Value("${pipedrive.client.id}")
     private String tempPipedriveClientId;
     @Value("${pipedrive.client.secret}")
     private String tempPipedriveClientSecret;
 
+    @Value("${google.client-id}")
+    private String tempGmailClientId;
+
+    @Value("${google.client-secret}")
+    private String tempGmailClientSecret;
+
 
     @PostConstruct
     public void init() {
-//        LOGGER.info("Begin:"+Thread.currentThread().getName());
         if (tempPipedriveClientId == null || tempPipedriveClientSecret == null) {
             LOGGER.info("tempPipedriveClientId/tempPipedriveClientSecret is null");
             throw new IllegalStateException("We have missing pipedrive credentials");
+        }
+        if (tempGmailClientId == null || tempGmailClientSecret == null) {
+            LOGGER.info("tempGmailClientId/tempGmailClientSecret is null");
+            throw new IllegalStateException("We have missing gmail credentials");
         }
         pipedriveClientId = tempPipedriveClientId;
         pipedriveClientSecret = tempPipedriveClientSecret;
         LOGGER.info("pipedriveClientId: " + pipedriveClientId);
         LOGGER.info("pipedriveClientSecret" + pipedriveClientSecret);
-//        LOGGER.info("End:"+Thread.currentThread().getName());
+        gmailClientId = tempGmailClientId;
+        gmailClientSecret = tempGmailClientSecret;
+        LOGGER.info("gmailClientId: " + gmailClientId);
+        LOGGER.info("gmailClientSecret" + gmailClientSecret);
     }
 
     public static JSONObject basicAuthorization(String type, String authCode) {
@@ -70,7 +85,12 @@ public class CrmHttpUtils {
                 headers = getAuthHeaders(CrmConstants.PIPEDRIVE_REFRESH_TOKEN, encodedAuth);
                 MultiValueMap<String, String> refreshTokenMap = getMultivalueMap(CrmConstants.PIPEDRIVE_REFRESH_TOKEN, authCode);
                 return makeHttpRequest(refreshTokenMap, headers, HttpMethod.POST, type);
-
+            case "GMAIL_REFRESH_TOKEN":
+                LOGGER.info("Case: Gmail api's refreshtoken");
+                LOGGER.info("Using clientId: " + gmailClientId);
+                headers = getAuthHeaders(CrmConstants.PIPEDRIVE_REFRESH_TOKEN, encodedAuth);
+                MultiValueMap<String, String> gmailRefreshTokenMap = getMultivalueMap(GoogleConstants.GMAIL_REFRESH_TOKEN, authCode);
+                return makeHttpRequest(gmailRefreshTokenMap, headers, HttpMethod.POST, type);
             default:
                 return new JSONObject();
         }
@@ -87,6 +107,7 @@ public class CrmHttpUtils {
             case "PIPEDRIVE_REFRESH_TOKEN":
                 headers.setBasicAuth(encodedAuth);
                 headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+                return headers;
             default:
                 return headers;
         }
@@ -105,6 +126,15 @@ public class CrmHttpUtils {
                 map.add("grant_type", CrmConstants.PIPEDRIVE_REFRESH_TOKEN_GRANT_TYPE);
                 map.add("refresh_token", authCode);
                 map.add("redirect_uri", CrmConstants.PIPEDRIVE_REDIRECT_URL);
+                return map;
+
+            case "GMAIL_REFRESH_TOKEN":
+                map.add("client_id", gmailClientId);
+                map.add("client_secret", gmailClientSecret);
+                map.add("refresh_token", authCode);
+                map.add("grant_type", GoogleConstants.GMAIL_REFRESH_TOKEN_GRANT_TYPE);
+                return map;
+
             default:
                 return map;
         }
@@ -165,6 +195,31 @@ public class CrmHttpUtils {
                     LOGGER.warn("Error occured while fetching acccess token usn");
                     throw new RuntimeException(e);
                 }
+
+            case "GMAIL_REFRESH_TOKEN":
+                try {
+                    String url = GoogleConstants.GMAIL_BASE_URL;
+                    ResponseEntity<String> response = restTemplate.postForEntity(url, request, String.class);
+                    LOGGER.info("Response status: " + response.getStatusCode());
+                    LOGGER.info("Response body: " + response.getBody());
+                    try {
+                        JSONObject jsonResponse = new JSONObject(response.getBody());
+                        LOGGER.info("Parsed JSON response refresh token: " + jsonResponse.toString());
+                        return jsonResponse;
+                    } catch (JSONException e) {
+                        LOGGER.error("Failed to parse JSON response: " + e.getMessage());
+                        return new JSONObject().put("error", "Failed to parse response: " + e.getMessage());
+                    }
+                } catch (HttpClientErrorException e) {
+                    LOGGER.warn("HttpClientErrorException Error occurred while fetching tokens: " + e.getMessage());
+                    return new JSONObject().put("error", e.getMessage());
+                } catch (HttpServerErrorException e) {
+                    LOGGER.warn("HttpServerErrorException Error occurred while fetching tokens:" + e.getMessage());
+                    return new JSONObject().put("error", e.getMessage());
+                } catch (Exception e) {
+                    LOGGER.warn("Error occured while fetching acccess token usn");
+                    throw new RuntimeException(e);
+                }
             default:
                 return new JSONObject();
         }
@@ -185,7 +240,27 @@ public class CrmHttpUtils {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
 
-
+    public static void updateUnifiedAccData(UnifiedInboxAccounts connectedMailAccs,
+                                            String fromAddress, JSONObject response){
+        try {
+            LOGGER.info("Updating Unified account setting after fetching new credentials");
+            if (response.has("access_token")) {
+                List<ConnectedGmailAccount> connectedMails = connectedMailAccs.getConnectedEmailAccounts();
+                Optional<ConnectedGmailAccount> connectedAcc = connectedMails.stream()
+                        .filter(connectedMail -> connectedMail.getConnectedMail().equals(fromAddress))
+                        .findFirst();
+                ConnectedGmailAccount acc = connectedAcc.get();
+                acc.setAccessToken(response.getString("access_token"));
+                acc.setTokenExpiryTime(new Date(System.currentTimeMillis() +
+                        response.getLong("expires_in") * 1000));
+                acc.setScopes(Collections.singletonList(response.getString("scope")));
+                acc.setRefreshTokenExpiry(new Date(System.currentTimeMillis() +
+                        response.getLong("refresh_token_expires_in") * 1000));
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

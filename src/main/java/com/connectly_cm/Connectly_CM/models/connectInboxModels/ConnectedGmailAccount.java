@@ -10,6 +10,16 @@ public class ConnectedGmailAccount {
     private String accessToken;
     private String refreshToken;
 
+    public Date getRefreshTokenExpiry() {
+        return refreshTokenExpiry;
+    }
+
+    public void setRefreshTokenExpiry(Date refreshTokenExpiry) {
+        this.refreshTokenExpiry = refreshTokenExpiry;
+    }
+
+    private Date refreshTokenExpiry;
+
     @Override
     public String toString() {
         return "ConnectedGmailAccount{" +
